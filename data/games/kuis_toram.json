@@ -41,10 +41,9 @@
   {
     "question": "Siapakah nama NPC wanita peramu obat dan sintesis perlengkapan (Synthesist) di Kota Sofya?",
     "answers": [
-      "chalon",
-      "charon"
+      "mubia"
     ],
-    "display": "Chalon",
+    "display": "Mubia",
     "clue": "Menjaga meja Synthesist di Sofya City",
     "points": 45
   },
