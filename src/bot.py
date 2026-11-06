@@ -6210,20 +6210,17 @@ def on_message(client: NewClient, message: MessageEv):
         
         if not query or query in ["list", "menu"]:
             reply = "*DAFTAR TRAIT PET TORAM ONLINE*\n\n"
-            reply += "Berikut adalah daftar trait yang tersedia (Inggris / Indonesia):\n\n"
+            reply += "Berikut adalah daftar trait yang tersedia:\n\n"
             for idx, t_key in enumerate(sorted(traits_db.keys()), start=1):
                 en_title = t_key.title() if t_key not in ["str", "int", "vit", "agi", "dex", "atk", "matk", "def", "mdef", "aspd", "cspd", "maxhp", "maxmp"] else t_key.upper()
-                id_title = TRAIT_TRANSLATIONS.get(t_key, "")
-                disp = f"{en_title} / {id_title}" if id_title and id_title != en_title else en_title
-                reply += f"{idx}. *{disp}*\n"
-            reply += "\nTips: Ketik `,trait [nama]` (contoh: `,trait battlecast` atau `,trait mantra tempur`) untuk melihat detail efek."
+                reply += f"{idx}. *{en_title}*\n"
+            reply += "\nTips: Ketik `,trait [nama]` (contoh: `,trait battlecast`) untuk melihat detail efek."
             client.reply_message(reply, message)
         else:
             matches = []
             for t_key in sorted(traits_db.keys()):
                 en_name = t_key.lower()
-                id_name = TRAIT_TRANSLATIONS.get(t_key, "").lower()
-                if query in en_name or query in id_name:
+                if query in en_name:
                     matches.append(format_trait_detail(t_key))
             
             if matches:

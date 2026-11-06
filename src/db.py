@@ -915,8 +915,6 @@ def format_trait_detail(key: str) -> str:
     if not raw:
         return ""
     en_title = key_low.title() if key_low not in ["str", "int", "vit", "agi", "dex", "atk", "matk", "def", "mdef", "aspd", "cspd", "maxhp", "maxmp"] else key_low.upper()
-    id_title = TRAIT_TRANSLATIONS.get(key_low, "")
-    disp = f"{en_title} / {id_title}" if id_title and id_title != en_title else en_title
     lines = raw.splitlines()
     body = "\n".join(lines[1:]) if len(lines) > 1 and lines[0].strip().lower() == key_low else raw
-    return f"*DETAIL TRAIT: {disp.upper()}*\n\n• *Nama:* {disp}\n{body}".strip()
+    return f"*DETAIL TRAIT: {en_title.upper()}*\n\n• *Nama:* {en_title}\n{body}".strip()
