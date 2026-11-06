@@ -49,51 +49,131 @@ import re
 HEAD_NOUNS = {
     "Sword": "Pedang", "Greatsword": "Pedang Besar", "Katana": "Katana",
     "Bow": "Busur", "Bowgun": "Pistol Busur", "Staff": "Tongkat",
-    "Knuckles": "Tinju", "Halberd": "Tombak Halberd", "Arrow": "Panah",
-    "Shield": "Perisai", "Dagger": "Belati",
+    "Knuckles": "Tinju", "Knuckle": "Tinju", "Halberd": "Tombak Halberd", "Arrow": "Panah",
+    "Shield": "Perisai", "Dagger": "Belati", "Blade": "Pedang", "Scythe": "Sabit",
+    "Lance": "Tombak Kavaleri", "Spear": "Tombak", "Glaive": "Glaive",
+    "Mace": "Gada", "Hammer": "Palu", "Axe": "Kapak", "Rod": "Tongkat", "Cane": "Tongkat",
+    "Bat": "Tongkat Pemukul", "Tonfa": "Tonfa", "Gun": "Pistol", "Whip": "Cambuk",
+    
     "Garb": "Zirah", "Armor": "Zirah", "Mail": "Zirah", "Coat": "Mantel",
     "Suit": "Jas", "Robe": "Jubah", "Dress": "Gaun", "Costume": "Kostum",
-    "Outfit": "Pakaian", "Uniform": "Seragam", "Vest": "Rompi",
+    "Outfit": "Pakaian", "Uniform": "Seragam", "Vest": "Rompi", "Kimono": "Kimono",
+    "Cloak": "Jubah", "Cape": "Jubah Pendek",
+    
     "Ring": "Cincin", "Talisman": "Jimat", "Charm": "Jimat", "Bangle": "Gelang",
-    "Bracelet": "Gelang", "Earring": "Anting", "Necklace": "Kalung",
+    "Bracelet": "Gelang", "Earring": "Anting", "Necklace": "Kalung", "Strap": "Tali Kulit",
+    "Amulet": "Jimat", "Pendant": "Liontin", "Brooch": "Bros", "Belt": "Sabuk",
+    "Sash": "Selendang Pinggang", "Band": "Pita Ikat",
+    
     "Hat": "Topi", "Cap": "Topi", "Mask": "Topeng", "Helm": "Helm",
     "Helmet": "Helm", "Crown": "Mahkota", "Tiara": "Tiara", "Halo": "Halo",
-    "Cape": "Jubah Pendek", "Cloak": "Jubah", "Wings": "Sayap", "Ribbon": "Pita",
-    "Headband": "Bando", "Hairpin": "Jepit Rambut",
+    "Wings": "Sayap", "Ribbon": "Pita", "Headband": "Bando", "Hairpin": "Jepit Rambut",
+    "Circlet": "Mahkota Lingkar", "Beret": "Baret", "Bandana": "Bandana",
+    "Scarf": "Selendang", "Eyepatch": "Penutup Mata", "Glasses": "Kacamata",
+    
     "Horn": "Tanduk", "Horns": "Tanduk", "Tail": "Ekor", "Eye": "Mata",
     "Eyes": "Mata", "Skin": "Kulit", "Hide": "Kulit", "Fur": "Bulu",
-    "Claw": "Cakar", "Claws": "Cakar", "Tooth": "Gigi", "Fang": "Taring",
-    "Fangs": "Taring", "Bone": "Tulang", "Bones": "Tulang", "Ore": "Bijih",
-    "Wood": "Kayu", "Cloth": "Kain", "Stone": "Batu", "Crystal": "Kristal",
-    "Potion": "Ramuan", "Ticket": "Tiket", "Bottle": "Botol", "Box": "Kotak",
-    "Scroll": "Gulungan", "Feather": "Bulu", "Scale": "Sisik", "Scales": "Sisik",
-    "Meat": "Daging", "Fluid": "Cairan", "Liquid": "Cairan",
-    "Fragment": "Serpihan", "Piece": "Potongan", "Shard": "Pecahan",
-    "Tear": "Air Mata", "Tears": "Air Mata", "Blood": "Darah", "Heart": "Jantung",
-    "Soul": "Jiwa", "Root": "Akar"
+    "Claw": "Cakar", "Claws": "Cakar", "Tooth": "Gigi", "Teeth": "Gigi",
+    "Fang": "Taring", "Fangs": "Taring", "Tusk": "Taring", "Tusks": "Taring",
+    "Bone": "Tulang", "Bones": "Tulang", "Face": "Wajah", "Hand": "Tangan",
+    "Fist": "Tinju", "Fists": "Tinju", "Hair": "Rambut", "Beard": "Janggut",
+    "Moustache": "Kumis", "Heart": "Jantung", "Soul": "Jiwa", "Blood": "Darah",
+    "Tear": "Air Mata", "Tears": "Air Mata", "Feather": "Bulu", "Feathers": "Bulu",
+    "Scale": "Sisik", "Scales": "Sisik", "Shell": "Tempurung",
+    
+    "Ore": "Bijih", "Wood": "Kayu", "Cloth": "Kain", "Stone": "Batu",
+    "Crystal": "Kristal", "Potion": "Ramuan", "Ticket": "Tiket", "Bottle": "Botol",
+    "Box": "Kotak", "Scroll": "Gulungan", "Meat": "Daging", "Fluid": "Cairan",
+    "Liquid": "Cairan", "Fragment": "Serpihan", "Piece": "Potongan", "Shard": "Pecahan",
+    "Root": "Akar", "Seed": "Benih", "Flower": "Bunga", "Leaf": "Daun",
+    "Branch": "Ranting", "Bark": "Kulit Kayu", "Jerky": "Dendeng",
+    "Apple": "Apel", "Candy": "Permen", "Cookie": "Kue", "Cake": "Kue", "Soup": "Sup",
+    "Card": "Kartu", "Book": "Buku", "Grimoire": "Kitab Sihir", "Tome": "Kitab",
+    "Rune": "Rune", "Emblem": "Lambang", "Badge": "Lencana", "Coin": "Koin", "Medal": "Medali",
+    "Pouch": "Kantung", "Bag": "Tas", "Sack": "Karung", "Basket": "Keranjang",
+    "Mirror": "Cermin", "Key": "Kunci", "Bell": "Lonceng", "Orb": "Bola Kristal",
+    "Boots": "Sepatu Bot", "Shoes": "Sepatu", "Sandals": "Sandal",
+    "Gloves": "Sarung Tangan", "Gauntlet": "Sarung Tangan Besi", "Bracer": "Pelindung Lengan",
+    
+    "Rattle": "Kerincingan", "Wisp": "Gumpalan Roh", "Clown": "Badut", "Titan": "Titan",
+    "Octopus": "Gurita", "Passion": "Gairah", "Shaman": "Dukun", "Scarecrow": "Orang-orangan Sawah",
+    "Rat": "Tikus", "Manifest": "Manifestasi", "Grace": "Karunia", "Blessing": "Berkat",
+    "Remnant": "Sisa", "Shadow": "Bayangan", "Cavalier": "Ksatria", "Fairy": "Peri", "Doll": "Boneka"
 }
 
 MODIFIERS = {
-    "Fire": "Api", "Water": "Air", "Aqua": "Air", "Wind": "Angin", "Earth": "Bumi",
-    "Light": "Cahaya", "Dark": "Gelap", "Ice": "Es", "Thunder": "Petir",
-    "Lightning": "Kilat", "Holy": "Suci", "Sacred": "Keramat", "Evil": "Jahat",
-    "Cursed": "Terkutuk", "Ancient": "Kuno", "Iron": "Besi", "Steel": "Baja",
-    "Gold": "Emas", "Golden": "Emas", "Silver": "Perak", "Bronze": "Perunggu",
-    "Copper": "Tembaga", "Platinum": "Platina", "Mithril": "Mitril",
-    "Red": "Merah", "Crimson": "Merah Tua", "Blue": "Biru", "Green": "Hijau",
-    "Black": "Hitam", "White": "Putih", "Yellow": "Kuning", "Purple": "Ungu",
-    "Forest": "Hutan", "Sea": "Laut", "Ocean": "Samudra", "Moon": "Bulan",
-    "Sun": "Matahari", "Star": "Bintang", "Stardust": "Debu Bintang",
-    "Dragon": "Naga", "Beast": "Binatang", "Demon": "Iblis", "Devil": "Iblis",
+    "Fire": "Api", "Flame": "Api", "Water": "Air", "Aqua": "Air", "Wind": "Angin",
+    "Earth": "Bumi", "Light": "Cahaya", "Dark": "Gelap", "Ice": "Es",
+    "Thunder": "Petir", "Lightning": "Kilat", "Holy": "Suci", "Sacred": "Keramat",
+    "Evil": "Jahat", "Cursed": "Terkutuk", "Ancient": "Kuno", "Iron": "Besi",
+    "Steel": "Baja", "Gold": "Emas", "Golden": "Emas", "Silver": "Perak",
+    "Bronze": "Perunggu", "Copper": "Tembaga", "Platinum": "Platina", "Mithril": "Mitril",
+    "Mythril": "Mitril", "Red": "Merah", "Crimson": "Merah Tua", "Scarlet": "Merah Menyala",
+    "Blue": "Biru", "Azure": "Biru Langit", "Green": "Hijau", "Black": "Hitam",
+    "White": "Putih", "Yellow": "Kuning", "Purple": "Ungu", "Violet": "Ungu",
+    "Forest": "Hutan", "Mountain": "Gunung", "Sea": "Laut", "Ocean": "Samudra",
+    "Moon": "Bulan", "Sun": "Matahari", "Solar": "Matahari", "Star": "Bintang",
+    "Stardust": "Debu Bintang", "Dragon": "Naga", "Beast": "Binatang",
+    "Demon": "Iblis", "Devil": "Iblis", "Angel": "Malaikat", "Ghost": "Hantu",
+    "Spirit": "Roh", "Phantom": "Fantasma", "Knight": "Ksatria", "Mage": "Penyihir",
+    "Wizard": "Penyihir", "Witch": "Penyihir", "Hunter": "Pemburu",
+    "Queen": "Ratu", "Empress": "Ratu", "King": "Raja", "Emperor": "Kaisar",
+    "Lord": "Tuan", "Warrior": "Pendekar", "Soldier": "Prajurit",
     "Broken": "Rusak", "Old": "Tua", "Rusty": "Berkarat", "Sharp": "Tajam",
-    "Pointed": "Runcing", "Heavy": "Berat", "Light": "Ringan", "Short": "Pendek",
-    "Long": "Panjang", "Great": "Besar", "Giant": "Raksasa", "Magic": "Sihir",
-    "Magical": "Gaib", "Mysterious": "Misterius", "Toxic": "Racun", "Poison": "Racun"
+    "Pointed": "Runcing", "Heavy": "Berat", "Lightweight": "Ringan",
+    "Short": "Pendek", "Long": "Panjang", "Great": "Besar", "Giant": "Raksasa",
+    "Little": "Kecil", "Small": "Kecil", "Wild": "Liar", "Magic": "Sihir",
+    "Magical": "Gaib", "Mysterious": "Misterius", "Toxic": "Racun", "Poison": "Racun",
+    "Wooden": "Kayu", "Nailed": "Berpaku", "Mystic": "Mistis", "Chaos": "Kekacauan",
+    "Abyssal": "Jurang Maut", "Fallen": "Jatuh", "Shining": "Bercahaya",
+    "Brutal": "Brutal", "Furious": "Murka", "Silent": "Sunyi", "Deep": "Dalam",
+    "Rough": "Kasar", "Tough": "Keras", "Soft": "Lembut", "Sweet": "Manis",
+    "Bitter": "Pahit", "Spicy": "Pedas", "Hot": "Panas", "Cold": "Dingin"
+}
+
+PAREN_TYPES = {
+    "(Staff)": "(Tongkat)",
+    "(Knuckle)": "(Tinju)",
+    "(Knuckles)": "(Tinju)",
+    "(Sword)": "(Pedang)",
+    "(1 Handed Sword)": "(Pedang 1 Tangan)",
+    "(2 Handed Sword)": "(Pedang 2 Tangan)",
+    "(Bow)": "(Busur)",
+    "(Bowgun)": "(Pistol Busur)",
+    "(Halberd)": "(Tombak Halberd)",
+    "(Katana)": "(Katana)",
+    "(Magic Device)": "(Alat Sihir)",
+    "(Shield)": "(Perisai)",
+    "(Dagger)": "(Belati)",
+    "(Arrow)": "(Panah)",
+    "(Armor)": "(Zirah)",
+    "(Additional)": "(Tambahan)",
+    "(Special)": "(Khusus)"
 }
 
 def smart_toram_translation(en_name: str) -> str:
     name = en_name.strip()
-    words = name.split()
+    if not name:
+        return name
+        
+    # 1. Cek akhiran dalam tanda kurung seperti (Staff) -> (Tongkat)
+    paren_suffix = ""
+    work_name = name
+    for p_en, p_id in PAREN_TYPES.items():
+        if work_name.endswith(p_en):
+            paren_suffix = " " + p_id
+            work_name = work_name[:-len(p_en)].strip()
+            break
+            
+    # 2. Cek possessive 's (misal Aba's Face -> Wajah Aba, Lucia's Cane -> Tongkat Lucia)
+    m_poss = re.match(r"^([A-Za-z0-9\s]+)'s\s+(.+)$", work_name)
+    if m_poss:
+        owner = m_poss.group(1).strip()
+        item_part = m_poss.group(2).strip()
+        translated_item = smart_toram_translation(item_part)
+        return f"{translated_item} {owner}{paren_suffix}"
+        
+    words = work_name.split()
     if not words:
         return name
     
@@ -107,19 +187,30 @@ def smart_toram_translation(en_name: str) -> str:
         
     last_w = base_words[-1]
     clean_last = last_w.strip("()[],.'")
-    if clean_last in HEAD_NOUNS:
+    
+    if len(base_words) >= 2 and f"{base_words[-2]} {base_words[-1]}" in HEAD_NOUNS:
+        head_en = f"{base_words[-2]} {base_words[-1]}"
+        head_id = HEAD_NOUNS[head_en]
+        mod_words = base_words[:-2]
+    elif clean_last in HEAD_NOUNS:
         head_id = HEAD_NOUNS[clean_last]
         mod_words = base_words[:-1]
-        if mod_words:
-            translated_mods = [MODIFIERS.get(m.strip("()[],.'"), m) for m in mod_words]
-            res = f"{head_id} {' '.join(translated_mods)}"
-        else:
-            res = head_id
-        if suffix_part:
-            res = f"{res} {suffix_part}"
-        return res
+    else:
+        if paren_suffix:
+            return f"{work_name}{paren_suffix}"
+        return name
         
-    return name
+    if mod_words:
+        translated_mods = [MODIFIERS.get(m.strip("()[],.'"), m) for m in mod_words]
+        res = f"{head_id} {' '.join(translated_mods)}"
+    else:
+        res = head_id
+        
+    if suffix_part:
+        res = f"{res} {suffix_part}"
+    if paren_suffix:
+        res = f"{res}{paren_suffix}"
+    return res
 
 def get_item_bilingual_name(name: str) -> str:
     """Mengembalikan format nama dua bahasa: 'Nama Inggris / Nama Indonesia' (misal: 'Mycodian / Sanmurbon')"""

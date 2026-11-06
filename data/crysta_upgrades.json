@@ -1286,5 +1286,829 @@
   "35003": {
     "name": "Crashing Lightning",
     "upgrades_id": 35002
+  },
+  "8574": {
+    "name": "Kipina",
+    "upgrades_id": null
+  },
+  "8572": {
+    "name": "Tachy",
+    "upgrades_id": null
+  },
+  "8570": {
+    "name": "Vatran The Crimson Dragon",
+    "upgrades_id": null
+  },
+  "8565": {
+    "name": "Florashroom Petarie",
+    "upgrades_id": null
+  },
+  "8562": {
+    "name": "Crashing Lightning",
+    "upgrades_id": null
+  },
+  "8561": {
+    "name": "Arnold II",
+    "upgrades_id": null
+  },
+  "8560": {
+    "name": "Arnold",
+    "upgrades_id": null
+  },
+  "8559": {
+    "name": "Usan The Ghost Master",
+    "upgrades_id": null
+  },
+  "8558": {
+    "name": "Weepy Colon",
+    "upgrades_id": null
+  },
+  "8553": {
+    "name": "Aba",
+    "upgrades_id": null
+  },
+  "8552": {
+    "name": "Megiston The Champion IX",
+    "upgrades_id": null
+  },
+  "8547": {
+    "name": "Shawkal",
+    "upgrades_id": null
+  },
+  "8511": {
+    "name": "Ghostfire Oni",
+    "upgrades_id": null
+  },
+  "8452": {
+    "name": "AGI+9",
+    "upgrades_id": null
+  },
+  "8412": {
+    "name": "Spying Eye",
+    "upgrades_id": null
+  },
+  "8400": {
+    "name": "Baratok",
+    "upgrades_id": null
+  },
+  "8390": {
+    "name": "Mortares",
+    "upgrades_id": null
+  },
+  "8372": {
+    "name": "Mycodian",
+    "upgrades_id": 6163
+  },
+  "8309": {
+    "name": "Zeegard",
+    "upgrades_id": null
+  },
+  "8235": {
+    "name": "Potumotter III",
+    "upgrades_id": null
+  },
+  "8234": {
+    "name": "Potumotter II",
+    "upgrades_id": null
+  },
+  "8229": {
+    "name": "Stormun",
+    "upgrades_id": null
+  },
+  "8202": {
+    "name": "Aralago",
+    "upgrades_id": null
+  },
+  "8174": {
+    "name": "Olobaid",
+    "upgrades_id": null
+  },
+  "8173": {
+    "name": "Shadow Devil Cavalier",
+    "upgrades_id": null
+  },
+  "8131": {
+    "name": "Machine God Maple",
+    "upgrades_id": null
+  },
+  "8060": {
+    "name": "Black Lixi",
+    "upgrades_id": null
+  },
+  "8003": {
+    "name": "DEX+8",
+    "upgrades_id": null
+  },
+  "7907": {
+    "name": "Remnant of Beyond",
+    "upgrades_id": null
+  },
+  "7904": {
+    "name": "Castilia",
+    "upgrades_id": null
+  },
+  "7752": {
+    "name": "HP+800",
+    "upgrades_id": null
+  },
+  "7676": {
+    "name": "Mulgoon's Hand",
+    "upgrades_id": null
+  },
+  "7660": {
+    "name": "VIT+8",
+    "upgrades_id": null
+  },
+  "7613": {
+    "name": "Scream Shadow",
+    "upgrades_id": null
+  },
+  "7600": {
+    "name": "CSPD+160",
+    "upgrades_id": null
+  },
+  "7581": {
+    "name": "MP+400",
+    "upgrades_id": null
+  },
+  "7522": {
+    "name": "Bangrudom",
+    "upgrades_id": null
+  },
+  "7507": {
+    "name": "Giant Pelulu",
+    "upgrades_id": null
+  },
+  "7433": {
+    "name": "Zodiac's Blessing",
+    "upgrades_id": null
+  },
+  "7422": {
+    "name": "Altadar",
+    "upgrades_id": null
+  },
+  "7413": {
+    "name": "Primordial Moonlit",
+    "upgrades_id": null
+  },
+  "7383": {
+    "name": "Accuracy+16",
+    "upgrades_id": null
+  },
+  "7364": {
+    "name": "Aubermight",
+    "upgrades_id": null
+  },
+  "7362": {
+    "name": "Aubergine Dragon Auvio",
+    "upgrades_id": null
+  },
+  "7333": {
+    "name": "Falburrows",
+    "upgrades_id": null
+  },
+  "7163": {
+    "name": "Vodre",
+    "upgrades_id": null
+  },
+  "7101": {
+    "name": "Dodge+16",
+    "upgrades_id": null
+  },
+  "7008": {
+    "name": "ASPD+160",
+    "upgrades_id": null
+  },
+  "6956": {
+    "name": "Trus",
+    "upgrades_id": null
+  },
+  "6856": {
+    "name": "Mage Filecia",
+    "upgrades_id": null
+  },
+  "6783": {
+    "name": "Lunadore",
+    "upgrades_id": null
+  },
+  "6769": {
+    "name": "ASPD+140",
+    "upgrades_id": null
+  },
+  "6751": {
+    "name": "Illuminitor",
+    "upgrades_id": null
+  },
+  "6682": {
+    "name": "DEX+7",
+    "upgrades_id": null
+  },
+  "6672": {
+    "name": "Stellar Ooze II",
+    "upgrades_id": null
+  },
+  "6616": {
+    "name": "INT+7",
+    "upgrades_id": null
+  },
+  "6610": {
+    "name": "Ghost Forest Dark Shaman",
+    "upgrades_id": null
+  },
+  "6544": {
+    "name": "STR+7",
+    "upgrades_id": null
+  },
+  "6528": {
+    "name": "CSPD+140",
+    "upgrades_id": null
+  },
+  "6507": {
+    "name": "Gigantic Octopus",
+    "upgrades_id": null
+  },
+  "6343": {
+    "name": "Wolkissa",
+    "upgrades_id": null
+  },
+  "6301": {
+    "name": "Rampion",
+    "upgrades_id": null
+  },
+  "6287": {
+    "name": "MP+350",
+    "upgrades_id": null
+  },
+  "6218": {
+    "name": "Ignitrus",
+    "upgrades_id": null
+  },
+  "6163": {
+    "name": "Evil Lefina",
+    "upgrades_id": null
+  },
+  "6117": {
+    "name": "AGI+7",
+    "upgrades_id": null
+  },
+  "6073": {
+    "name": "Mieli",
+    "upgrades_id": null
+  },
+  "6026": {
+    "name": "Accuracy+14",
+    "upgrades_id": null
+  },
+  "6016": {
+    "name": "Purro",
+    "upgrades_id": null
+  },
+  "5949": {
+    "name": "Dodge+14",
+    "upgrades_id": null
+  },
+  "5907": {
+    "name": "Crimson One-Eyed Wolf",
+    "upgrades_id": null
+  },
+  "5711": {
+    "name": "VIT+7",
+    "upgrades_id": null
+  },
+  "5695": {
+    "name": "Midsummer Passion",
+    "upgrades_id": null
+  },
+  "5688": {
+    "name": "Captain Amiya",
+    "upgrades_id": null
+  },
+  "5678": {
+    "name": "HP+700",
+    "upgrades_id": null
+  },
+  "5479": {
+    "name": "Star Wizard",
+    "upgrades_id": null
+  },
+  "5417": {
+    "name": "Doctor Pom Pom",
+    "upgrades_id": null
+  },
+  "5377": {
+    "name": "Panchos Kita Makura",
+    "upgrades_id": null
+  },
+  "5323": {
+    "name": "Lord of Nezim",
+    "upgrades_id": null
+  },
+  "5252": {
+    "name": "Grim Reaper Scarecrow",
+    "upgrades_id": null
+  },
+  "5244": {
+    "name": "CSPD+120",
+    "upgrades_id": null
+  },
+  "5189": {
+    "name": "Bovinio",
+    "upgrades_id": null
+  },
+  "5185": {
+    "name": "Dark Captain with B",
+    "upgrades_id": null
+  },
+  "5088": {
+    "name": "INT +6",
+    "upgrades_id": null
+  },
+  "5002": {
+    "name": "Lil Wonder Rat",
+    "upgrades_id": null
+  },
+  "4968": {
+    "name": "MP+300",
+    "upgrades_id": null
+  },
+  "4952": {
+    "name": "STR+6",
+    "upgrades_id": null
+  },
+  "4941": {
+    "name": "Phantom Wisp",
+    "upgrades_id": null
+  },
+  "4877": {
+    "name": "Ruzart",
+    "upgrades_id": null
+  },
+  "4680": {
+    "name": "AGI+6",
+    "upgrades_id": null
+  },
+  "4571": {
+    "name": "HP+600",
+    "upgrades_id": null
+  },
+  "4514": {
+    "name": "VIT+6",
+    "upgrades_id": null
+  },
+  "4489": {
+    "name": "Mercy",
+    "upgrades_id": null
+  },
+  "4478": {
+    "name": "Potumotter",
+    "upgrades_id": null
+  },
+  "4448": {
+    "name": "Dodge+12",
+    "upgrades_id": null
+  },
+  "4418": {
+    "name": "Jeandoux",
+    "upgrades_id": null
+  },
+  "4371": {
+    "name": "ASPD+120",
+    "upgrades_id": null
+  },
+  "4357": {
+    "name": "Omochi",
+    "upgrades_id": null
+  },
+  "4188": {
+    "name": "Drama Clown",
+    "upgrades_id": null
+  },
+  "4157": {
+    "name": "Gerumi",
+    "upgrades_id": null
+  },
+  "4154": {
+    "name": "Frenzy Viola",
+    "upgrades_id": null
+  },
+  "4108": {
+    "name": "Dex+6",
+    "upgrades_id": null
+  },
+  "4061": {
+    "name": "Grimuckus",
+    "upgrades_id": null
+  },
+  "4051": {
+    "name": "Accuracy+12",
+    "upgrades_id": null
+  },
+  "3822": {
+    "name": "Specter of Death",
+    "upgrades_id": null
+  },
+  "3795": {
+    "name": "Critical Rate +5",
+    "upgrades_id": null
+  },
+  "3741": {
+    "name": "Goldenia",
+    "upgrades_id": null
+  },
+  "3724": {
+    "name": "STR+5",
+    "upgrades_id": null
+  },
+  "3704": {
+    "name": "Iron Empress",
+    "upgrades_id": null
+  },
+  "3652": {
+    "name": "Carbuncle",
+    "upgrades_id": null
+  },
+  "3625": {
+    "name": "Seele Zauga",
+    "upgrades_id": null
+  },
+  "3607": {
+    "name": "Grand Pojo",
+    "upgrades_id": null
+  },
+  "3599": {
+    "name": "VIT+5",
+    "upgrades_id": null
+  },
+  "3480": {
+    "name": "Felien",
+    "upgrades_id": null
+  },
+  "3477": {
+    "name": "Altoblepas",
+    "upgrades_id": null
+  },
+  "3404": {
+    "name": "HP+500",
+    "upgrades_id": null
+  },
+  "3364": {
+    "name": "Yashiro Azuki's Mom",
+    "upgrades_id": null
+  },
+  "3363": {
+    "name": "Yashiro Azuki",
+    "upgrades_id": null
+  },
+  "3343": {
+    "name": "Crystal Titan",
+    "upgrades_id": null
+  },
+  "3328": {
+    "name": "INT+5",
+    "upgrades_id": null
+  },
+  "3283": {
+    "name": "The Great Witch of Crow",
+    "upgrades_id": null
+  },
+  "3207": {
+    "name": "DEX+5",
+    "upgrades_id": null
+  },
+  "3199": {
+    "name": "Maton Sword",
+    "upgrades_id": null
+  },
+  "3158": {
+    "name": "Titeres",
+    "upgrades_id": null
+  },
+  "2962": {
+    "name": "ASPD+100",
+    "upgrades_id": null
+  },
+  "2914": {
+    "name": "Cursed Crysta",
+    "upgrades_id": null
+  },
+  "2910": {
+    "name": "P. Avatar",
+    "upgrades_id": null
+  },
+  "2876": {
+    "name": "Dodge+10",
+    "upgrades_id": null
+  },
+  "2854": {
+    "name": "Choiyaki Mentai",
+    "upgrades_id": null
+  },
+  "2805": {
+    "name": "CSPD+100",
+    "upgrades_id": null
+  },
+  "2741": {
+    "name": "Accuracy+10",
+    "upgrades_id": null
+  },
+  "2711": {
+    "name": "AGI+5",
+    "upgrades_id": null
+  },
+  "2658": {
+    "name": "Commander Golem",
+    "upgrades_id": null
+  },
+  "2649": {
+    "name": "Dodge+8",
+    "upgrades_id": null
+  },
+  "2646": {
+    "name": "DEX+4",
+    "upgrades_id": null
+  },
+  "2590": {
+    "name": "Critical Rate +4",
+    "upgrades_id": null
+  },
+  "2550": {
+    "name": "Perro",
+    "upgrades_id": null
+  },
+  "2488": {
+    "name": "MP+250",
+    "upgrades_id": null
+  },
+  "2469": {
+    "name": "Grecia",
+    "upgrades_id": null
+  },
+  "2445": {
+    "name": "MP+200",
+    "upgrades_id": null
+  },
+  "2421": {
+    "name": "Dragon Witch",
+    "upgrades_id": null
+  },
+  "2401": {
+    "name": "INT+4",
+    "upgrades_id": null
+  },
+  "2394": {
+    "name": "ASPD+80",
+    "upgrades_id": null
+  },
+  "2367": {
+    "name": "Goldoon",
+    "upgrades_id": null
+  },
+  "2324": {
+    "name": "AGI+4",
+    "upgrades_id": null
+  },
+  "2275": {
+    "name": "VIT+4",
+    "upgrades_id": null
+  },
+  "2062": {
+    "name": "HP+400",
+    "upgrades_id": null
+  },
+  "1952": {
+    "name": "CSPD+80",
+    "upgrades_id": null
+  },
+  "1923": {
+    "name": "Super Night Mushroom",
+    "upgrades_id": null
+  },
+  "1921": {
+    "name": "Marchitar",
+    "upgrades_id": null
+  },
+  "1890": {
+    "name": "STR+4",
+    "upgrades_id": null
+  },
+  "1832": {
+    "name": "Accuracy+8",
+    "upgrades_id": null
+  },
+  "1759": {
+    "name": "Nightmare Potum",
+    "upgrades_id": null
+  },
+  "1756": {
+    "name": "ASPD+60",
+    "upgrades_id": null
+  },
+  "1752": {
+    "name": "AGI+3",
+    "upgrades_id": null
+  },
+  "1600": {
+    "name": "Inzanio",
+    "upgrades_id": null
+  },
+  "1595": {
+    "name": "Don Yeti",
+    "upgrades_id": null
+  },
+  "1594": {
+    "name": "HP+300",
+    "upgrades_id": null
+  },
+  "1548": {
+    "name": "Critical Rate+3",
+    "upgrades_id": null
+  },
+  "1461": {
+    "name": "Granny",
+    "upgrades_id": null
+  },
+  "1451": {
+    "name": "INT+3",
+    "upgrades_id": null
+  },
+  "1443": {
+    "name": "DEX+3",
+    "upgrades_id": null
+  },
+  "1402": {
+    "name": "CSPD+60",
+    "upgrades_id": null
+  },
+  "1399": {
+    "name": "Scrader",
+    "upgrades_id": null
+  },
+  "1329": {
+    "name": "MP+150",
+    "upgrades_id": null
+  },
+  "1323": {
+    "name": "STR+3",
+    "upgrades_id": null
+  },
+  "1319": {
+    "name": "Goovua",
+    "upgrades_id": null
+  },
+  "1269": {
+    "name": "Megiston",
+    "upgrades_id": null
+  },
+  "1191": {
+    "name": "Dodge+6",
+    "upgrades_id": null
+  },
+  "1183": {
+    "name": "Death Colon",
+    "upgrades_id": null
+  },
+  "1122": {
+    "name": "VIT+3",
+    "upgrades_id": null
+  },
+  "1096": {
+    "name": "HP+200",
+    "upgrades_id": null
+  },
+  "858": {
+    "name": "Golden Potum",
+    "upgrades_id": null
+  },
+  "832": {
+    "name": "B.B. Goblin",
+    "upgrades_id": null
+  },
+  "813": {
+    "name": "Masked Warrior",
+    "upgrades_id": null
+  },
+  "806": {
+    "name": "INT+2",
+    "upgrades_id": null
+  },
+  "799": {
+    "name": "Accuracy+4",
+    "upgrades_id": null
+  },
+  "329": {
+    "name": "VIT+2",
+    "upgrades_id": null
+  },
+  "327": {
+    "name": "STR+2",
+    "upgrades_id": null
+  },
+  "326": {
+    "name": "STR+1",
+    "upgrades_id": null
+  },
+  "324": {
+    "name": "Silver Roar",
+    "upgrades_id": null
+  },
+  "319": {
+    "name": "Ruin Golem",
+    "upgrades_id": null
+  },
+  "317": {
+    "name": "MP+50",
+    "upgrades_id": null
+  },
+  "316": {
+    "name": "MP+100",
+    "upgrades_id": null
+  },
+  "315": {
+    "name": "Moonlight Potum",
+    "upgrades_id": null
+  },
+  "314": {
+    "name": "Mochelo",
+    "upgrades_id": null
+  },
+  "311": {
+    "name": "Mauez",
+    "upgrades_id": null
+  },
+  "309": {
+    "name": "INT+1",
+    "upgrades_id": null
+  },
+  "308": {
+    "name": "HP+100",
+    "upgrades_id": null
+  },
+  "301": {
+    "name": "Forest Wolf",
+    "upgrades_id": null
+  },
+  "298": {
+    "name": "Dodge+4",
+    "upgrades_id": null
+  },
+  "296": {
+    "name": "Dodge+2",
+    "upgrades_id": null
+  },
+  "295": {
+    "name": "DEX+2",
+    "upgrades_id": null
+  },
+  "294": {
+    "name": "DEX+1",
+    "upgrades_id": null
+  },
+  "291": {
+    "name": "CSPD+40",
+    "upgrades_id": null
+  },
+  "290": {
+    "name": "CSPD+20",
+    "upgrades_id": null
+  },
+  "289": {
+    "name": "Critical Rate+2",
+    "upgrades_id": null
+  },
+  "288": {
+    "name": "Critical Rate+1",
+    "upgrades_id": null
+  },
+  "282": {
+    "name": "Boss Colon",
+    "upgrades_id": null
+  },
+  "280": {
+    "name": "Astol",
+    "upgrades_id": null
+  },
+  "279": {
+    "name": "ASPD+40",
+    "upgrades_id": null
+  },
+  "278": {
+    "name": "ASPD+20",
+    "upgrades_id": null
+  },
+  "277": {
+    "name": "Arcoiris",
+    "upgrades_id": null
+  },
+  "276": {
+    "name": "AGI+2",
+    "upgrades_id": null
+  },
+  "275": {
+    "name": "AGI+1",
+    "upgrades_id": null
+  },
+  "274": {
+    "name": "Accuracy+2",
+    "upgrades_id": null
   }
 }
