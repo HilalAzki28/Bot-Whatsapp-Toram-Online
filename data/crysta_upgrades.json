@@ -229,7 +229,7 @@
   },
   "7893": {
     "name": "Hero Potum IV",
-    "upgrades_id": null
+    "upgrades_id": 6729
   },
   "7736": {
     "name": "Deformis",
@@ -797,7 +797,7 @@
   },
   "7608": {
     "name": "Seele Zauga II",
-    "upgrades_id": null
+    "upgrades_id": 3625
   },
   "7482": {
     "name": "Humida",
@@ -1185,7 +1185,7 @@
   },
   "2916": {
     "name": "Gespenst II",
-    "upgrades_id": null
+    "upgrades_id": 304
   },
   "1901": {
     "name": "Bexiz",
@@ -1309,7 +1309,7 @@
   },
   "8561": {
     "name": "Arnold II",
-    "upgrades_id": null
+    "upgrades_id": 35001
   },
   "8560": {
     "name": "Arnold",
@@ -1329,7 +1329,7 @@
   },
   "8552": {
     "name": "Megiston The Champion IX",
-    "upgrades_id": null
+    "upgrades_id": 8284
   },
   "8547": {
     "name": "Shawkal",
@@ -1365,11 +1365,11 @@
   },
   "8235": {
     "name": "Potumotter III",
-    "upgrades_id": null
+    "upgrades_id": 8234
   },
   "8234": {
     "name": "Potumotter II",
-    "upgrades_id": null
+    "upgrades_id": 4478
   },
   "8229": {
     "name": "Stormun",
@@ -1505,7 +1505,7 @@
   },
   "6672": {
     "name": "Stellar Ooze II",
-    "upgrades_id": null
+    "upgrades_id": 5195
   },
   "6616": {
     "name": "INT+7",

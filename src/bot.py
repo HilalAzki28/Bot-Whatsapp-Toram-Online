@@ -2166,7 +2166,13 @@ def format_item_detail(item: dict) -> str:
                     reply.append(f"*Varian Drop {idx+1}:*")
                 if d.get("stats"):
                     reply.append("*Status & Stats (Drop):*")
-                    reply.extend(d["stats"])
+                    for s in d["stats"]:
+                        m_upg = re.match(r"^-\s*Upgrade for:\s*(.+)$", s, re.IGNORECASE)
+                        if m_upg:
+                            target_c = m_upg.group(1).strip()
+                            reply.append(f"- Upgrade dari Crysta: {get_item_bilingual_name(target_c)}")
+                        else:
+                            reply.append(s)
                 else:
                     reply.append("*Status & Stats (Drop):* Tidak ada data statistik khusus")
 
@@ -3230,9 +3236,10 @@ def handle_item_search_command(client: NewClient, message: MessageEv, query: str
 
         # Cek apakah ada exact match atau hanya ada 1 nama item unik (misal varian-varian dengan nama persis sama)
         q_lower = query.lower()
-        results.sort(key=lambda x: (0 if x.get("name", "").strip().lower() == q_lower else (1 if x.get("name", "").strip().lower().startswith(q_lower) else 2), x.get("name", "").strip().lower()))
+        search_terms = get_translation_search_terms(q_lower)
+        results.sort(key=lambda x: (0 if any(x.get("name", "").strip().lower() == t for t in search_terms) else (1 if any(x.get("name", "").strip().lower().startswith(t) for t in search_terms) else 2), x.get("name", "").strip().lower()))
         unique_names_low = set(i.get("name", "").strip().lower() for i in results if i.get("name", "").strip())
-        exact_matches = [i for i in results if i.get("name", "").strip().lower() == q_lower] if (force_exact or len(unique_names_low) == 1) else []
+        exact_matches = [i for i in results if any(i.get("name", "").strip().lower() == t for t in search_terms)] if (force_exact or len(unique_names_low) == 1) else []
         unique_names = set(i.get("name", "").strip() for i in results)
 
         if exact_matches:
