@@ -5322,8 +5322,17 @@ def on_message(client: NewClient, message: MessageEv):
     elif lower_text in [",skor", ",topskor", ",leaderboard"]:
         client.reply_message(games.get_group_leaderboard(chat_jid_str), message)
 
-    elif lower_text == ",resetskor" or lower_text.startswith(",resetskor ") or lower_text == ",resetleaderboard" or lower_text.startswith(",resetleaderboard "):
-        admins_list = get_group_admins(client, chat_jid) if is_group else []
+    elif (
+        lower_text == ",resetskor" or lower_text.startswith(",resetskor ") 
+        or lower_text == ",resetleaderboard" or lower_text.startswith(",resetleaderboard ")
+        or lower_text == ",resetpoin" or lower_text.startswith(",resetpoin ")
+        or lower_text == ",resetscore" or lower_text.startswith(",resetscore ")
+    ):
+        if is_group:
+            group_data = get_group_members_info(client, chat_jid)
+            admins_list = group_data.get('admins', [])
+        else:
+            admins_list = []
         is_admin = sender_user in admins_list or clean_sender in admins_list or is_owner
         if not is_admin:
             client.reply_message("Peringatan: Perintah `,resetskor` hanya dapat digunakan oleh Admin Grup atau Owner Bot.", message)

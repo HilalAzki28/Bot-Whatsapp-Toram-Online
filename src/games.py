@@ -94,6 +94,18 @@ def load_game_dataset(filename: str) -> list:
 def clean_answer_text(text: str) -> str:
     return re.sub(r'[^a-zA-Z0-9\s]', '', text.strip().lower())
 
+def generate_scrambled_letters(word: str) -> str:
+    """Mengacak huruf-huruf kata dan memastikan hasilnya benar-benar teracak (tidak sama dengan aslinya)"""
+    letters = list(re.sub(r'[^a-zA-Z0-9]', '', word.upper()))
+    if len(letters) <= 1:
+        return " - ".join(letters)
+    orig = "".join(letters)
+    for _ in range(30):
+        random.shuffle(letters)
+        if "".join(letters) != orig:
+            break
+    return " - ".join(letters)
+
 def cancel_game_timer(session: dict):
     timer = session.get("timer")
     if timer and timer.is_alive():
@@ -206,9 +218,11 @@ def start_susun_kata(client, message, chat_jid: str):
             return
 
         q = random.choice(dataset)
+        raw_ans = q.get("display") or q["answer"]
+        scrambled_display = generate_scrambled_letters(raw_ans)
         session = {
             "game_type": "susunkata",
-            "scrambled": q["scrambled"],
+            "scrambled": scrambled_display,
             "answers": [clean_answer_text(q["answer"])],
             "correct_display": q.get("display", q["answer"]),
             "clue": q.get("clue", ""),
@@ -227,7 +241,7 @@ def start_susun_kata(client, message, chat_jid: str):
 
     reply = "🔤 *GAME SUSUN KATA*\n\n"
     reply += f"Susun huruf-huruf berikut menjadi kata yang tepat:\n\n"
-    reply += f"👉 *[ {q['scrambled']} ]*\n\n"
+    reply += f"👉 *[ {scrambled_display} ]*\n\n"
     if q.get("clue"):
         reply += f"🔎 *Petunjuk:* {q['clue']}\n"
     reply += f"🎁 *Poin Hadiah:* +{q.get('points', 50)} Poin\n"
