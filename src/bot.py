@@ -82,6 +82,7 @@ def get_banned_groups() -> set:
     return set()
 
 GROUP_SUBSCRIPTIONS_FILE = os.path.join(DATA_DIR, "group_subscriptions.json")
+GROUP_SUBSCRIPTIONS_BAK = os.path.join(DATA_DIR, "group_subscriptions.json.bak")
 OWNERS_FILE = os.path.join(DATA_DIR, "owner_numbers.json")
 SUBSCRIPTION_COOLDOWN = {}
 DEFAULT_OWNER_NUMBERS = {
@@ -125,8 +126,16 @@ def load_group_subscriptions() -> dict:
         if os.path.exists(GROUP_SUBSCRIPTIONS_FILE):
             with open(GROUP_SUBSCRIPTIONS_FILE, "r") as f:
                 data = json.load(f)
-                if isinstance(data, dict):
+                if isinstance(data, dict) and data:
                     return data
+        # Fallback pemulihan otomatis jika file utama kosong / tertimpa tapi ada backup .bak
+        if os.path.exists(GROUP_SUBSCRIPTIONS_BAK):
+            with open(GROUP_SUBSCRIPTIONS_BAK, "r") as f:
+                bak_data = json.load(f)
+                if isinstance(bak_data, dict) and bak_data:
+                    logging.info("Memulihkan group_subscriptions.json dari file cadangan .bak")
+                    save_group_subscriptions(bak_data)
+                    return bak_data
     except Exception as e:
         logging.error(f"Gagal membaca group_subscriptions.json: {e}")
     return {}
@@ -135,6 +144,10 @@ def save_group_subscriptions(data: dict):
     try:
         with open(GROUP_SUBSCRIPTIONS_FILE, "w") as f:
             json.dump(data, f, indent=2)
+        # Buat salinan cadangan otomatis setiap kali ada data aktif
+        if data:
+            with open(GROUP_SUBSCRIPTIONS_BAK, "w") as f:
+                json.dump(data, f, indent=2)
     except Exception as e:
         logging.error(f"Gagal menyimpan group_subscriptions.json: {e}")
 

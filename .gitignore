@@ -15,13 +15,16 @@ whatsapp_qr.png
 env/
 venv/
 
-# State Tracker Data Temporary (Opsional di-ignore agar terbuat baru)
-data/waifu_limit.json
-data/husbu_limit.json
-data/warnings.json
-data/group_messages_cache.json
-data/group_subscriptions.json
-data/banned_groups.json
+# State Tracker Data Temporary & Dynamic (JANGAN DI-COMMIT/DI-PULL DEMI MENJAGA DATA USER)
+data/waifu_limit.json*
+data/husbu_limit.json*
+data/warnings.json*
+data/group_messages_cache.json*
+data/group_subscriptions.json*
+data/banned_groups.json*
+*.bak
+*.backup
+data/*.bak
 
 # IDEs & Editor Files
 scratch/
