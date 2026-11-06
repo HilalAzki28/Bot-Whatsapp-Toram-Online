@@ -146,8 +146,9 @@ def game_timeout_callback(client, chat_jid: str, game_type: str):
     except Exception as e:
         logging.error(f"Gagal mengirim pesan timeout game ke {chat_jid}: {e}")
 
-# Riwayat soal yang baru ditanyakan per grup agar tidak muncul soal yang sama berulang
+# Riwayat soal yang baru ditanyakan per grup agar tidak muncul soal yang sama dalam 4 sesi permainan
 RECENT_QUESTIONS = {}
+QUESTION_COOLDOWN = 4  # Soal yang sudah keluar akan di-cooldown selama 4 sesi sebelum bisa keluar lagi
 
 def get_unique_question(chat_jid: str, game_type: str, dataset: list) -> dict:
     if not dataset:
@@ -158,19 +159,20 @@ def get_unique_question(chat_jid: str, game_type: str, dataset: list) -> dict:
         RECENT_QUESTIONS[chat_jid][game_type] = []
         
     recent_list = RECENT_QUESTIONS[chat_jid][game_type]
+    
+    # Filter pertanyaan yang belum dimainkan dalam 4 sesi terakhir
     available = [q for q in dataset if (q.get("question") or q.get("answer")) not in recent_list]
     
-    # Jika seluruh soal sudah pernah dimainkan di grup ini, bersihkan riwayat agar berputar kembali
+    # Jika karena suatu hal pool pertanyaan kosong, fallback gunakan seluruh dataset
     if not available:
-        recent_list.clear()
         available = dataset
         
     chosen = random.choice(available)
     q_key = chosen.get("question") or chosen.get("answer")
     recent_list.append(q_key)
     
-    max_history = max(5, int(len(dataset) * 0.75))
-    if len(recent_list) > max_history:
+    # Batasi riwayat maksimal 4 sesi terakhir (soal lama di-pop agar bisa keluar lagi)
+    while len(recent_list) > QUESTION_COOLDOWN:
         recent_list.pop(0)
         
     return chosen
