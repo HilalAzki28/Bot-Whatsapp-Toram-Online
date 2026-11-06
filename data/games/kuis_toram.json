@@ -30,13 +30,22 @@
     "points": 50
   },
   {
-    "question": "Siapakah nama NPC pandai besi wanita berambut cokelat di Kota Sofya?",
+    "question": "Siapakah nama NPC pandai besi (Blacksmith) pria bertubuh kekar pembawa palu di Kota Sofya?",
+    "answers": [
+      "zaldo"
+    ],
+    "display": "Zaldo",
+    "clue": "Menjaga meja Blacksmith NPC di Sofya City",
+    "points": 45
+  },
+  {
+    "question": "Siapakah nama NPC wanita peramu obat dan sintesis perlengkapan (Synthesist) di Kota Sofya?",
     "answers": [
       "chalon",
-      "zono"
+      "charon"
     ],
     "display": "Chalon",
-    "clue": "Menjaga meja Blacksmith NPC di Sofya",
+    "clue": "Menjaga meja Synthesist di Sofya City",
     "points": 45
   },
   {
@@ -50,14 +59,14 @@
     "points": 35
   },
   {
-    "question": "Boss naga apakah yang bersemayam di Nisel Mountain dan menjatuhkan nisel wood?",
+    "question": "Boss naga berkulit cokelat batu yang berada di puncak Nisel Mountain (Gunung Nisel) adalah?",
     "answers": [
       "brutal dragon decel",
       "decel",
       "naga brutal decel"
     ],
     "display": "Brutal Dragon Decel",
-    "clue": "Naga brutal berwarna cokelat batu",
+    "clue": "Naga brutal bertubuh batu cokelat",
     "points": 45
   },
   {
@@ -104,9 +113,7 @@
   {
     "question": "Skill Tier 4 dari pohon skill Blade yang melakukan tebasan bayangan berkali-kali tanpa bisa diserang lawan adalah?",
     "answers": [
-      "shining cross",
-      "buster blade",
-      "shut-out"
+      "shining cross"
     ],
     "display": "Shining Cross",
     "clue": "Skill tebasan silang bercahaya",
@@ -132,13 +139,13 @@
     "points": 40
   },
   {
-    "question": "Apa nama item material yang sangat terkenal di Nisel Mountain untuk quest leveling cepat di Sofya?",
+    "question": "Apa nama item material dari monster Colon di Nisel Mountain yang terkenal untuk quest leveling cepat di Sofya?",
     "answers": [
       "nisel wood",
       "kayu nisel"
     ],
     "display": "Nisel Wood (Kayu Nisel)",
-    "clue": "Didapat dari membunuh monster Colon Nisel",
+    "clue": "Material kayu untuk quest NPC Zono",
     "points": 40
   },
   {
@@ -183,12 +190,12 @@
   {
     "question": "Item mineral apakah yang paling tinggi tingkatannya untuk melakukan penempaan (refining) perlengkapan ke tingkat +S?",
     "answers": [
-      "orichalcum",
       "high purity orichalcum",
+      "orichalcum",
       "ori"
     ],
     "display": "High Purity Orichalcum",
-    "clue": "Logam langka berkilau keemasan",
+    "clue": "Logam kemurnian tinggi berkilau keemasan",
     "points": 50
   },
   {
@@ -211,25 +218,12 @@
     "points": 40
   },
   {
-    "question": "Skill dari pohon Halberd Tier 4 yang menusuk target dan mengabaikan sebagian Physical Defense musuh adalah?",
+    "question": "Skill dari pohon Halberd Tier 4 yang melompat tinggi menusuk target dan mengabaikan sebagian Physical Defense musuh adalah?",
     "answers": [
-      "strike stab",
-      "dive impact",
       "dragon tooth"
     ],
     "display": "Dragon Tooth",
     "clue": "Lompatan tinggi menusuk ke bawah",
-    "points": 50
-  },
-  {
-    "question": "Monster mini boss berbentuk rubah putih berekor sembilan di Wazeero Street adalah?",
-    "answers": [
-      "odelon machina",
-      "lyark master specialist",
-      "shampy"
-    ],
-    "display": "Odelon Machina",
-    "clue": "Mesin rubah berkecepatan tinggi",
     "points": 50
   },
   {
@@ -264,12 +258,9 @@
     "points": 45
   },
   {
-    "question": "Crysta armor legendaris yang memberikan MaxHP +3000, Physical Resistance +10%, Magic Resistance +10% adalah?",
+    "question": "Crysta armor hasil upgrade dari 'Boss Roga' yang memberikan MaxHP +3000 dan Resistance adalah?",
     "answers": [
-      "dx fighter",
-      "dx fighter ii",
-      "super death potum",
-      "dr leonardo"
+      "dx fighter"
     ],
     "display": "DX Fighter",
     "clue": "Crysta dari event kolaborasi robot tempur",
@@ -300,9 +291,7 @@
   {
     "question": "Skill Tier 4 Bow yang menembakkan panah vertikal ke langit lalu menghujam tanah berulang kali adalah?",
     "answers": [
-      "cross fire",
-      "arrow rain",
-      "snipe"
+      "cross fire"
     ],
     "display": "Cross Fire",
     "clue": "Memerlukan charging tembakan panah",
@@ -316,17 +305,6 @@
     ],
     "display": "Hora Diomedea",
     "clue": "Kota dengan bangunan tenda dan bebatuan gurun",
-    "points": 45
-  },
-  {
-    "question": "Skill pasif dari pohon Survival yang meningkatkan kapasitas batas tas penyimpanan item adalah?",
-    "answers": [
-      "play dead",
-      "sober analysis",
-      "collect drop"
-    ],
-    "display": "Collect Drop",
-    "clue": "Skill penting agar tas tidak cepat penuh",
     "points": 45
   },
   {
@@ -349,30 +327,29 @@
     "points": 45
   },
   {
-    "question": "Siapakah nama NPC bangsawan wanita kaya yang sering memberikan quest mewah di Kota Sofya?",
+    "question": "Siapakah nama NPC bangsawan wanita kaya bergaun merah muda yang sering memberikan quest mewah di Kota Sofya?",
     "answers": [
       "lefina"
     ],
     "display": "Lefina",
-    "clue": "Gadis bangsawan kaya bergaun merah muda",
+    "clue": "Gadis bangsawan kaya pencari Minotaur Skin",
     "points": 40
   },
   {
-    "question": "Mini Boss serigala berbulu abu-abu di Land of Chaos yang menjatuhkan bahan armor adalah?",
+    "question": "Mini Boss serigala buas di Land of Chaos yang menjatuhkan bahan perlengkapan adalah?",
     "answers": [
-      "cerberus",
-      "forest wolf"
+      "cerberus"
     ],
     "display": "Cerberus",
-    "clue": "Anjing raksasa penjaga berkepala buas",
+    "clue": "Monster buas penjaga berkepala serigala",
     "points": 45
   },
   {
-    "question": "Item konsumsi penambah Magic Attack (MATK) yang dibuat dari daging dan sayuran memasak di Land adalah?",
+    "question": "Item konsumsi penambah stat yang dimasak dari kebun rumah sendiri di Land adalah?",
     "answers": [
       "food buff",
       "buff masakan",
-      "pizza"
+      "masakan"
     ],
     "display": "Food Buff",
     "clue": "Masakan kuliner di kebun rumah sendiri",
@@ -408,5 +385,14 @@
     "display": "DEX",
     "clue": "Status ketangkasan tangan",
     "points": 40
+  },
+  {
+    "question": "Siapakah nama NPC pemilik Toko Serba Ada (General Store) di Kota Sofya?",
+    "answers": [
+      "sololo"
+    ],
+    "display": "Sololo",
+    "clue": "Pria pedagang penjual item konsumsi di Sofya",
+    "points": 45
   }
 ]
