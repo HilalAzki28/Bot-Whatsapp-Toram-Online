@@ -66,6 +66,17 @@ def get_group_leaderboard(chat_jid: str) -> str:
     reply += f"\nTotal Pemain Tercatat: {len(sorted_players)}"
     return reply.strip()
 
+def reset_group_leaderboard(chat_jid: str, reset_all: bool = False) -> bool:
+    with GAMES_LOCK:
+        board = load_leaderboard()
+        if reset_all:
+            board = {}
+        else:
+            if chat_jid in board:
+                del board[chat_jid]
+        save_leaderboard(board)
+        return True
+
 # ----------------- DATASET LOADERS -----------------
 
 def load_game_dataset(filename: str) -> list:
@@ -412,3 +423,4 @@ def check_game_answer(client, message, chat_jid: str, sender_jid: str, sender_na
         return True
 
     return False
+

@@ -5322,6 +5322,20 @@ def on_message(client: NewClient, message: MessageEv):
     elif lower_text in [",skor", ",topskor", ",leaderboard"]:
         client.reply_message(games.get_group_leaderboard(chat_jid_str), message)
 
+    elif lower_text == ",resetskor" or lower_text.startswith(",resetskor ") or lower_text == ",resetleaderboard" or lower_text.startswith(",resetleaderboard "):
+        admins_list = get_group_admins(client, chat_jid) if is_group else []
+        is_admin = sender_user in admins_list or clean_sender in admins_list or is_owner
+        if not is_admin:
+            client.reply_message("Peringatan: Perintah `,resetskor` hanya dapat digunakan oleh Admin Grup atau Owner Bot.", message)
+        else:
+            args = msg_text.split()
+            reset_all = is_owner and len(args) > 1 and args[1].lower() == "all"
+            games.reset_group_leaderboard(chat_jid_str, reset_all=reset_all)
+            if reset_all:
+                client.reply_message("Berhasil mereset seluruh leaderboard game di semua grup (Oleh Owner).", message)
+            else:
+                client.reply_message("Berhasil mereset skor game di grup ini. Papan klasemen telah kembali ke 0.", message)
+
     elif lower_text in [",game", ",games", ",permainan"]:
         game_help = (
             "🎮 *GAME INTERAKTIF BOT TORAM*\n\n"
@@ -5336,6 +5350,8 @@ def on_message(client: NewClient, message: MessageEv):
             "  └ Menyerah dan membuka seluruh kunci jawaban sesi aktif.\n\n"
             "• *,skor*\n"
             "  └ Melihat klasemen peringkat poin pemain di grup ini.\n\n"
+            "• *,resetskor*\n"
+            "  └ Mereset klasemen poin game di grup ini (Khusus Admin/Owner).\n\n"
             "💡 *Catatan:* Sesi permainan di grup ini bersifat mandiri dan tidak mengganggu grup lain!"
         )
         client.reply_message(game_help, message)
