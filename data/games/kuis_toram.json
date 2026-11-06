@@ -1,0 +1,125 @@
+[
+  {
+    "question": "Crysta manakah yang merupakan Upgrade lanjutan dari Crysta 'Kuffania' dan memiliki efek: Short Range Damage +10%, Long Range Damage -15%?",
+    "answers": [
+      "blanc"
+    ],
+    "display": "Blanc",
+    "clue": "Crysta Normal berelemen murni",
+    "points": 50
+  },
+  {
+    "question": "Apa nama kota utama tempat para petualang pertama kali memulai petualangan di Toram Online?",
+    "answers": [
+      "sofya",
+      "kota sofya",
+      "sofya city"
+    ],
+    "display": "Sofya City (Kota Sofya)",
+    "clue": "Kota dengan air mancur dan tangga besar di tengahnya",
+    "points": 40
+  },
+  {
+    "question": "Crysta apakah yang merupakan hasil upgrade dari 'Evil Lefina' (Lefina Jahat)?",
+    "answers": [
+      "mycodian",
+      "sanmurbon"
+    ],
+    "display": "Mycodian / Sanmurbon",
+    "clue": "Crysta berbentuk jamur mistis dari event",
+    "points": 50
+  },
+  {
+    "question": "Siapakah nama NPC pandai besi wanita berambut cokelat di Kota Sofya?",
+    "answers": [
+      "chalon",
+      "zono"
+    ],
+    "display": "Chalon",
+    "clue": "Menjaga meja Blacksmith NPC di Sofya",
+    "points": 45
+  },
+  {
+    "question": "Berapa batas maksimal jumlah pemain dalam satu Party standar di Toram Online (tanpa raid)?",
+    "answers": [
+      "4",
+      "empat"
+    ],
+    "display": "4 Pemain",
+    "clue": "Angka antara 3 dan 5",
+    "points": 35
+  },
+  {
+    "question": "Boss naga apakah yang bersemayam di Nisel Mountain dan menjatuhkan nisel wood?",
+    "answers": [
+      "brutal dragon decel",
+      "decel",
+      "naga brutal decel"
+    ],
+    "display": "Brutal Dragon Decel",
+    "clue": "Naga brutal berwarna cokelat batu",
+    "points": 45
+  },
+  {
+    "question": "Mata uang apakah yang digunakan untuk bertransaksi antar pemain di Papan Pasar (Consignment Board) Toram?",
+    "answers": [
+      "spina"
+    ],
+    "display": "Spina",
+    "clue": "Mata uang utama game Toram",
+    "points": 35
+  },
+  {
+    "question": "Apa nama Crysta legendaris penambah MaxMP +1000 yang dijatuhkan oleh Boss Venena Coenubia?",
+    "answers": [
+      "venena",
+      "venena coenubia"
+    ],
+    "display": "Venena",
+    "clue": "Nama boss ratu raksasa di Ultimea Palace",
+    "points": 45
+  },
+  {
+    "question": "Item consumable apakah yang biasa digunakan untuk langsung kembali ke Kota Sofya secara instan?",
+    "answers": [
+      "teleport sofya",
+      "teleport city of sofya",
+      "tp sofya",
+      "save point sofya"
+    ],
+    "display": "Teleport City of Sofya",
+    "clue": "Gulungan teleportasi kota",
+    "points": 40
+  },
+  {
+    "question": "Status (Stat) apakah yang menaikkan Physical Attack (ATK) utama bagi pengguna senjata One-Handed Sword (Pedang 1 Tangan)?",
+    "answers": [
+      "str",
+      "strength"
+    ],
+    "display": "STR (Strength)",
+    "clue": "Singkatan 3 huruf status kekuatan fisik",
+    "points": 40
+  },
+  {
+    "question": "Skill Tier 4 dari pohon skill Blade yang melakukan tebasan bayangan berkali-kali tanpa bisa diserang lawan adalah?",
+    "answers": [
+      "shining cross",
+      "buster blade",
+      "shut-out"
+    ],
+    "display": "Shining Cross",
+    "clue": "Skill tebasan silang bercahaya",
+    "points": 50
+  },
+  {
+    "question": "Crysta apakah yang merupakan kelanjutan upgrade dari 'Hero Potum' tingkat ke-2?",
+    "answers": [
+      "hero potum ii",
+      "potum pahlawan ii"
+    ],
+    "display": "Hero Potum II (Potum Pahlawan II)",
+    "clue": "Tier kedua dari crysta potum pahlawan",
+    "points": 45
+  }
+]

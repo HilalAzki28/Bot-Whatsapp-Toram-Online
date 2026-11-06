@@ -1,0 +1,452 @@
+[
+  {
+    "question": "Apa yang biasanya dicari orang saat bangun tidur di pagi hari?",
+    "answers": [
+      {
+        "text": "hp",
+        "display": "HP / Handphone",
+        "points": 35
+      },
+      {
+        "text": "kacamata",
+        "display": "Kacamata",
+        "points": 25
+      },
+      {
+        "text": "air minum",
+        "display": "Air Minum / Air",
+        "points": 20
+      },
+      {
+        "text": "jam",
+        "display": "Jam Dinding / Alarm",
+        "points": 15
+      },
+      {
+        "text": "sandal",
+        "display": "Sandal",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan alasan seseorang terlambat masuk kerja atau sekolah!",
+    "answers": [
+      {
+        "text": "macet",
+        "display": "Macet di Jalan",
+        "points": 40
+      },
+      {
+        "text": "bangun kesiangan",
+        "display": "Bangun Kesiangan",
+        "points": 30
+      },
+      {
+        "text": "ban bocor",
+        "display": "Ban Bocor / Kendaraan Mogok",
+        "points": 15
+      },
+      {
+        "text": "hujan",
+        "display": "Hujan Deras / Banjir",
+        "points": 10
+      },
+      {
+        "text": "sakit",
+        "display": "Sakit Tiba-tiba",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Apa yang biasa dilakukan orang saat sedang menunggu antrean lama?",
+    "answers": [
+      {
+        "text": "main hp",
+        "display": "Main HP / Medsos",
+        "points": 45
+      },
+      {
+        "text": "tidur",
+        "display": "Tidur / Mengantuk",
+        "points": 20
+      },
+      {
+        "text": "ngobrol",
+        "display": "Ngobrol / Curhat",
+        "points": 15
+      },
+      {
+        "text": "merokok",
+        "display": "Merokok",
+        "points": 10
+      },
+      {
+        "text": "baca",
+        "display": "Membaca Buku/Brosur",
+        "points": 10
+      }
+    ]
+  },
+  {
+    "question": "Benda apa yang paling sering tertinggal saat hendak bepergian keluar rumah?",
+    "answers": [
+      {
+        "text": "dompet",
+        "display": "Dompet",
+        "points": 35
+      },
+      {
+        "text": "hp",
+        "display": "HP / Handphone",
+        "points": 30
+      },
+      {
+        "text": "kunci",
+        "display": "Kunci Rumah / Motor",
+        "points": 20
+      },
+      {
+        "text": "charger",
+        "display": "Charger / Kabel",
+        "points": 10
+      },
+      {
+        "text": "masker",
+        "display": "Masker",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Makanan atau camilan apa yang paling nikmat disantap saat hujan?",
+    "answers": [
+      {
+        "text": "mie instan",
+        "display": "Mie Instan / Mie Kuah",
+        "points": 45
+      },
+      {
+        "text": "bakso",
+        "display": "Bakso",
+        "points": 25
+      },
+      {
+        "text": "gorengan",
+        "display": "Gorengan",
+        "points": 15
+      },
+      {
+        "text": "kopi",
+        "display": "Kopi Panas / Teh",
+        "points": 10
+      },
+      {
+        "text": "seblak",
+        "display": "Seblak",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan hewan peliharaan yang paling umum dipelihara di rumah!",
+    "answers": [
+      {
+        "text": "kucing",
+        "display": "Kucing",
+        "points": 40
+      },
+      {
+        "text": "anjing",
+        "display": "Anjing",
+        "points": 25
+      },
+      {
+        "text": "burung",
+        "display": "Burung",
+        "points": 15
+      },
+      {
+        "text": "ikan",
+        "display": "Ikan Hias",
+        "points": 12
+      },
+      {
+        "text": "hamster",
+        "display": "Hamster / Kelinci",
+        "points": 8
+      }
+    ]
+  },
+  {
+    "question": "Apa yang dilakukan orang jika kuota internetnya mendadak habis?",
+    "answers": [
+      {
+        "text": "minta hotspot",
+        "display": "Minta Hotspot / Tethering",
+        "points": 45
+      },
+      {
+        "text": "cari wifi",
+        "display": "Cari WiFi Gratis",
+        "points": 25
+      },
+      {
+        "text": "beli pulsa",
+        "display": "Beli Kuota / Pulsa",
+        "points": 18
+      },
+      {
+        "text": "tidur",
+        "display": "Tidur",
+        "points": 7
+      },
+      {
+        "text": "nonton tv",
+        "display": "Nonton TV",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan perlengkapan yang selalu ada di dalam kamar mandi!",
+    "answers": [
+      {
+        "text": "sabun",
+        "display": "Sabun Mandi",
+        "points": 35
+      },
+      {
+        "text": "sampo",
+        "display": "Sampo",
+        "points": 25
+      },
+      {
+        "text": "sikat gigi",
+        "display": "Sikat Gigi / Pasta Gigi",
+        "points": 20
+      },
+      {
+        "text": "gayung",
+        "display": "Gayung / Ember",
+        "points": 12
+      },
+      {
+        "text": "handuk",
+        "display": "Handuk",
+        "points": 8
+      }
+    ]
+  },
+  {
+    "question": "Apa yang biasa disiapkan orang sebelum pergi ke pantai?",
+    "answers": [
+      {
+        "text": "baju ganti",
+        "display": "Baju Ganti / Renang",
+        "points": 35
+      },
+      {
+        "text": "kacamata hitam",
+        "display": "Kacamata Hitam",
+        "points": 25
+      },
+      {
+        "text": "sunscreen",
+        "display": "Sunscreen / Tabir Surya",
+        "points": 20
+      },
+      {
+        "text": "makanan",
+        "display": "Makanan / Bekal",
+        "points": 12
+      },
+      {
+        "text": "kamera",
+        "display": "Kamera / HP",
+        "points": 8
+      }
+    ]
+  },
+  {
+    "question": "Pekerjaan rumah tangga apa yang paling melelahkan menurut ibu rumah tangga?",
+    "answers": [
+      {
+        "text": "mencuci baju",
+        "display": "Mencuci Baju",
+        "points": 35
+      },
+      {
+        "text": "menyetrika",
+        "display": "Menyetrika Baju",
+        "points": 30
+      },
+      {
+        "text": "memasak",
+        "display": "Memasak",
+        "points": 15
+      },
+      {
+        "text": "mengepel",
+        "display": "Mengepel Lantai",
+        "points": 12
+      },
+      {
+        "text": "cuci piring",
+        "display": "Mencuci Piring",
+        "points": 8
+      }
+    ]
+  },
+  {
+    "question": "Apa yang menyebabkan seseorang tiba-tiba tertawa sendirian?",
+    "answers": [
+      {
+        "text": "ingat hal lucu",
+        "display": "Mengingat Hal Lucu",
+        "points": 40
+      },
+      {
+        "text": "lihat hp",
+        "display": "Melihat Meme / HP",
+        "points": 30
+      },
+      {
+        "text": "dengar lelucon",
+        "display": "Mendengar Lelucon",
+        "points": 15
+      },
+      {
+        "text": "melamun",
+        "display": "Melamun",
+        "points": 10
+      },
+      {
+        "text": "gila",
+        "display": "Gangguan Jiwa",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Barang apa yang biasa dipinjam teman tapi sering lupa dikembalikan?",
+    "answers": [
+      {
+        "text": "pulpen",
+        "display": "Pulpen",
+        "points": 40
+      },
+      {
+        "text": "uang",
+        "display": "Uang",
+        "points": 30
+      },
+      {
+        "text": "korek api",
+        "display": "Korek Api",
+        "points": 15
+      },
+      {
+        "text": "charger",
+        "display": "Charger HP",
+        "points": 10
+      },
+      {
+        "text": "buku",
+        "display": "Buku / Catatan",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan jenis minuman segar yang paling laris saat cuaca panas terik!",
+    "answers": [
+      {
+        "text": "es teh",
+        "display": "Es Teh Manis",
+        "points": 45
+      },
+      {
+        "text": "es jeruk",
+        "display": "Es Jeruk",
+        "points": 20
+      },
+      {
+        "text": "es kelapa",
+        "display": "Es Kelapa Muda",
+        "points": 18
+      },
+      {
+        "text": "air putih dingin",
+        "display": "Air Mineral Dingin",
+        "points": 10
+      },
+      {
+        "text": "jus buah",
+        "display": "Jus Buah",
+        "points": 7
+      }
+    ]
+  },
+  {
+    "question": "Hal apa yang paling sering dibanggakan orang di media sosial?",
+    "answers": [
+      {
+        "text": "prestasi",
+        "display": "Prestasi / Gelar",
+        "points": 35
+      },
+      {
+        "text": "harta",
+        "display": "Harta / Barang Mewah",
+        "points": 30
+      },
+      {
+        "text": "pasangan",
+        "display": "Pasangan / Pacar",
+        "points": 18
+      },
+      {
+        "text": "liburan",
+        "display": "Liburan / Wisata",
+        "points": 12
+      },
+      {
+        "text": "makanan",
+        "display": "Makanan Mewah",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Apa yang dilakukan murid saat jam pelajaran kosong (guru tidak hadir)?",
+    "answers": [
+      {
+        "text": "tidur",
+        "display": "Tidur di Kelas",
+        "points": 35
+      },
+      {
+        "text": "main hp",
+        "display": "Main Game / HP",
+        "points": 30
+      },
+      {
+        "text": "ngobrol",
+        "display": "Ngobrol / Gosip",
+        "points": 20
+      },
+      {
+        "text": "ke kantin",
+        "display": "Pergi ke Kantin",
+        "points": 10
+      },
+      {
+        "text": "belajar",
+        "display": "Mengerjakan PR / Belajar",
+        "points": 5
+      }
+    ]
+  }
+]

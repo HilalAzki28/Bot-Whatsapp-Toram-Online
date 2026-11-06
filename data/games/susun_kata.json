@@ -1,0 +1,107 @@
+[
+  {
+    "scrambled": "T - O - R - A - M",
+    "answer": "toram",
+    "display": "TORAM",
+    "clue": "Game MMORPG petualangan seru tanpa batasan class",
+    "points": 40
+  },
+  {
+    "scrambled": "P - O - T - U - M",
+    "answer": "potum",
+    "display": "POTUM",
+    "clue": "Maskot monster bundar imut khas Toram Online",
+    "points": 40
+  },
+  {
+    "scrambled": "C - R - Y - S - T - A",
+    "answer": "crysta",
+    "display": "CRYSTA",
+    "clue": "Batu kristal sakti penambah stat di slot perlengkapan",
+    "points": 50
+  },
+  {
+    "scrambled": "P - A - H - L - A - W - A - N",
+    "answer": "pahlawan",
+    "display": "PAHLAWAN",
+    "clue": "Sosok gagah berani pembela kebenaran (Gelar Hero Potum)",
+    "points": 50
+  },
+  {
+    "scrambled": "B - L - A - C - K - S - M - I - T - H",
+    "answer": "blacksmith",
+    "display": "BLACKSMITH",
+    "clue": "Pandai besi pembuat dan penempa perlengkapan tempur",
+    "points": 60
+  },
+  {
+    "scrambled": "S - E - R - I - G - A - L - A",
+    "answer": "serigala",
+    "display": "SERIGALA",
+    "clue": "Hewan buas predator hutan (Forest Wolf)",
+    "points": 40
+  },
+  {
+    "scrambled": "K - A - T - A - N - A",
+    "answer": "katana",
+    "display": "KATANA",
+    "clue": "Pedang tradisional khas jepang yang sangat tajam",
+    "points": 40
+  },
+  {
+    "scrambled": "B - U - S - U - R",
+    "answer": "busur",
+    "display": "BUSUR",
+    "clue": "Senjata jarak jauh yang meluncurkan anak panah",
+    "points": 40
+  },
+  {
+    "scrambled": "H - A - L - B - E - R - D",
+    "answer": "halberd",
+    "display": "HALBERD",
+    "clue": "Senjata tombak kapak bertangkai panjang",
+    "points": 50
+  },
+  {
+    "scrambled": "P - E - R - I - S - A - I",
+    "answer": "perisai",
+    "display": "PERISAI",
+    "clue": "Alat pelindung pertahanan diri dari benturan senjata lawan",
+    "points": 40
+  },
+  {
+    "scrambled": "K - O - M - B - O",
+    "answer": "kombo",
+    "display": "KOMBO",
+    "clue": "Rangkaian jurus skill berturut-turut untuk menghemat MP",
+    "points": 40
+  },
+  {
+    "scrambled": "R - A - T - U",
+    "answer": "ratu",
+    "display": "RATU",
+    "clue": "Penguasa wanita bermahkota megah (Ancient Empress)",
+    "points": 35
+  },
+  {
+    "scrambled": "S - P - I - N - A",
+    "answer": "spina",
+    "display": "SPINA",
+    "clue": "Mata uang resmi perdagangan dunia Toram Online",
+    "points": 45
+  },
+  {
+    "scrambled": "R - A - M - U - A - N",
+    "answer": "ramuan",
+    "display": "RAMUAN",
+    "clue": "Cairan obat mujarab pemulih HP/MP seketika",
+    "points": 40
+  },
+  {
+    "scrambled": "I - B - L - I - S",
+    "answer": "iblis",
+    "display": "IBLIS",
+    "clue": "Makhluk jahat pembawa kegelapan dan kehancuran",
+    "points": 35
+  }
+]

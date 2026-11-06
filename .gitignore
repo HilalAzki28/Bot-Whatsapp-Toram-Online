@@ -22,6 +22,7 @@ data/warnings.json*
 data/group_messages_cache.json*
 data/group_subscriptions.json*
 data/banned_groups.json*
+data/games_leaderboard.json*
 *.bak
 *.backup
 data/*.bak

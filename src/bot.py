@@ -541,6 +541,7 @@ from db import (
     get_item_bilingual_name, get_translation_search_terms,
     TRAIT_TRANSLATIONS, format_trait_detail
 )
+import games
 from respon_bot import get_menu_text, ABOUT_TEXT, PING_TEXT, QUOTE_TEXT, MQ_TEXT, TAS_TEXT, SUNK_TEXT, get_pet_menu_text, format_pet_detail, STATLIST_TEXT, get_buff_response, calculate_mq_exp
 
 
@@ -5283,6 +5284,10 @@ def on_message(client: NewClient, message: MessageEv):
                     )
         return
 
+    # Cek apakah pesan merupakan jawaban tebakan permainan interaktif di grup ini
+    if is_group and games.check_game_answer(client, message, chat_jid_str, clean_sender, sender_name, msg_text):
+        return
+
     # Respon jika memanggil ditdut
     if "ditdut" in lower_text:
         client.reply_message("Ada yang bisa aku bantu? Silakan gunakan command *,menu* untuk melihat semua command yang tersedia.", message)
@@ -5302,6 +5307,39 @@ def on_message(client: NewClient, message: MessageEv):
     elif lower_text == ",about":
         send_image_reply(client, message, DSGIRL_IMAGE_PATH, ABOUT_TEXT)
         
+    elif lower_text in [",family100", ",f100"]:
+        games.start_family100(client, message, chat_jid_str)
+
+    elif lower_text in [",susunkata", ",tebakkata"]:
+        games.start_susun_kata(client, message, chat_jid_str)
+
+    elif lower_text in [",kuistoram", ",tebaktoram"]:
+        games.start_kuis_toram(client, message, chat_jid_str)
+
+    elif lower_text in [",nyerah", ",stopgame", ",surrender"]:
+        games.handle_surrender(client, message, chat_jid_str)
+
+    elif lower_text in [",skor", ",topskor", ",leaderboard"]:
+        client.reply_message(games.get_group_leaderboard(chat_jid_str), message)
+
+    elif lower_text in [",game", ",games", ",permainan"]:
+        game_help = (
+            "🎮 *GAME INTERAKTIF BOT TORAM*\n\n"
+            "Ayo bermain bareng anggota grup! Pilih salah satu permainan berikut:\n\n"
+            "• *,f100* (atau *,family100*)\n"
+            "  └ Game survei Family 100 seru dengan banyak jawaban.\n\n"
+            "• *,kuistoram*\n"
+            "  └ Kuis seru seputar boss, crysta, dan dunia Toram Online.\n\n"
+            "• *,susunkata*\n"
+            "  └ Asah otak menyusun huruf-huruf acak menjadi kata.\n\n"
+            "• *,nyerah*\n"
+            "  └ Menyerah dan membuka seluruh kunci jawaban sesi aktif.\n\n"
+            "• *,skor*\n"
+            "  └ Melihat klasemen peringkat poin pemain di grup ini.\n\n"
+            "💡 *Catatan:* Sesi permainan di grup ini bersifat mandiri dan tidak mengganggu grup lain!"
+        )
+        client.reply_message(game_help, message)
+
     elif lower_text == ",quote":
         client.reply_message(QUOTE_TEXT, message)
         
