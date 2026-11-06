@@ -448,5 +448,1055 @@
         "points": 5
       }
     ]
+  },
+  {
+    "question": "Sebutkan menu makanan yang paling sering dipesan di warteg (warung tegal)!",
+    "answers": [
+      {
+        "text": "ayam goreng",
+        "display": "Ayam Goreng",
+        "points": 35
+      },
+      {
+        "text": "telur balado",
+        "display": "Telur Balado / Dadar",
+        "points": 25
+      },
+      {
+        "text": "tempe orek",
+        "display": "Tempe Orek",
+        "points": 20
+      },
+      {
+        "text": "sayur sop",
+        "display": "Sayur Sop / Asem",
+        "points": 12
+      },
+      {
+        "text": "tahu",
+        "display": "Tahu Goreng / Bacem",
+        "points": 8
+      }
+    ]
+  },
+  {
+    "question": "Apa yang dilakukan orang ketika listrik di rumahnya tiba-tiba padam?",
+    "answers": [
+      {
+        "text": "nyalakan lilin",
+        "display": "Menyalakan Lilin / Senter",
+        "points": 40
+      },
+      {
+        "text": "lihat keluar",
+        "display": "Melihat Rumah Tetangga",
+        "points": 30
+      },
+      {
+        "text": "buka hp",
+        "display": "Mengecek HP / Lampu HP",
+        "points": 15
+      },
+      {
+        "text": "tidur",
+        "display": "Tidur",
+        "points": 10
+      },
+      {
+        "text": "gerah",
+        "display": "Kipas-kipas / Kepanasan",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan alasan orang berbohong kepada pasangannya!",
+    "answers": [
+      {
+        "text": "selingkuh",
+        "display": "Selingkuh",
+        "points": 40
+      },
+      {
+        "text": "takut dimarahi",
+        "display": "Takut Dimarahi / Bertengkar",
+        "points": 30
+      },
+      {
+        "text": "keluar bareng teman",
+        "display": "Nongkrong Bareng Teman",
+        "points": 15
+      },
+      {
+        "text": "beli barang",
+        "display": "Membeli Barang / Boros",
+        "points": 10
+      },
+      {
+        "text": "kejutan",
+        "display": "Memberi Kejutan / Hadiah",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan kendaraan umum yang paling sering digunakan masyarakat perkotaan!",
+    "answers": [
+      {
+        "text": "busway",
+        "display": "Busway / TransJakarta",
+        "points": 35
+      },
+      {
+        "text": "krl",
+        "display": "KRL / Kereta Commuter",
+        "points": 30
+      },
+      {
+        "text": "ojek online",
+        "display": "Ojek Online (Ojol)",
+        "points": 20
+      },
+      {
+        "text": "angkot",
+        "display": "Angkot (Angkutan Kota)",
+        "points": 10
+      },
+      {
+        "text": "mrt",
+        "display": "MRT / LRT",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Apa yang biasa dibeli orang saat singgah di minimarket (Indomaret/Alfamart)?",
+    "answers": [
+      {
+        "text": "minuman",
+        "display": "Minuman Dingin / Air Mineral",
+        "points": 35
+      },
+      {
+        "text": "rokok",
+        "display": "Rokok",
+        "points": 25
+      },
+      {
+        "text": "snack",
+        "display": "Snack / Camilan",
+        "points": 20
+      },
+      {
+        "text": "pulsa",
+        "display": "Pulsa / Token Listrik",
+        "points": 12
+      },
+      {
+        "text": "roti",
+        "display": "Roti",
+        "points": 8
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan topping atau isian martabak manis yang paling favorit!",
+    "answers": [
+      {
+        "text": "cokelat",
+        "display": "Cokelat / Mesis",
+        "points": 40
+      },
+      {
+        "text": "keju",
+        "display": "Keju",
+        "points": 30
+      },
+      {
+        "text": "kacang",
+        "display": "Kacang",
+        "points": 15
+      },
+      {
+        "text": "susu",
+        "display": "Susu Kental Manis",
+        "points": 10
+      },
+      {
+        "text": "pisang",
+        "display": "Pisang",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Apa yang menyebabkan seseorang sulit tidur (insomnia) di malam hari?",
+    "answers": [
+      {
+        "text": "banyak pikiran",
+        "display": "Banyak Pikiran / Stres",
+        "points": 40
+      },
+      {
+        "text": "main hp",
+        "display": "Bermain HP / Medsos",
+        "points": 30
+      },
+      {
+        "text": "ngopi",
+        "display": "Minum Kopi / Kafein",
+        "points": 15
+      },
+      {
+        "text": "tidur siang",
+        "display": "Kebanyakan Tidur Siang",
+        "points": 10
+      },
+      {
+        "text": "kepanasan",
+        "display": "Kepanasan / Suasana Berisik",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan jenis olahraga yang paling sering dimainkan pria di akhir pekan!",
+    "answers": [
+      {
+        "text": "futsal",
+        "display": "Futsal / Sepak Bola",
+        "points": 45
+      },
+      {
+        "text": "badminton",
+        "display": "Badminton / Bulu Tangkis",
+        "points": 25
+      },
+      {
+        "text": "jogging",
+        "display": "Jogging / Lari",
+        "points": 15
+      },
+      {
+        "text": "sepeda",
+        "display": "Bersepeda",
+        "points": 10
+      },
+      {
+        "text": "gym",
+        "display": "Fitness / Gym",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Apa yang membuat seseorang merasa gugup atau grogi?",
+    "answers": [
+      {
+        "text": "bicara di depan umum",
+        "display": "Bicara di Depan Umum / Presentasi",
+        "points": 40
+      },
+      {
+        "text": "ketemu gebetan",
+        "display": "Ketemu Gebetan / Pacar",
+        "points": 25
+      },
+      {
+        "text": "ujian",
+        "display": "Ujian / Sidang Skripsi",
+        "points": 20
+      },
+      {
+        "text": "wawancara kerja",
+        "display": "Wawancara Kerja (Interview)",
+        "points": 10
+      },
+      {
+        "text": "ditilang polisi",
+        "display": "Ditilang Polisi",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan buah yang rasanya asam dan sering dijadikan rujak!",
+    "answers": [
+      {
+        "text": "mangga muda",
+        "display": "Mangga Muda",
+        "points": 40
+      },
+      {
+        "text": "kedondong",
+        "display": "Kedondong",
+        "points": 25
+      },
+      {
+        "text": "nanas",
+        "display": "Nanas",
+        "points": 20
+      },
+      {
+        "text": "bengkuang",
+        "display": "Bengkuang",
+        "points": 10
+      },
+      {
+        "text": "jambu air",
+        "display": "Jambu Air",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Apa yang biasanya dicari turis saat berlibur ke Bali?",
+    "answers": [
+      {
+        "text": "pantai",
+        "display": "Pantai / Kuta / Canggu",
+        "points": 45
+      },
+      {
+        "text": "sunset",
+        "display": "Pemandangan Sunset",
+        "points": 25
+      },
+      {
+        "text": "oleh oleh",
+        "display": "Oleh-oleh / Pia Legong",
+        "points": 15
+      },
+      {
+        "text": "budaya",
+        "display": "Budaya / Pura / Tari Kecak",
+        "points": 10
+      },
+      {
+        "text": "klub malam",
+        "display": "Klub Malam / Beach Club",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan hal yang biasa dilakukan orang saat pertama kali pacaran!",
+    "answers": [
+      {
+        "text": "nonton bioskop",
+        "display": "Nonton Bioskop",
+        "points": 35
+      },
+      {
+        "text": "makan bareng",
+        "display": "Makan Bersama di Kafe",
+        "points": 30
+      },
+      {
+        "text": "pegangan tangan",
+        "display": "Bergandengan Tangan",
+        "points": 18
+      },
+      {
+        "text": "jalan jalan",
+        "display": "Jalan-jalan / Keliling Kota",
+        "points": 12
+      },
+      {
+        "text": "foto berdua",
+        "display": "Foto Berdua / Selfie",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Apa yang dilakukan pengendara motor saat hujan tiba-tiba turun deras?",
+    "answers": [
+      {
+        "text": "pakai jas hujan",
+        "display": "Memakai Jas Hujan",
+        "points": 45
+      },
+      {
+        "text": "teduh di jembatan",
+        "display": "Berteduh di Kolong Flyover / Jembatan",
+        "points": 30
+      },
+      {
+        "text": "teduh di pom bensin",
+        "display": "Berteduh di SPBU / Halte",
+        "points": 15
+      },
+      {
+        "text": "tetap jalan",
+        "display": "Menerobos Hujan",
+        "points": 7
+      },
+      {
+        "text": "masuk kafe",
+        "display": "Masuk Warung / Kafe",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan jenis pekerjaan yang mengharuskan seseorang bekerja di malam hari!",
+    "answers": [
+      {
+        "text": "satpam",
+        "display": "Satpam / Security",
+        "points": 40
+      },
+      {
+        "text": "dokter",
+        "display": "Dokter / Perawat",
+        "points": 25
+      },
+      {
+        "text": "polisi",
+        "display": "Polisi",
+        "points": 15
+      },
+      {
+        "text": "ojol",
+        "display": "Pengemudi Taksi / Ojol",
+        "points": 12
+      },
+      {
+        "text": "bartender",
+        "display": "Karyawan Hotel / Bartender",
+        "points": 8
+      }
+    ]
+  },
+  {
+    "question": "Apa yang sering dicari anak kost saat akhir bulan?",
+    "answers": [
+      {
+        "text": "mie instan",
+        "display": "Mie Instan (Indomie)",
+        "points": 45
+      },
+      {
+        "text": "pinjaman uang",
+        "display": "Pinjaman Uang / Kasbon",
+        "points": 25
+      },
+      {
+        "text": "makanan gratis",
+        "display": "Makanan Gratis / Hajatan",
+        "points": 15
+      },
+      {
+        "text": "promo diskon",
+        "display": "Promo Diskon Makanan",
+        "points": 10
+      },
+      {
+        "text": "telur",
+        "display": "Telur / Nasi Putih",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan benda yang wajib dibawa wanita di dalam tasnya!",
+    "answers": [
+      {
+        "text": "lipstik",
+        "display": "Lipstik / Make up",
+        "points": 40
+      },
+      {
+        "text": "dompet",
+        "display": "Dompet",
+        "points": 25
+      },
+      {
+        "text": "cermin",
+        "display": "Cermin Kecil",
+        "points": 15
+      },
+      {
+        "text": "tisu",
+        "display": "Tisu Basah / Kering",
+        "points": 12
+      },
+      {
+        "text": "sisir",
+        "display": "Sisir Rambut",
+        "points": 8
+      }
+    ]
+  },
+  {
+    "question": "Apa alasan utama seseorang memutuskan untuk berhenti merokok?",
+    "answers": [
+      {
+        "text": "kesehatan",
+        "display": "Faktor Kesehatan / Sakit",
+        "points": 45
+      },
+      {
+        "text": "boros",
+        "display": "Boros / Ingin Berhemat",
+        "points": 30
+      },
+      {
+        "text": "disuruh pasangan",
+        "display": "Diminta Pasangan / Keluarga",
+        "points": 15
+      },
+      {
+        "text": "punya anak",
+        "display": "Memiliki Bayi / Anak",
+        "points": 7
+      },
+      {
+        "text": "bau mulut",
+        "display": "Napas Bau",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan menu sarapan pagi yang paling populer di Indonesia!",
+    "answers": [
+      {
+        "text": "nasi uduk",
+        "display": "Nasi Uduk",
+        "points": 35
+      },
+      {
+        "text": "bubur ayam",
+        "display": "Bubur Ayam",
+        "points": 30
+      },
+      {
+        "text": "nasi goreng",
+        "display": "Nasi Goreng",
+        "points": 20
+      },
+      {
+        "text": "lontong sayur",
+        "display": "Lontong Sayur",
+        "points": 10
+      },
+      {
+        "text": "roti bakar",
+        "display": "Roti Bakar / Telur",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Apa yang dilakukan orang ketika bangun tidur di hari libur?",
+    "answers": [
+      {
+        "text": "tidur lagi",
+        "display": "Tidur Lagi / Rebahan",
+        "points": 50
+      },
+      {
+        "text": "main hp",
+        "display": "Scroll Medsos / Nonton YouTube",
+        "points": 25
+      },
+      {
+        "text": "olahraga",
+        "display": "Olahraga Pagi",
+        "points": 12
+      },
+      {
+        "text": "bersih rumah",
+        "display": "Membersihkan Kamar / Rumah",
+        "points": 8
+      },
+      {
+        "text": "nonton film",
+        "display": "Nonton Film / Drakor",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan hal yang sering diperdebatkan pasangan kekasih!",
+    "answers": [
+      {
+        "text": "mau makan di mana",
+        "display": "Mau Makan di Mana Terserah",
+        "points": 45
+      },
+      {
+        "text": "cemburu",
+        "display": "Cemburu / Punya Teman Lawan Jenis",
+        "points": 25
+      },
+      {
+        "text": "kabar",
+        "display": "Lupa Kabar / Lama Balas Chat",
+        "points": 15
+      },
+      {
+        "text": "uang",
+        "display": "Masalah Keuangan / Biaya Kencan",
+        "points": 10
+      },
+      {
+        "text": "waktu kencan",
+        "display": "Keterlambatan Waktu Kencan",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan jenis binatang yang sering ditakuti oleh orang dewasa!",
+    "answers": [
+      {
+        "text": "ular",
+        "display": "Ular",
+        "points": 40
+      },
+      {
+        "text": "kecoa",
+        "display": "Kecoa (Apalagi Terbang)",
+        "points": 30
+      },
+      {
+        "text": "tikus",
+        "display": "Tikus",
+        "points": 15
+      },
+      {
+        "text": "anjing galak",
+        "display": "Anjing Galak",
+        "points": 10
+      },
+      {
+        "text": "cacing",
+        "display": "Cacing / Ulat",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Apa yang biasa dibagikan orang saat merayakan ulang tahun?",
+    "answers": [
+      {
+        "text": "kue tart",
+        "display": "Kue Ulang Tahun (Kue Tart)",
+        "points": 40
+      },
+      {
+        "text": "nasi tumpeng",
+        "display": "Nasi Kotak / Tumpeng",
+        "points": 25
+      },
+      {
+        "text": "traktir makan",
+        "display": "Traktir Makan di Restoran",
+        "points": 20
+      },
+      {
+        "text": "bingkisan",
+        "display": "Souvenir / Goodie Bag",
+        "points": 10
+      },
+      {
+        "text": "permen",
+        "display": "Permen / Snack",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan tempat yang paling disukai remaja untuk nongkrong!",
+    "answers": [
+      {
+        "text": "kafe",
+        "display": "Kafe / Kedai Kopi",
+        "points": 45
+      },
+      {
+        "text": "mall",
+        "display": "Mall (Pusat Perbelanjaan)",
+        "points": 25
+      },
+      {
+        "text": "angkringan",
+        "display": "Angkringan / Warung Kopi (Warkop)",
+        "points": 18
+      },
+      {
+        "text": "taman kota",
+        "display": "Taman Kota",
+        "points": 7
+      },
+      {
+        "text": "rumah teman",
+        "display": "Rumah Teman",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Apa yang dilakukan orang jika nomornya dimasukkan ke grup WhatsApp asing?",
+    "answers": [
+      {
+        "text": "keluar grup",
+        "display": "Langsung Keluar Grup (Left Group)",
+        "points": 50
+      },
+      {
+        "text": "baca pesan",
+        "display": "Membaca Pesan / Menyimak Dulu",
+        "points": 25
+      },
+      {
+        "text": "mute",
+        "display": "Mute / Bisukan Notifikasi",
+        "points": 15
+      },
+      {
+        "text": "tanya siapa",
+        "display": "Bertanya Siapa yang Memasukkan",
+        "points": 7
+      },
+      {
+        "text": "lapor spam",
+        "display": "Laporkan Spam",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan jenis bunga yang sering dijadikan lambang ungkapan cinta!",
+    "answers": [
+      {
+        "text": "mawar merah",
+        "display": "Bunga Mawar",
+        "points": 55
+      },
+      {
+        "text": "melati",
+        "display": "Bunga Melati",
+        "points": 20
+      },
+      {
+        "text": "anggrek",
+        "display": "Bunga Anggrek",
+        "points": 12
+      },
+      {
+        "text": "tulip",
+        "display": "Bunga Tulip",
+        "points": 8
+      },
+      {
+        "text": "matahari",
+        "display": "Bunga Matahari",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Apa yang dicari seseorang ketika pertama kali menyewa kamar kost?",
+    "answers": [
+      {
+        "text": "kamar mandi dalam",
+        "display": "Kamar Mandi Dalam",
+        "points": 35
+      },
+      {
+        "text": "ac",
+        "display": "AC / Kipas Angin",
+        "points": 25
+      },
+      {
+        "text": "wifi",
+        "display": "WiFi Cepat Gratis",
+        "points": 20
+      },
+      {
+        "text": "kasur",
+        "display": "Kasur & Lemari",
+        "points": 12
+      },
+      {
+        "text": "parkiran",
+        "display": "Parkiran Motor Aman",
+        "points": 8
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan rasa es krim yang paling banyak disukai orang!",
+    "answers": [
+      {
+        "text": "cokelat",
+        "display": "Cokelat",
+        "points": 45
+      },
+      {
+        "text": "vanila",
+        "display": "Vanila",
+        "points": 25
+      },
+      {
+        "text": "stroberi",
+        "display": "Stroberi",
+        "points": 18
+      },
+      {
+        "text": "matcha",
+        "display": "Matcha / Teh Hijau",
+        "points": 7
+      },
+      {
+        "text": "kopi",
+        "display": "Kopi / Moka",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Apa alasan orang membuka kulkas padahal tidak sedang merasa lapar?",
+    "answers": [
+      {
+        "text": "bosan",
+        "display": "Bosan / Gabut",
+        "points": 45
+      },
+      {
+        "text": "cari minum",
+        "display": "Cari Minuman Dingin",
+        "points": 30
+      },
+      {
+        "text": "berharap ada makanan",
+        "display": "Berharap Tiba-tiba Ada Makanan",
+        "points": 15
+      },
+      {
+        "text": "ngadem",
+        "display": "Mencari Udara Dingin",
+        "points": 7
+      },
+      {
+        "text": "melamun",
+        "display": "Melamun Sendirian",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan profesi yang seragamnya berwarna putih!",
+    "answers": [
+      {
+        "text": "dokter",
+        "display": "Dokter / Perawat",
+        "points": 45
+      },
+      {
+        "text": "koki",
+        "display": "Koki / Chef",
+        "points": 25
+      },
+      {
+        "text": "pilot",
+        "display": "Pilot",
+        "points": 15
+      },
+      {
+        "text": "ilmuwan",
+        "display": "Ilmuwan / Peneliti Laboratorium",
+        "points": 10
+      },
+      {
+        "text": "pelaut",
+        "display": "Pelaut (Angkatan Laut)",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Apa yang membuat seseorang malas beranjak dari tempat tidurnya?",
+    "answers": [
+      {
+        "text": "hujan dingin",
+        "display": "Cuaca Hujan / Dingin",
+        "points": 45
+      },
+      {
+        "text": "lelah",
+        "display": "Badan Terasa Lelah",
+        "points": 25
+      },
+      {
+        "text": "hari libur",
+        "display": "Sedang Hari Libur",
+        "points": 15
+      },
+      {
+        "text": "selimut nyaman",
+        "display": "Kasur & Selimut Sangat Nyaman",
+        "points": 10
+      },
+      {
+        "text": "begadang",
+        "display": "Kurang Tidur Karena Begadang",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan perlengkapan yang selalu ada di atas meja kantor/belajar!",
+    "answers": [
+      {
+        "text": "laptop",
+        "display": "Laptop / Komputer",
+        "points": 40
+      },
+      {
+        "text": "pulpen",
+        "display": "Pulpen / Tempat Pensil",
+        "points": 25
+      },
+      {
+        "text": "buku",
+        "display": "Buku Catatan / Kertas",
+        "points": 15
+      },
+      {
+        "text": "botol minum",
+        "display": "Cangkir Kopi / Botol Air",
+        "points": 12
+      },
+      {
+        "text": "lampu belajar",
+        "display": "Lampu Meja",
+        "points": 8
+      }
+    ]
+  },
+  {
+    "question": "Apa yang biasa ditanyakan satpam perumahan kepada tamu yang datang?",
+    "answers": [
+      {
+        "text": "mau ke rumah siapa",
+        "display": "Mau ke Rumah Siapa / Blok Berapa?",
+        "points": 50
+      },
+      {
+        "text": "ada perlu apa",
+        "display": "Ada Perlu Apa?",
+        "points": 25
+      },
+      {
+        "text": "minta ktp",
+        "display": "Boleh Titip KTP / Identitas?",
+        "points": 15
+      },
+      {
+        "text": "dari mana",
+        "display": "Dari Mana?",
+        "points": 7
+      },
+      {
+        "text": "buka kaca",
+        "display": "Buka Kaca Mobil / Helm",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan jenis lauk pauk yang digoreng garing!",
+    "answers": [
+      {
+        "text": "ayam goreng",
+        "display": "Ayam Goreng Crispy",
+        "points": 40
+      },
+      {
+        "text": "tahu goreng",
+        "display": "Tahu Goreng",
+        "points": 25
+      },
+      {
+        "text": "tempe goreng",
+        "display": "Tempe Goreng",
+        "points": 20
+      },
+      {
+        "text": "ikan goreng",
+        "display": "Ikan Goreng",
+        "points": 10
+      },
+      {
+        "text": "bebek goreng",
+        "display": "Bebek Goreng",
+        "points": 5
+      }
+    ]
+  },
+  {
+    "question": "Apa yang dilakukan orang ketika foto KTP-nya dirasa kurang memuaskan?",
+    "answers": [
+      {
+        "text": "pasrah",
+        "display": "Pasrah Menerima Kenyataan",
+        "points": 45
+      },
+      {
+        "text": "sembunyikan",
+        "display": "Menyembunyikan KTP Dari Orang Lain",
+        "points": 30
+      },
+      {
+        "text": "tutup foto",
+        "display": "Menutupi Fotonya Pakai Stiker",
+        "points": 15
+      },
+      {
+        "text": "ingin foto ulang",
+        "display": "Mencoba Minta Foto Ulang",
+        "points": 7
+      },
+      {
+        "text": "edit digital",
+        "display": "Foto Diedit di Medsos",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "question": "Sebutkan acara televisi yang paling disukai oleh ibu-ibu di rumah!",
+    "answers": [
+      {
+        "text": "sinetron",
+        "display": "Sinetron Drama",
+        "points": 50
+      },
+      {
+        "text": "gosip",
+        "display": "Infotainment / Acara Gosip",
+        "points": 25
+      },
+      {
+        "text": "masak",
+        "display": "Acara Memasak",
+        "points": 12
+      },
+      {
+        "text": "berita",
+        "display": "Berita Kriminal / Seputar Indonesia",
+        "points": 8
+      },
+      {
+        "text": "ceramah",
+        "display": "Ceramah Agama",
+        "points": 5
+      }
+    ]
   }
 ]

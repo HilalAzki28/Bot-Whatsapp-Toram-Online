@@ -1,107 +1,352 @@
 [
   {
-    "scrambled": "T - O - R - A - M",
+    "scrambled": "",
     "answer": "toram",
     "display": "TORAM",
-    "clue": "Game MMORPG petualangan seru tanpa batasan class",
+    "clue": "Game MMORPG petualangan tanpa batasan class",
     "points": 40
   },
   {
-    "scrambled": "P - O - T - U - M",
+    "scrambled": "",
     "answer": "potum",
     "display": "POTUM",
     "clue": "Maskot monster bundar imut khas Toram Online",
     "points": 40
   },
   {
-    "scrambled": "C - R - Y - S - T - A",
+    "scrambled": "",
     "answer": "crysta",
     "display": "CRYSTA",
     "clue": "Batu kristal sakti penambah stat di slot perlengkapan",
     "points": 50
   },
   {
-    "scrambled": "P - A - H - L - A - W - A - N",
+    "scrambled": "",
     "answer": "pahlawan",
     "display": "PAHLAWAN",
-    "clue": "Sosok gagah berani pembela kebenaran (Gelar Hero Potum)",
+    "clue": "Sosok gagah pembela kebenaran (Gelar Hero Potum)",
     "points": 50
   },
   {
-    "scrambled": "B - L - A - C - K - S - M - I - T - H",
+    "scrambled": "",
     "answer": "blacksmith",
     "display": "BLACKSMITH",
     "clue": "Pandai besi pembuat dan penempa perlengkapan tempur",
     "points": 60
   },
   {
-    "scrambled": "S - E - R - I - G - A - L - A",
+    "scrambled": "",
     "answer": "serigala",
     "display": "SERIGALA",
     "clue": "Hewan buas predator hutan (Forest Wolf)",
     "points": 40
   },
   {
-    "scrambled": "K - A - T - A - N - A",
+    "scrambled": "",
     "answer": "katana",
     "display": "KATANA",
-    "clue": "Pedang tradisional khas jepang yang sangat tajam",
+    "clue": "Pedang tradisional Jepang yang sangat tajam",
     "points": 40
   },
   {
-    "scrambled": "B - U - S - U - R",
+    "scrambled": "",
     "answer": "busur",
     "display": "BUSUR",
-    "clue": "Senjata jarak jauh yang meluncurkan anak panah",
+    "clue": "Senjata jarak jauh peluncur anak panah",
     "points": 40
   },
   {
-    "scrambled": "H - A - L - B - E - R - D",
+    "scrambled": "",
     "answer": "halberd",
     "display": "HALBERD",
     "clue": "Senjata tombak kapak bertangkai panjang",
     "points": 50
   },
   {
-    "scrambled": "P - E - R - I - S - A - I",
+    "scrambled": "",
     "answer": "perisai",
     "display": "PERISAI",
     "clue": "Alat pelindung pertahanan diri dari benturan senjata lawan",
     "points": 40
   },
   {
-    "scrambled": "K - O - M - B - O",
+    "scrambled": "",
     "answer": "kombo",
     "display": "KOMBO",
-    "clue": "Rangkaian jurus skill berturut-turut untuk menghemat MP",
+    "clue": "Rangkaian jurus berturut-turut penghemat MP",
     "points": 40
   },
   {
-    "scrambled": "R - A - T - U",
+    "scrambled": "",
     "answer": "ratu",
     "display": "RATU",
     "clue": "Penguasa wanita bermahkota megah (Ancient Empress)",
     "points": 35
   },
   {
-    "scrambled": "S - P - I - N - A",
+    "scrambled": "",
     "answer": "spina",
     "display": "SPINA",
     "clue": "Mata uang resmi perdagangan dunia Toram Online",
     "points": 45
   },
   {
-    "scrambled": "R - A - M - U - A - N",
+    "scrambled": "",
     "answer": "ramuan",
     "display": "RAMUAN",
-    "clue": "Cairan obat mujarab pemulih HP/MP seketika",
+    "clue": "Cairan obat mujarab pemulih darah instan",
     "points": 40
   },
   {
-    "scrambled": "I - B - L - I - S",
+    "scrambled": "",
     "answer": "iblis",
     "display": "IBLIS",
     "clue": "Makhluk jahat pembawa kegelapan dan kehancuran",
+    "points": 35
+  },
+  {
+    "scrambled": "",
+    "answer": "naga",
+    "display": "NAGA",
+    "clue": "Makhluk mitologi reptil raksasa bersayap yang menyemburkan api",
+    "points": 35
+  },
+  {
+    "scrambled": "",
+    "answer": "panah",
+    "display": "PANAH",
+    "clue": "Senjata pendamping sub-weapon untuk busur",
+    "points": 35
+  },
+  {
+    "scrambled": "",
+    "answer": "belati",
+    "display": "BELATI",
+    "clue": "Pisau kecil tajam untuk serangan cepat menusuk",
+    "points": 40
+  },
+  {
+    "scrambled": "",
+    "answer": "tongkat",
+    "display": "TONGKAT",
+    "clue": "Senjata sihir utama para penyihir (Staff)",
+    "points": 40
+  },
+  {
+    "scrambled": "",
+    "answer": "mahkot",
+    "display": "MAHKOTA",
+    "clue": "Hiasan kepala simbol kekuasaan seorang raja atau ratu",
+    "points": 45
+  },
+  {
+    "scrambled": "",
+    "answer": "mantel",
+    "display": "MANTEL",
+    "clue": "Pakaian pelindung dingin yang disampirkan di bahu",
+    "points": 40
+  },
+  {
+    "scrambled": "",
+    "answer": "cincin",
+    "display": "CINCIN",
+    "clue": "Perhiasan melingkar di jari (Special Gear)",
+    "points": 35
+  },
+  {
+    "scrambled": "",
+    "answer": "gelang",
+    "display": "GELANG",
+    "clue": "Perhiasan melingkar yang dipakai di pergelangan tangan",
+    "points": 35
+  },
+  {
+    "scrambled": "",
+    "answer": "kalung",
+    "display": "KALUNG",
+    "clue": "Perhiasan indah yang dikenakan melingkari leher",
+    "points": 35
+  },
+  {
+    "scrambled": "",
+    "answer": "topeng",
+    "display": "TOPENG",
+    "clue": "Penutup wajah untuk menyamarkan identitas diri",
+    "points": 40
+  },
+  {
+    "scrambled": "",
+    "answer": "sayap",
+    "display": "SAYAP",
+    "clue": "Organ tubuh burung yang digunakan untuk terbang di udara",
+    "points": 35
+  },
+  {
+    "scrambled": "",
+    "answer": "tanduk",
+    "display": "TANDUK",
+    "clue": "Tonjolan keras runcing di kepala hewan banteng",
+    "points": 40
+  },
+  {
+    "scrambled": "",
+    "answer": "taring",
+    "display": "TARING",
+    "clue": "Gigi runcing tajam pemegang daging mangsa",
+    "points": 40
+  },
+  {
+    "scrambled": "",
+    "answer": "jamur",
+    "display": "JAMUR",
+    "clue": "Tumbuhan spora lembab yang sering tumbuh di kayu lapuk",
+    "points": 35
+  },
+  {
+    "scrambled": "",
+    "answer": "kelinci",
+    "display": "KELINCI",
+    "clue": "Hewan bertelinga panjang yang suka memakan wortel",
+    "points": 45
+  },
+  {
+    "scrambled": "",
+    "answer": "kucing",
+    "display": "KUCING",
+    "clue": "Hewan mamalia berbulu imut pemakan ikan bersuara meong",
+    "points": 40
+  },
+  {
+    "scrambled": "",
+    "answer": "anjing",
+    "display": "ANJING",
+    "clue": "Sahabat setia manusia yang pandai menggonggong",
+    "points": 40
+  },
+  {
+    "scrambled": "",
+    "answer": "merpati",
+    "display": "MERPATI",
+    "clue": "Burung lambang kesetiaan dan pembawa surat kabar",
+    "points": 45
+  },
+  {
+    "scrambled": "",
+    "answer": "harimau",
+    "display": "HARIMAU",
+    "clue": "Kucing besar bertaring loreng raja rimba hutan",
+    "points": 45
+  },
+  {
+    "scrambled": "",
+    "answer": "banteng",
+    "display": "BANTENG",
+    "clue": "Hewan bertubuh kekar berotot dengan sepasang tanduk",
+    "points": 45
+  },
+  {
+    "scrambled": "",
+    "answer": "komputer",
+    "display": "KOMPUTER",
+    "clue": "Perangkat elektronik pengolah data dan komputasi",
+    "points": 50
+  },
+  {
+    "scrambled": "",
+    "answer": "pesawat",
+    "display": "PESAWAT",
+    "clue": "Kendaraan bermesin yang mampu melesat di langit angkasa",
+    "points": 45
+  },
+  {
+    "scrambled": "",
+    "answer": "samudra",
+    "display": "SAMUDRA",
+    "clue": "Lautan air asin yang sangat luas membentang di bumi",
+    "points": 45
+  },
+  {
+    "scrambled": "",
+    "answer": "gunung",
+    "display": "GUNUNG",
+    "clue": "Daratan tinggi menjulang berketinggian ribuan meter",
+    "points": 40
+  },
+  {
+    "scrambled": "",
+    "answer": "pelangi",
+    "display": "PELANGI",
+    "clue": "Lengkungan warna-warni indah setelah hujan reda",
+    "points": 45
+  },
+  {
+    "scrambled": "",
+    "answer": "bintang",
+    "display": "BINTANG",
+    "clue": "Benda langit bercahaya kelap-kelip di malam gulita",
+    "points": 45
+  },
+  {
+    "scrambled": "",
+    "answer": "rembulan",
+    "display": "REMBULAN",
+    "clue": "Satelit alami penerang bumi di malam hari",
+    "points": 45
+  },
+  {
+    "scrambled": "",
+    "answer": "matahari",
+    "display": "MATAHARI",
+    "clue": "Pusat tata surya sumber cahaya dan kehangatan bumi",
+    "points": 45
+  },
+  {
+    "scrambled": "",
+    "answer": "sarapan",
+    "display": "SARAPAN",
+    "clue": "Kegiatan menyantap makanan di pagi hari sebelum beraktivitas",
+    "points": 45
+  },
+  {
+    "scrambled": "",
+    "answer": "sahabat",
+    "display": "SAHABAT",
+    "clue": "Teman dekat yang selalu setia menemani suka dan duka",
+    "points": 45
+  },
+  {
+    "scrambled": "",
+    "answer": "keluarga",
+    "display": "KELUARGA",
+    "clue": "Unit terkecil masyarakat yang terdiri dari ayah ibu anak",
+    "points": 50
+  },
+  {
+    "scrambled": "",
+    "answer": "sekolah",
+    "display": "SEKOLAH",
+    "clue": "Tempat menuntut ilmu dan belajar bersama guru",
+    "points": 40
+  },
+  {
+    "scrambled": "",
+    "answer": "perpustakaan",
+    "display": "PERPUSTAKAAN",
+    "clue": "Gedung tempat menyimpan ribuan koleksi buku",
+    "points": 60
+  },
+  {
+    "scrambled": "",
+    "answer": "petualang",
+    "display": "PETUALANG",
+    "clue": "Penjelajah pemberani yang gemar mencari pengalaman baru",
+    "points": 50
+  },
+  {
+    "scrambled": "",
+    "answer": "kebun",
+    "display": "KEBUN",
+    "clue": "Lahan tanah tempat bercocok tanam buah dan sayur",
     "points": 35
   }
 ]

@@ -146,6 +146,35 @@ def game_timeout_callback(client, chat_jid: str, game_type: str):
     except Exception as e:
         logging.error(f"Gagal mengirim pesan timeout game ke {chat_jid}: {e}")
 
+# Riwayat soal yang baru ditanyakan per grup agar tidak muncul soal yang sama berulang
+RECENT_QUESTIONS = {}
+
+def get_unique_question(chat_jid: str, game_type: str, dataset: list) -> dict:
+    if not dataset:
+        return None
+    if chat_jid not in RECENT_QUESTIONS:
+        RECENT_QUESTIONS[chat_jid] = {}
+    if game_type not in RECENT_QUESTIONS[chat_jid]:
+        RECENT_QUESTIONS[chat_jid][game_type] = []
+        
+    recent_list = RECENT_QUESTIONS[chat_jid][game_type]
+    available = [q for q in dataset if (q.get("question") or q.get("answer")) not in recent_list]
+    
+    # Jika seluruh soal sudah pernah dimainkan di grup ini, bersihkan riwayat agar berputar kembali
+    if not available:
+        recent_list.clear()
+        available = dataset
+        
+    chosen = random.choice(available)
+    q_key = chosen.get("question") or chosen.get("answer")
+    recent_list.append(q_key)
+    
+    max_history = max(5, int(len(dataset) * 0.75))
+    if len(recent_list) > max_history:
+        recent_list.pop(0)
+        
+    return chosen
+
 # 1. FAMILY 100
 def start_family100(client, message, chat_jid: str):
     with GAMES_LOCK:
@@ -160,7 +189,7 @@ def start_family100(client, message, chat_jid: str):
             client.reply_message("Gagal: Database soal Family 100 kosong atau tidak ditemukan.", message)
             return
 
-        question_data = random.choice(dataset)
+        question_data = get_unique_question(chat_jid, "family100", dataset)
         answers_state = []
         for a in question_data["answers"]:
             answers_state.append({
@@ -217,7 +246,7 @@ def start_susun_kata(client, message, chat_jid: str):
             client.reply_message("Gagal: Database soal Susun Kata kosong atau tidak ditemukan.", message)
             return
 
-        q = random.choice(dataset)
+        q = get_unique_question(chat_jid, "susunkata", dataset)
         raw_ans = q.get("display") or q["answer"]
         scrambled_display = generate_scrambled_letters(raw_ans)
         session = {
@@ -265,7 +294,7 @@ def start_kuis_toram(client, message, chat_jid: str):
             client.reply_message("Gagal: Database soal Kuis Toram kosong atau tidak ditemukan.", message)
             return
 
-        q = random.choice(dataset)
+        q = get_unique_question(chat_jid, "kuistoram", dataset)
         clean_ans = [clean_answer_text(a) for a in q.get("answers", [])]
         session = {
             "game_type": "kuistoram",

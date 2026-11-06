@@ -121,5 +121,292 @@
     "display": "Hero Potum II (Potum Pahlawan II)",
     "clue": "Tier kedua dari crysta potum pahlawan",
     "points": 45
+  },
+  {
+    "question": "Boss raksasa berkepala banteng yang berada di Ruined Temple dan menjatuhkan Minotaur Skin adalah?",
+    "answers": [
+      "minotaur"
+    ],
+    "display": "Minotaur",
+    "clue": "Monster banteng bertubuh manusia berotot",
+    "points": 40
+  },
+  {
+    "question": "Apa nama item material yang sangat terkenal di Nisel Mountain untuk quest leveling cepat di Sofya?",
+    "answers": [
+      "nisel wood",
+      "kayu nisel"
+    ],
+    "display": "Nisel Wood (Kayu Nisel)",
+    "clue": "Didapat dari membunuh monster Colon Nisel",
+    "points": 40
+  },
+  {
+    "question": "Skill Tier 4 Magic yang membutuhkan waktu cast lama dan menciptakan pusaran sihir kehancuran dahsyat adalah?",
+    "answers": [
+      "finale",
+      "magic finale"
+    ],
+    "display": "Magic: Finale",
+    "clue": "Skill pamungkas para Mage",
+    "points": 45
+  },
+  {
+    "question": "Boss naga berelemen api merah yang berada di Fiery Volcano adalah?",
+    "answers": [
+      "flare volg",
+      "volg"
+    ],
+    "display": "Flare Volg",
+    "clue": "Naga api yang memiliki cakar membara",
+    "points": 45
+  },
+  {
+    "question": "Siapakah nama gadis mungil berambut oranye pedagang keliling yang menemani perjalanan karakter utama Toram?",
+    "answers": [
+      "pelulu"
+    ],
+    "display": "Pelulu",
+    "clue": "Pedagang cilik cerdik dari bangsa Elves",
+    "points": 40
+  },
+  {
+    "question": "Crysta apakah yang memberikan stat Critical Rate +20, ATK +5%, dan merupakan boss di Dark Castle?",
+    "answers": [
+      "black shadow",
+      "bayangan hitam"
+    ],
+    "display": "Black Shadow",
+    "clue": "Bayangan berwujud sosok kegelapan",
+    "points": 50
+  },
+  {
+    "question": "Item mineral apakah yang paling tinggi tingkatannya untuk melakukan penempaan (refining) perlengkapan ke tingkat +S?",
+    "answers": [
+      "orichalcum",
+      "high purity orichalcum",
+      "ori"
+    ],
+    "display": "High Purity Orichalcum",
+    "clue": "Logam langka berkilau keemasan",
+    "points": 50
+  },
+  {
+    "question": "Kota terapung bernuansa istana megah tempat tinggal bangsa Elfo yang dipimpin oleh Raja Elbano adalah?",
+    "answers": [
+      "el scaro",
+      "elscaro"
+    ],
+    "display": "El Scaro",
+    "clue": "Kota megah dengan air terjun dan kubah biru",
+    "points": 45
+  },
+  {
+    "question": "Boss pohon labu yang hanya muncul saat event perayaan Halloween di Toram Online adalah?",
+    "answers": [
+      "pumpking"
+    ],
+    "display": "Pumpking",
+    "clue": "Raja berkepala labu seram oranye",
+    "points": 40
+  },
+  {
+    "question": "Skill dari pohon Halberd Tier 4 yang menusuk target dan mengabaikan sebagian Physical Defense musuh adalah?",
+    "answers": [
+      "strike stab",
+      "dive impact",
+      "dragon tooth"
+    ],
+    "display": "Dragon Tooth",
+    "clue": "Lompatan tinggi menusuk ke bawah",
+    "points": 50
+  },
+  {
+    "question": "Monster mini boss berbentuk rubah putih berekor sembilan di Wazeero Street adalah?",
+    "answers": [
+      "odelon machina",
+      "lyark master specialist",
+      "shampy"
+    ],
+    "display": "Odelon Machina",
+    "clue": "Mesin rubah berkecepatan tinggi",
+    "points": 50
+  },
+  {
+    "question": "Berapa slot maksimal (socket) yang bisa dimiliki oleh satu senjata di Toram Online?",
+    "answers": [
+      "2",
+      "dua",
+      "2 slot"
+    ],
+    "display": "2 Slot",
+    "clue": "Bisa dibuka menggunakan Piercer",
+    "points": 35
+  },
+  {
+    "question": "Item apakah yang digunakan untuk melubangi slot ke-1 pada senjata tipe Katana?",
+    "answers": [
+      "katana piercer",
+      "piercer katana"
+    ],
+    "display": "Katana Piercer",
+    "clue": "Item spesial berbentuk jarum penembus",
+    "points": 45
+  },
+  {
+    "question": "Boss naga kegelapan yang memiliki sayap besar dan berada di Dark Dragon Shrine adalah?",
+    "answers": [
+      "finstern",
+      "finstern the dark dragon"
+    ],
+    "display": "Finstern the Dark Dragon",
+    "clue": "Naga gelap perkasa penguasa kegelapan",
+    "points": 45
+  },
+  {
+    "question": "Crysta armor legendaris yang memberikan MaxHP +3000, Physical Resistance +10%, Magic Resistance +10% adalah?",
+    "answers": [
+      "dx fighter",
+      "dx fighter ii",
+      "super death potum",
+      "dr leonardo"
+    ],
+    "display": "DX Fighter",
+    "clue": "Crysta dari event kolaborasi robot tempur",
+    "points": 50
+  },
+  {
+    "question": "Apa nama consumable ramuan pemulih HP warna merah yang paling umum dibuat oleh alchemist?",
+    "answers": [
+      "revita",
+      "revita vi",
+      "revita v",
+      "revita iv"
+    ],
+    "display": "Revita",
+    "clue": "Obat merah pemulih darah",
+    "points": 35
+  },
+  {
+    "question": "Boss berbentuk peti harta karun palsu yang menjebak petualang di Dark Anon Road adalah?",
+    "answers": [
+      "imitator",
+      "imitacia"
+    ],
+    "display": "Imitator",
+    "clue": "Peti bergigi tajam yang bisa melompat",
+    "points": 45
+  },
+  {
+    "question": "Skill Tier 4 Bow yang menembakkan panah vertikal ke langit lalu menghujam tanah berulang kali adalah?",
+    "answers": [
+      "cross fire",
+      "arrow rain",
+      "snipe"
+    ],
+    "display": "Cross Fire",
+    "clue": "Memerlukan charging tembakan panah",
+    "points": 50
+  },
+  {
+    "question": "Kota kuno di tengah gurun pasir tempat para pejuang bangsa Diel tinggal adalah?",
+    "answers": [
+      "hora diomedea",
+      "hora"
+    ],
+    "display": "Hora Diomedea",
+    "clue": "Kota dengan bangunan tenda dan bebatuan gurun",
+    "points": 45
+  },
+  {
+    "question": "Skill pasif dari pohon Survival yang meningkatkan kapasitas batas tas penyimpanan item adalah?",
+    "answers": [
+      "play dead",
+      "sober analysis",
+      "collect drop"
+    ],
+    "display": "Collect Drop",
+    "clue": "Skill penting agar tas tidak cepat penuh",
+    "points": 45
+  },
+  {
+    "question": "Benda apakah yang dipasang pada Pet untuk meningkatkan stat dan memberikan kemampuan unik?",
+    "answers": [
+      "trait",
+      "pet trait"
+    ],
+    "display": "Trait",
+    "clue": "Bakat alami bawaan pet peliharaan",
+    "points": 40
+  },
+  {
+    "question": "Crysta upgrade lanjutan dari 'Seele Zauga' adalah?",
+    "answers": [
+      "seele zauga ii"
+    ],
+    "display": "Seele Zauga II",
+    "clue": "Menambah nomor angka romawi dua di belakangnya",
+    "points": 45
+  },
+  {
+    "question": "Siapakah nama NPC bangsawan wanita kaya yang sering memberikan quest mewah di Kota Sofya?",
+    "answers": [
+      "lefina"
+    ],
+    "display": "Lefina",
+    "clue": "Gadis bangsawan kaya bergaun merah muda",
+    "points": 40
+  },
+  {
+    "question": "Mini Boss serigala berbulu abu-abu di Land of Chaos yang menjatuhkan bahan armor adalah?",
+    "answers": [
+      "cerberus",
+      "forest wolf"
+    ],
+    "display": "Cerberus",
+    "clue": "Anjing raksasa penjaga berkepala buas",
+    "points": 45
+  },
+  {
+    "question": "Item konsumsi penambah Magic Attack (MATK) yang dibuat dari daging dan sayuran memasak di Land adalah?",
+    "answers": [
+      "food buff",
+      "buff masakan",
+      "pizza"
+    ],
+    "display": "Food Buff",
+    "clue": "Masakan kuliner di kebun rumah sendiri",
+    "points": 40
+  },
+  {
+    "question": "Crysta upgrade lanjutan dari 'Megiston the Champion VIII' adalah?",
+    "answers": [
+      "megiston ix",
+      "megiston the champion ix"
+    ],
+    "display": "Megiston The Champion IX",
+    "clue": "Gelar sang juara arena turnamen tingkat sembilan",
+    "points": 50
+  },
+  {
+    "question": "Tempat apakah yang bisa dihias dengan perabotan, ditanami sayuran, dan memelihara hewan peliharaan di Toram?",
+    "answers": [
+      "land",
+      "your land",
+      "rumah"
+    ],
+    "display": "Land (Your Land)",
+    "clue": "Lahan pribadi milik setiap pemain",
+    "points": 35
+  },
+  {
+    "question": "Status apakah yang wajib ditingkatkan oleh karakter bertipe Magic untuk mempercepat waktu merapal mantra (CSPD)?",
+    "answers": [
+      "dex",
+      "dexterity"
+    ],
+    "display": "DEX",
+    "clue": "Status ketangkasan tangan",
+    "points": 40
   }
 ]
