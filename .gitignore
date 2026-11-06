@@ -1,0 +1,35 @@
+# Python Cache & Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# WhatsApp Session & Temp Files (JANGAN DI-UPLOAD DEMI KEAMANAN AKUN!)
+whatsapp_session.sqlite3*
+whatsapp_qr.png
+
+# Environment & Virtual Environments
+.env
+.venv/
+env/
+venv/
+
+# State Tracker Data Temporary (Opsional di-ignore agar terbuat baru)
+data/waifu_limit.json
+data/husbu_limit.json
+data/warnings.json
+data/group_messages_cache.json
+data/group_subscriptions.json
+data/banned_groups.json
+
+# IDEs & Editor Files
+scratch/
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS Generated Files
+.DS_Store
+Thumbs.db

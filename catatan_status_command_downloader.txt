@@ -1,0 +1,87 @@
+====================================================================
+CATATAN STATUS PENGUJIAN COMMAND DOWNLOADER & UPDATE BOT WHATSAPP
+Tanggal : 30 Oktober 2026
+Project : Bot WhatsApp Toram Online (ditdut-wa-bot)
+====================================================================
+
+1. COMMAND YANG SUDAH BERHASIL (TESTED & WORKING)
+--------------------------------------------------------------------
+[OK] ,music <judul_lagu>
+     - Status     : Berhasil
+     - Keterangan : Mengunduh dan mengirimkan output audio lagu yang
+                    langsung bisa diputar (playable) di WhatsApp.
+
+[OK] ,tt <link> (Alias: ,tiktok)
+     - Status     : Berhasil
+     - Keterangan : Mengunduh video TikTok tanpa watermark dan dikirim
+                    sebagai video playable di WhatsApp.
+
+[OK] ,fb <link> (Alias: ,facebook)
+     - Status     : Berhasil
+     - Keterangan : Mengunduh video/Reels Facebook dan dikirim sebagai
+                    video playable di WhatsApp.
+
+[OK] ,ig <link> (Alias: ,instagram)
+     - Status     : Berhasil
+     - Keterangan : Mengunduh video/Reels Instagram dan dikirim sebagai
+                    video playable di WhatsApp.
+
+[OK] ,xtall & ,rute (Database Crysta & Opsi Pilihan Interaktif)
+     - Status     : Berhasil
+     - Keterangan : - Penambahan Crysta Normal "Blanc" (Upgrade dari Kuffania)
+                    - Penambahan Crysta Special/Ring "Lunar Grace"
+                    - Fitur tombol opsi pilihan saat terdapat lebih dari
+                      1 kecocokan nama Crysta.
+
+
+2. COMMAND YANG MASIH GAGAL / PERLU PERBAIKAN (FAILED)
+--------------------------------------------------------------------
+[GAGAL] ,yt <link> (Alias: ,youtube, ,ytdl)
+        - Platform   : YouTube Video / Shorts
+        - Status     : Gagal digunakan saat pengujian
+        - Catatan    : Perlu perbaikan lebih lanjut pada jalur ekstraksi
+                       stream video MP4 YouTube di IP VPS (bypass blokir
+                       bot YouTube / pemilihan API konverter MP4 yang
+                       lebih stabil).
+
+[GAGAL] ,pin <link> (Alias: ,pinterest)
+        - Platform   : Pinterest Video / Pin
+        - Status     : Gagal digunakan saat pengujian
+        - Catatan    : Perlu perbaikan pada parser halaman/API Pinterest
+                       untuk mengekstrak URL video MP4 dari shortlink
+                       pin.it maupun halaman pin langsung.
+
+
+3. COMMAND YANG BELUM DI-TEST (PENDING TEST)
+--------------------------------------------------------------------
+[BELUM DITEST] ,x <link> / ,tw <link> (Alias: ,twitter)
+               - Platform : Twitter / X Video
+               - Contoh   : ,x https://x.com/user/status/xxxx
+
+[BELUM DITEST] ,cc <link> (Alias: ,capcut)
+               - Platform : CapCut Template / Video
+               - Contoh   : ,cc https://www.capcut.com/t/xxxx/
+
+[BELUM DITEST] ,sv <link> (Alias: ,snackvideo)
+               - Platform : SnackVideo
+               - Contoh   : ,sv https://s.snackvideo.com/p/xxxx
+
+[BELUM DITEST] ,sp <link> (Alias: ,spotify)
+               - Platform : Spotify Track Audio
+               - Contoh   : ,sp https://open.spotify.com/track/xxxx
+
+[BELUM DITEST] ,sc <link> (Alias: ,soundcloud)
+               - Platform : SoundCloud Track Audio
+               - Contoh   : ,sc https://soundcloud.com/artist/track
+
+[BELUM DITEST] ,th <link> (Alias: ,threads)
+               - Platform : Threads Video
+               - Contoh   : ,th https://www.threads.net/@user/post/xxxx
+
+====================================================================
+RENCANA TINDAK LANJUT (TODO SELANJUTNYA):
+1. Memperbaiki extractor command ,yt dan ,pin hingga berhasil 100%.
+2. Melakukan pengujian satu per satu untuk command ,x, ,cc, ,sv, ,sp,
+   ,sc, dan ,th serta memperbaiki jika ditemukan kendala.
+====================================================================
+

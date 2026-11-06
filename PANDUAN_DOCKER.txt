@@ -1,0 +1,111 @@
+================================================================================
+PANDUAN LENGKAP PENGOPERASIAN DOCKER BOT WHATSAPP TORAM ONLINE
+================================================================================
+
+Folder Proyek di VPS : ~/ditdut-wa-bot
+Nama Container       : ditdut-wa-bot
+
+--------------------------------------------------------------------------------
+1. CARA MENJALANKAN & MENGAKSES DOCKER BOT
+--------------------------------------------------------------------------------
+Pastikan selalu masuk ke folder proyek terlebih dahulu:
+  cd ~/ditdut-wa-bot
+
+- Menjalankan bot (di background):
+  docker compose up -d
+
+- Melihat status container (apakah berjalan / exit):
+  docker compose ps
+  (atau: docker ps)
+
+- Melihat log bot secara realtime (seperti memantau terminal bot):
+  docker compose logs -f
+  (Tekan Ctrl+C untuk keluar dari log tanpa mematikan bot)
+
+- Melihat 100 baris log terakhir:
+  docker compose logs --tail=100
+
+- Merestart bot:
+  docker compose restart
+
+- Menghentikan bot sementara:
+  docker compose stop
+
+- Mematikan dan melepas container:
+  docker compose down
+
+- Masuk ke dalam terminal/shell container (untuk cek file di dalam docker):
+  docker exec -it ditdut-wa-bot bash
+
+- Memantau penggunaan RAM & CPU bot:
+  docker stats --no-stream
+
+
+--------------------------------------------------------------------------------
+2. CARA UPDATE CODE / UPLOAD PERUBAHAN
+--------------------------------------------------------------------------------
+Pertanyaan: Apakah cukup git pull saja?
+Jawaban   : TIDAK cukup git pull saja.
+
+Penjelasan:
+Source code bot disalin ke dalam image Docker saat proses "build".
+Jika Anda hanya menjalankan "git pull", file di direktori VPS memang berubah,
+tetapi container Docker yang sedang berjalan masih menggunakan image lama.
+
+Langkah resmi untuk menerapkan perubahan:
+  1. Masuk ke folder proyek:
+     cd ~/ditdut-wa-bot
+
+  2. Tarik kode terbaru:
+     git pull
+
+  3. Build ulang image dan jalankan versi baru:
+     docker compose up -d --build
+
+Catatan Penting:
+- Perintah "docker compose up -d --build" akan otomatis mendeteksi perubahan,
+  memperbarui image, dan me-restart container dengan kode baru.
+- Data sesi WhatsApp (whatsapp_session.sqlite3) dan folder database (data/)
+  TIDAK AKAN HILANG atau ter-reset karena sudah di-mount sebagai volume ke VPS.
+- Sesi login WhatsApp tetap aman dan bot tidak perlu scan QR ulang.
+
+
+--------------------------------------------------------------------------------
+3. AUTOSTART SAAT VPS REBOOT (OTOMATIS RUNNING)
+--------------------------------------------------------------------------------
+Pertanyaan: Apakah perlu membuat service.d atau systemd baru?
+Jawaban   : TIDAK PERLU.
+
+Penjelasan:
+Di dalam docker-compose.yml sudah terdapat baris:
+  restart: unless-stopped
+
+Artinya, Docker daemon secara otomatis akan menyalakan container bot kembali
+setiap kali sistem atau VPS baru saja reboot, asalkan Docker service itu sendiri
+aktif saat booting.
+
+Yang perlu dipastikan hanya satu kali di terminal VPS:
+  1. Aktifkan service docker saat booting:
+     systemctl enable docker
+
+  2. Cek apakah sudah aktif saat boot:
+     systemctl is-enabled docker
+     (Jika outputnya "enabled", maka sudah berhasil)
+
+Dengan konfigurasi ini, jika VPS mati listrik / restart / reboot, bot akan
+langsung otomatis hidup kembali tanpa perlu Anda login dan ketik perintah apapun.
+
+
+--------------------------------------------------------------------------------
+4. TIPS PERAWATAN DISK VPS (SPEK 15 GB)
+--------------------------------------------------------------------------------
+Setelah beberapa kali melakukan "git pull" dan "docker compose up -d --build",
+Docker biasanya menyisakan image lama yang sudah tidak terpakai (<none>).
+Untuk membersihkan sisa build lama dan menghemat ruang disk 15 GB:
+
+  docker image prune -f
+
+Perintah ini aman dijalankan kapan saja dan hanya menghapus image bekas/lama
+yang sudah tidak dipakai oleh container yang sedang aktif.
+================================================================================
+

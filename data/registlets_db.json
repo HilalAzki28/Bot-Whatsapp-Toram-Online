@@ -1,0 +1,1108 @@
+[
+    {
+        "name": "Wind Talent",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Wind element skills",
+        "effect": "Sets skill effects that change based on element to wind element",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Water Talent",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Water element skills",
+        "effect": "Sets skill effects that change based on element to Water element",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Water Release: Aqua Mirror",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Water Release",
+        "effect": "Changes \"Water Release\" from a deployable skill to a buff skill",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Violent Lunar Misfortune",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Lunar Misfortune",
+        "effect": "While Storm Reaper's buff is active the skill \"Lunar Misfortune\" becomes a close-range attack regardless of distance. (15 - Regislet Level) seconds cooldown after activation",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Unsheather Wind Release",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Wind Release",
+        "effect": "Adds Magic Pierce (5% per Regislet Level) attribute to the skill \"Wind Release\" and when the skill changes, an Unsheathe Attack attribute is added",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Target Declaration",
+        "max_lv": "Max Lv 1",
+        "affects": "",
+        "effect": "When you are drawing the enemy's attention (aggro), you will declare it through Party Chat. If it is a Guild RAID, you will declare it through Say Chat",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Sprint Sheathe Remover",
+        "max_lv": "Max Lv 1",
+        "affects": "",
+        "effect": "Sheathing while moving will no longer occur",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Sneak Attack Timer",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Sneak Attack",
+        "effect": "The skill \"Sneak Attack\" changes into a time-based buff instead of remaining use-based",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Role Model",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Greatly suppresses your own damage output to increase your party members' EXP Gain by 1(+1 per Regislet Level)%",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Red Zone Shield",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Reduces the damage from monster attacks shown with a red warning by 1(+1 per Regislet Level)%. However, damage taken from single-target attacks increases by 10%(disadvantage) This damage reduction applies multiplicatively with other damage reductions such as Refinement, Resistance",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Purifying Twin Buster Blade",
+        "max_lv": "Max Lv 3",
+        "affects": "Affects Twin Buster Blade",
+        "effect": "The power of \"Twin Buster Blade\" now increases based on the number of debuffs (max 1 types × Regislet Level ) on the target",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Protection Aegis",
+        "max_lv": "Max Lv 1",
+        "affects": "",
+        "effect": "When [Protection] is activated, the [Aegis] you've acquired will also be activated at the same time. Likewise, when [Aegis] is activated, the [Protection] you've acquired will also be activated at the same time",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Perfect Triple Thrust",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Triple Thrust",
+        "effect": "Restores (10 × Regislet Level) MP if [Triple Thrust] is successfully activated without taking any damage when used alone",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Parrier Storm Blaze",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Storm Blaze",
+        "effect": "A Guard check is added to the skill \"Storm Blaze\". A successful Guard will double the amount of MP recovered",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Moonlight Crescent Saber",
+        "max_lv": "Max Lv 5",
+        "affects": "Affects Crescent Saber",
+        "effect": "While \"Crescent Saber\" is active, all aggro generated will be reduced by 15% per Regislet Level. This effect does not activate if you are being targeted",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Meteor Magic: Crash",
+        "max_lv": "Max Lv 5",
+        "affects": "Affects Magic: Crash",
+        "effect": "The meteorites from \"Magic: Crash\" become much smaller in size, but the time of impact is shortened by (0.1 × Regislet Level - 0.1) and all meteorites will drop down even when not hitting the target",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Mega Demon Wind Shuriken",
+        "max_lv": "Max Lv 2",
+        "affects": "",
+        "effect": "MP Cost of [Demon Wind Shuriken] increases by [200 - (100 × Regislet Level)], but, in exchange, the number of times the shuriken can hit without reduced damage is increased by 1",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Maximizer Converter",
+        "max_lv": "Max Lv 1",
+        "affects": "",
+        "effect": "Switches [Maximizer] to activate MP Charge instead when used alone Not part of a combo and the condition for instant activation is not met",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Magic: Storm Extender",
+        "max_lv": "Max Lv 5",
+        "affects": "Affects Magic: Storm",
+        "effect": "Lowers the power of \"Magic: Storm\" by 50% to make its effect last 1s(+1s per Regislet Level) longer",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Lunas Slash Absorber",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Lunas Slash",
+        "effect": "All \"Lunas Slash\" stacks are now consumed and MP is restored based on the number of stacks consumed. MP recovery amount is 1 MP × Regislet Level × Lunar Slash Stack Consumed. Lunar Slash stack additional damage is disabled when equipping this regislet",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Light Talent",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Light element skills",
+        "effect": "Sets skill effects that change based on element to light element",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Knight's Intuition",
+        "max_lv": "Max Lv 5",
+        "affects": "",
+        "effect": "Anticipate increases by 5% if a one-handed sword is equipped, Equipping a shield will triple the amount increased",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Ironhearted Chronos Drive",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Chronos Drive",
+        "effect": "Changes the additional attack effect of \"Chronos Drive\" from magic attack (based on INT) to physical attack (based on STR) Scaling remains the same. Proration usage of additional hits changes to physical proration",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Iron Fist",
+        "max_lv": "Max Lv 5",
+        "affects": "",
+        "effect": "Guard Break increases by (1% per Regislet Level) when barehanded or equipping knuckles (main only). The amount increased will be tripled if sub-weapon is empty",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Invincible Dauntless",
+        "max_lv": "Max Lv 3",
+        "affects": "Affects Dauntless",
+        "effect": "\"Dauntless\" accumulates 1 second faster, but the count will decrease by 9(- 3 per Regislet Level) when taking damage. However, it won't decrease if the damage is blocked with Guard or certain Mononofu skills",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Instructor",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Sets your own EXP Gain to 0 to increase the EXP Gain of the party member with the lowest level by 1% per Regislet Level. Less effective if there are multiple recipients",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Healing Hands",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Alleviates the reduced recovery of Heal-related Regislets by (10% per Regislet Level)",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Frugal Breathwork",
+        "max_lv": "Max Lv 1",
+        "affects": "",
+        "effect": "Reduces the MP Cost of [Breathwork] by 100",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Fire Talent",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Fire element skills",
+        "effect": "Sets skill effects that change based on element to Fire element",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Fighter's Magic: Impact",
+        "max_lv": "Max Lv 1",
+        "affects": "",
+        "effect": "Changes the proration dealt by [Magic: Impact] to physical proration",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Extreme Chronos Shift",
+        "max_lv": "Max Lv 5",
+        "affects": "Affects Chronos Shift",
+        "effect": "\"Chronos Shift\" can be activated even if there is not enough MP by consuming HP. 60(-10% per Regislet Level)% HP is required per 100 MP you're short of. This HP consumption could get you knocked out",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Exclusive Bodyguard",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Defender",
+        "effect": "Reduces the Physical/Magic/Fractional Damage received by the mercenary or partner summoned as a \"Defender\" by (3 × Regislet Level)%",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Evasive Floating Kick",
+        "max_lv": "Max Lv 1",
+        "affects": "",
+        "effect": "Gain [Invincible] for 1 second if [Floating Kick] is activated while moving",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Evasion Set",
+        "max_lv": "Max Lv 1",
+        "affects": "",
+        "effect": "Evasion becomes usable even with equipment that doesn't allow it",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Ether Flare Extender",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Ether Flare",
+        "effect": "Doubles the duration of the [Ether Flare] buff, but halves the buff's AMPR gain",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Emergency Care",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects First Aid",
+        "effect": "Reduces the MP Aggro triggered by \"First Aid\" by (1 × Regislet Level). Up to MP Cost 100 at the minimum.",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Earth Talent",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Earth element skills",
+        "effect": "Sets skill effects that change based on element to Earth element",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Dragon Fire Release",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "The time to cast [Fire Release] is increased by 1 second, but the skill gains (2.5 × Regislet Level)% Magic Pierce. This increase in Magic Pierce doubles if [Blazing Explosion] is triggered",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Distinct Parabola Cannon",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Parabola Cannon",
+        "effect": "The skill \"Parabola Cannon\" now only hits monsters currently in combat and guarantees a critical hit",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Distant Buster Lance",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Buster Lance",
+        "effect": "Increases the power of \"Buster Lance\" by (10% per Regislet Level). The range and distance at which the power starts to weaken is Increased, making it always a long-range attack",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Direct Sonic Thrust",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Sonic Thrust",
+        "effect": "The skill \"Sonic Thrust\" loses its swift effect, but gains an effect that ignores Evasion in return",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Dark Talent",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Dark element skills",
+        "effect": "Sets skill effects that change based on element to dark element",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Damage Check",
+        "max_lv": "Max Lv 1",
+        "affects": "",
+        "effect": "Displays an additional warning message when stepping on a warning area if the damage from the attack exceeds 50% of your current HP",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Check Out Notice",
+        "max_lv": "Max Lv 1",
+        "affects": "",
+        "effect": "When you get knocked out, you will declare it through Party Chat. If it is a Guild RAID, you will declare it through Say Chat",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Blue Zone Shield",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Reduces the damage from monster attacks shown with a blue warning by 1(+1 per Regislet Level)%. However, damage taken from single-target attacks increases by 10%(disadvantage) This damage reduction applies multiplicatively with other damage reductions such as Refinement, Resistance",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Berserk Rush",
+        "max_lv": "Max Lv 5",
+        "affects": "Affects Berserk",
+        "effect": "Reduces the negative effect of \"Berserk\" by (1 × Regislet Level)% if you take damage from a monster while the skill is active",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Aura Blade Force",
+        "max_lv": "Max Lv 8",
+        "affects": "Affects Aura Blade",
+        "effect": "Releases a shock wave (single target attack). Dealing 10(+10 per Regislet Level)% damage if the monster targeted by \"Aura Blade\" is out of range",
+        "obtained_from": "No drop source recorded yet."
+    },
+    {
+        "name": "Guitarist",
+        "max_lv": "Max Lv 6",
+        "affects": "",
+        "effect": "Shortens the time for song effect to increase when used continuously by [Registlet Level] sec, but aggro and damage received while singing increase by 10%. *Does not apply to Fantasy Song.",
+        "obtained_from": "Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Heal Bank",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "The amount of HP recovered by \"Mini Heal\" and \"Heal\" is halved. Accumulates up to [Registlet Level] stacks of buff every 3 sec. When using the skill to heal an ally, the buff is consumed instead of MP to activate it.",
+        "obtained_from": "Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Focus Resonance",
+        "max_lv": "Max Lv 9",
+        "affects": "Affects Resonance",
+        "effect": "\"Resonance\" will only enhance stats that affect concentration and precision, but the enhancement is reduced by [95 - (5 × Registlet Level)]%.",
+        "obtained_from": "Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Focus Demon Claw",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Demon Claw",
+        "effect": "The power of \"Demon Claw\" is reduced by 100% but the skill will focus on attacking a single target",
+        "obtained_from": "Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Chancy Trap",
+        "max_lv": "Max Lv 1",
+        "affects": "",
+        "effect": "Enables a trap skill to be set at the target's feet, but if it activates immediately, you will also be affected.",
+        "obtained_from": "Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Mana Crystal Catalyst",
+        "max_lv": "Max Lv 5",
+        "affects": "Affects Mana Crystal",
+        "effect": "Reduces the casting time of \"Mana Crystal\" by [10 × Registlet Level]%, but the amount of MP recovered gets reduced by 100.",
+        "obtained_from": "Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Assassin Stab Enhancer",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Assassin Stab",
+        "effect": "Raises the power of \"Assassin Stab\" by [Registlet Level]%. Furthermore, the accuracy is raised by [10 × Registlet Level]% if it is Back Stab.",
+        "obtained_from": "Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Holy Light Retribution",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Holy Light",
+        "effect": "There is a 1% chance that Lv[Registlet Level] light element Magic: Finale will activate when \"Holy Light\" hits the target.",
+        "obtained_from": "Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Binding Strike Modifier",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Binding Strike",
+        "effect": "Modifies \"Binding Strike\" so that it inflicts [Stun] to the target only and the [Stop] effect is removed.",
+        "obtained_from": "Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Silent P. Defense",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects P. Defense",
+        "effect": "Reduces the aggro generated when P. Defense is successful by [10 × Registlet Level]%",
+        "obtained_from": "Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Short Performance",
+        "max_lv": "Max Lv 1",
+        "affects": "",
+        "effect": "Shortens the duration of dance skill effect by 5 seconds. *Does not apply to Spirited Dance.",
+        "obtained_from": "Stoodie (Lv190) (El Scaro)"
+    },
+    {
+        "name": "Speed Resonance",
+        "max_lv": "Max Lv 9",
+        "affects": "Affects Resonance",
+        "effect": "\"Resonance\" will only enhance stats that affect acceleration, but the enhancement is reduced by [95 - (5 × Registlet Level)]%.",
+        "obtained_from": "Stoodie (Lv190) (El Scaro)"
+    },
+    {
+        "name": "Comrade Familia",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Familia",
+        "effect": "The chance of the familiar summoned with \"Familia\" fleeing is reduced by 1%. Movement becomes 1 second faster for Advanced Familiar.",
+        "obtained_from": "Stoodie (Lv190) (El Scaro)"
+    },
+    {
+        "name": "Tricky Shadow Walk",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Shadow Walk",
+        "effect": "Additional attack of \"Shadow Walk\" will no longer cause proration.",
+        "obtained_from": "Stoodie (Lv190) (El Scaro)"
+    },
+    {
+        "name": "Mega Royal Heal",
+        "max_lv": "Max Lv 8",
+        "affects": "Affects Royal Heal",
+        "effect": "The range of \"Royal Heal\" effect is increased by 1m per Registlet Level, but the amount of HP restores is halved.",
+        "obtained_from": "Stoodie (Lv190) (El Scaro)"
+    },
+    {
+        "name": "Rage Sword Enhancer",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Rage Sword",
+        "effect": "Raises the power of \"Rage Sword\" by 10% per Registlet Level. Aggro doubles if the target is hostile towards you.",
+        "obtained_from": "Stoodie (Lv190) (El Scaro)"
+    },
+    {
+        "name": "Express Assault Attack",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Assault Attack",
+        "effect": "Removes [Knock Back] and [Slow] from \"Assault Attack\" and increases its power by 10% per Registlet Level",
+        "obtained_from": "Stoodie (Lv190) (El Scaro)"
+    },
+    {
+        "name": "Zero Stance",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Damage dealt with skill activated without using a combo is multiplied by [1 + (0.01 × Registlet Level)]. *Does not apply to some skills such as charge skills.",
+        "obtained_from": "Stoodie (Lv170) (El Scaro)"
+    },
+    {
+        "name": "Secret Combo",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Reduces aggro by [Registlet Level]% per 1 combo. Better effect with longer combo.",
+        "obtained_from": "Stoodie (Lv170) (El Scaro)"
+    },
+    {
+        "name": "Start Dash",
+        "max_lv": "Max Lv 5",
+        "affects": "",
+        "effect": "Normal attack has 0 second cooldown for [5 + Registlet Level] seconds when getting aggro from the target monster for the first time. Cooldown: 60 seconds",
+        "obtained_from": "Stoodie (Lv170) (El Scaro)"
+    },
+    {
+        "name": "Single Meteor Strike",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Meteor Strike",
+        "effect": "Reduces the number of meteorites dropped from \"Meteor Strike\" to 1, but the drop point will no longer be random. It will no longer inflict status ailments either.",
+        "obtained_from": "Stoodie (Lv170) (El Scaro)"
+    },
+    {
+        "name": "Full Power Qi Charge",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Qi Charge",
+        "effect": "When \"Qi Charge\" gives no effect, qi will increase by [10 × Registlet Level]% if the skill is activated using 2000 MP.",
+        "obtained_from": "Stoodie (Lv170) (El Scaro)"
+    },
+    {
+        "name": "Bloody Bite Enhancer",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Bloody Bite",
+        "effect": "Raises the power of \"Bloody Bite\" by 10% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Universal Ether Flare",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Ether Flare",
+        "effect": "\"Ether Flare\" will recover Attack MP even if the element is not the target's weakness.",
+        "obtained_from": "Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Power Resonance",
+        "max_lv": "Max Lv 9",
+        "affects": "Affects Resonance",
+        "effect": "\"Resonance\" will only enhance stats that affect firepower, but the enhancement is reduced by [95 - (5 × Registlet Level)]%.",
+        "obtained_from": "Stoodie (Lv170) (El Scaro)"
+    },
+    {
+        "name": "Secret Chase ATK Boost",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Secret Chase Attack",
+        "effect": "Increases the activation rate of additional attack of \"Secret Chase Attack\" by 1% per level of the skill acquired.",
+        "obtained_from": "Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Extreme Concentrate",
+        "max_lv": "Max Lv 5",
+        "affects": "Affects Concentrate",
+        "effect": "Increases the activation rate of \"Concentrate\" by 1% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Extreme Whack",
+        "max_lv": "Max Lv 5",
+        "affects": "Affects Whack",
+        "effect": "Increases the activation rate of \"Whack\" by 1% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Frugal Heal",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Heal",
+        "effect": "Reduces the MP Cost of the skill \"Heal\" by 100.",
+        "obtained_from": "Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Extra Recovery",
+        "max_lv": "Max Lv 5",
+        "affects": "Affects Recovery",
+        "effect": "Adds a HP recovery effect to the skill \"Recovery\". The amount of HP restored is [10 × Registlet Level]% of the HP recovered by the Mini Heal learned.",
+        "obtained_from": "Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Frugal Shield Bash",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Shield Bash",
+        "effect": "Restores [10 × Registlet Level] MP when \"Shield Bash\" inflicts [Stun].",
+        "obtained_from": "Stoodie (Lv170) (El Scaro)"
+    },
+    {
+        "name": "Decoy Shot Compress",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Decoy Shot",
+        "effect": "Halves the duration of \"Decoy Shot\" but increases the power by 10% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Berserk Control",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Berserk",
+        "effect": "For each level of \"Berserk\", 10% chance to prevent \"Rampage\" from being cancelled.",
+        "obtained_from": "Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Dominant War Cry",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects War Cry",
+        "effect": "Activation of \"War Cry\" will not be interrupted by Fear.",
+        "obtained_from": "Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Transfer",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Lowers MaxMP by [1100 - (100 × Registlet Level)], but when you are knocked out, the remaining MP will be shared among your party members. ∗ Players whose MP gets restored by this effect cannot enjoy the same effect for 180 seconds.",
+        "obtained_from": "Stoodie (Lv150) (El Scaro)"
+    },
+    {
+        "name": "Panic",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Restores [10 × Registlet Level] MP every 3 seconds, but all MP will be lost if you get aggro and this Registlet will be suspended for 30 seconds.",
+        "obtained_from": "Stoodie (Lv150) (El Scaro)"
+    },
+    {
+        "name": "Monster Hunter",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Restores 100 MP when you defeat a monster. Cooldown: [30 - Registlet Level] seconds.",
+        "obtained_from": "Stoodie (Lv150) (El Scaro)"
+    },
+    {
+        "name": "Bloody Warrior",
+        "max_lv": "Max Lv 20",
+        "affects": "",
+        "effect": "Raises normal attack power and Attack MP Recovery by 5% per Registlet Level while afflicted with Bleed.",
+        "obtained_from": "Stoodie (Lv150) (El Scaro)"
+    },
+    {
+        "name": "Burning Spirit",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Restores MP as much as [5 × Registlet Level]% of your Attack MP Recovery when taking damage inflicted by Ignite.",
+        "obtained_from": "Stoodie (Lv150) (El Scaro)"
+    },
+    {
+        "name": "Pursuit Relief",
+        "max_lv": "Max Lv 20",
+        "affects": "",
+        "effect": "Reduces damage taken by 1% per Registlet Level when you can't move while afflicted with Flinch, Tumble, or Stun.",
+        "obtained_from": "Stoodie (Lv150) (El Scaro)"
+    },
+    {
+        "name": "Focus Dive Impact",
+        "max_lv": "Max Lv 5",
+        "affects": "Affects Dive Impact",
+        "effect": "Turns the skill \"Dive Impact\" into an attack that pierces through a single target. Resistance to Dazzled is shortened by 2 seconds per Registlet Level.",
+        "obtained_from": "Stoodie (Lv150) (El Scaro), Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Phantom Slash Enhancer",
+        "max_lv": "Max Lv 20",
+        "affects": "Affects Phantom Slash",
+        "effect": "Raises the power of \"Phantom Slash\" by 5% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv150) (El Scaro), Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Piercing Heavy Smash",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Heavy Smash",
+        "effect": "Adds [5 × Registlet Level]% Physical Pierce to the skill \"Heavy Smash\" if used with knuckles.",
+        "obtained_from": "Stoodie (Lv150) (El Scaro), Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Smoke Dust Extender",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Smoke Dust",
+        "effect": "Extends the duration of buff from the skill \"Smoke Dust\" by 1 second per Registlet Level.",
+        "obtained_from": "Stoodie (Lv150) (El Scaro), Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Sword Tempest Extender",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Sword Tempest",
+        "effect": "Adds 1 hit to the skill \"Sword Tempest\".",
+        "obtained_from": "Stoodie (Lv150) (El Scaro), Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Remedial Rampage",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Rampage",
+        "effect": "Removes the finishing attack of the skill \"Rampage\" and restores 50 HP per Registlet Level.",
+        "obtained_from": "Stoodie (Lv150) (El Scaro), Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro)"
+    },
+    {
+        "name": "Savior",
+        "max_lv": "Max Lv 1",
+        "affects": "",
+        "effect": "Grants a 10-second invincibility if you revive when all of your party members get knocked out.",
+        "obtained_from": "Stoodie (Lv130) (El Scaro)"
+    },
+    {
+        "name": "Eagle Eye",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Reduces damage taken from behind (opposite camera direction) by 1% per Registlet Level. The damage will be further reduced when taken from directly behind.",
+        "obtained_from": "Stoodie (Lv130) (El Scaro)"
+    },
+    {
+        "name": "Coffee Break",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Restores 10% of your HP when you defeat a monster. Cooldown: [30 - Registlet Level] seconds.",
+        "obtained_from": "Stoodie (Lv130) (El Scaro)"
+    },
+    {
+        "name": "Mana Defuser",
+        "max_lv": "Max Lv 1",
+        "affects": "",
+        "effect": "Immediately restores 100 MP if you survive a Mana Explosion.",
+        "obtained_from": "Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro)"
+    },
+    {
+        "name": "Emergency Repair",
+        "max_lv": "Max Lv 20",
+        "affects": "",
+        "effect": "There is a [5 × Registlet Level]% chance of having Armor Break status removed when the damage taken increases because of it.",
+        "obtained_from": "Stoodie (Lv130) (El Scaro)"
+    },
+    {
+        "name": "Parsimony",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Instead of consuming a triggered auto-item, the item cooldown is doubled. Cooldown: [40 - Registlet Level] seconds.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro)"
+    },
+    {
+        "name": "Mana Thrash",
+        "max_lv": "Max Lv 1",
+        "affects": "",
+        "effect": "Raises normal attack power in exchange for Attack MP Recovery. ∗ Power increases more with higher Attack MP Recovery.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro)"
+    },
+    {
+        "name": "Attacker's Pet",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Raises the damage dealt by pet by 3% per Registlet Level, but greatly decreases its owner's.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro)"
+    },
+    {
+        "name": "Silent Recharge",
+        "max_lv": "Max Lv 20",
+        "affects": "Affects MP Charge",
+        "effect": "Increase amount of MP recovered by 5% per Registlet Level if \"MP Charge\" is used while afflicted with Silence.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro)"
+    },
+    {
+        "name": "Impetus",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Reduces movement speed decline due to Slow by 5% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro)"
+    },
+    {
+        "name": "Pyrexia",
+        "max_lv": "Max Lv 20",
+        "affects": "",
+        "effect": "The chance of having Freeze status removed if you do a normal attack while frozen increases by 5% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro)"
+    },
+    {
+        "name": "Monophobia",
+        "max_lv": "Max Lv 5",
+        "affects": "",
+        "effect": "Restores 100 HP per 10 seconds when near a party member, but when not, 100 HP will be lost. Range is [3 + Registlet Level] meters. ∗ This HP loss won't knock player out.",
+        "obtained_from": "Stoodie (Lv170) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Last Hero",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Restores [10 + Registlet Level]% of your HP and MP per knocked out party member when you are the only one left. Cooldown: 300 seconds",
+        "obtained_from": "Stoodie (Lv190) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Tanker's Pet",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Lowers the damage received by pet by 3% per Registlet Level, but greatly increases the damage received by its owner.",
+        "obtained_from": "Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Forty Winks",
+        "max_lv": "Max Lv 5",
+        "affects": "",
+        "effect": "Shortens Sleep duration by 10% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Shared Destiny",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Each party member excluding you will raise ATK and MATK by 1%, but [110 - (10 × Registlet Level)]% of HP will be lost whenever a member gets knocked out. ∗ This HP loss could knock player out.",
+        "obtained_from": "Stoodie (Lv190) (El Scaro), Stoodie (Lv70) (El Scaro)"
+    },
+    {
+        "name": "Steady Stance",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Reduces damage taken while afflicted with Stop by 3% per Registlet Level if you stand still.",
+        "obtained_from": "Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Meikyo Shisui Preserver",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Meikyo Shisui",
+        "effect": "The effect from \"Meikyo Shisui\" remains when using a skill.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Magadachi Amulet",
+        "max_lv": "Max Lv 6",
+        "affects": "Affects Magadachi",
+        "effect": "Raises magic damage reduction by the skill \"Magadachi\" by 5% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Static Triple Thrust",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Triple Thrust",
+        "effect": "You will remain in the same spot when using the skill \"Triple Thrust\".",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Mega War Cry of Struggle",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects War Cry of Struggle",
+        "effect": "Increases the aggro generated by the skill \"War Cry of Struggle\" by 300 per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Dragon Tail Enhancer",
+        "max_lv": "Max Lv 20",
+        "affects": "Affects Dragon Tail",
+        "effect": "Raises the power of the second hit of \"Dragon Tail\" by 5% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Critical Charging Slash",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Charging Slash",
+        "effect": "Lowers the power of \"Charging Slash\" by [110 - (10 × Registlet Level)]% and guarantees a critical hit.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Spinning Slash Compress",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Spinning Slash",
+        "effect": "Reduces the range of \"Spinning Slash\" and removes the knock back effect, but raises its power by 5% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Earthbind Enhancer",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Earthbind",
+        "effect": "Raises the power of \"Earthbind\" by 5% per Registlet Level if used with knuckles.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Shell Break Enhancer",
+        "max_lv": "Max Lv 5",
+        "affects": "Affects Shell Break",
+        "effect": "Raises the chance to inflict Armor Break with the skill \"Shell Break\" by 5% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Power Wave Modifier",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Power Wave",
+        "effect": "Modifies the effect of \"Power Wave\" so that it raises normal attack power by [⌈(Registlet Level + Power Wave Level) × 0.5⌉]% instead of extending the range. ∗ The increment depends on the skill level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Magic: Blast Catalyst",
+        "max_lv": "Max Lv 5",
+        "affects": "Affects Magic: Blast",
+        "effect": "Shortens the time to cast the skill \"Magic: Blast\" by 0.2 seconds per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Magic: Lances Catalyst",
+        "max_lv": "Max Lv 5",
+        "affects": "Affects Magic: Lances",
+        "effect": "Shortens the interval between shots of the skill \"Magic: Lances\" by 0.1 seconds per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Paralysis Shot Extender",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Paralysis Shot",
+        "effect": "Extends the duration of buff from the skill \"Paralysis Shot\" by 1 second per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Arrow Rain Enhancer",
+        "max_lv": "Max Lv 2",
+        "affects": "Affects Arrow Rain",
+        "effect": "An additional attack is added to the skill \"Arrow Rain\" per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Spiral Air Enhancer",
+        "max_lv": "Max Lv 20",
+        "affects": "Affects Spiral Air",
+        "effect": "Raises the power of \"Spiral Air\" by 2% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Elemental Trigger Slash",
+        "max_lv": "Max Lv 1",
+        "affects": "Affects Trigger Slash",
+        "effect": "Converts the element of \"Trigger Slash\" from fire to that of the weapon equipped.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Final Resistance",
+        "max_lv": "Max Lv 5",
+        "affects": "",
+        "effect": "If you get knocked out last in the party, you will squeeze out every last bit of your strength to quickly revive for [5 + Registlet Level] seconds before becoming unable to battle again. ∗ First Aid, Struggle, Revive Droplets Unavailable",
+        "obtained_from": "Stoodie (Lv170) (El Scaro), Stoodie (Lv50) (El Scaro)"
+    },
+    {
+        "name": "Neural Control",
+        "max_lv": "Max Lv 30",
+        "affects": "",
+        "effect": "Reduces the amount of ASPD lowered due to Paralysis by 2% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro)"
+    },
+    {
+        "name": "Emergency MP Heal",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Immediately restores [10 × Registlet Level] MP if there is not enough MP. Cooldown: 60 seconds",
+        "obtained_from": "Stoodie (Lv150) (El Scaro), Stoodie (Lv50) (El Scaro)"
+    },
+    {
+        "name": "Emergency HP Heal",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Instantly restores [10 + Registlet Level]% of your HP when there is only 25% or less due to monster's attacks. Cooldown: 60 seconds",
+        "obtained_from": "Stoodie (Lv150) (El Scaro), Stoodie (Lv30) (El Scaro)"
+    },
+    {
+        "name": "Cat's Eye",
+        "max_lv": "Max Lv 1",
+        "affects": "",
+        "effect": "A MISS hit while you are Blind may be turned into a GRAZE hit when possible.",
+        "obtained_from": "Stoodie (Lv30) (El Scaro), Stoodie (Lv70) (El Scaro)"
+    },
+    {
+        "name": "Poison Heal",
+        "max_lv": "Max Lv 30",
+        "affects": "",
+        "effect": "[1 × Registlet Level]% chance of having Poison status removed when taking damage inflicted by Poison.",
+        "obtained_from": "Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro)"
+    },
+    {
+        "name": "Pommel Strike Enhancer",
+        "max_lv": "Max Lv 5",
+        "affects": "Affects Pommel Strike",
+        "effect": "Extends the duration of Paralysis caused by the skill \"Pommel Strike\" by 1 second per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Issen Enhancer",
+        "max_lv": "Max Lv 20",
+        "affects": "Affects Issen",
+        "effect": "Raises the power of the second hit of \"Issen\" by 5% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Cannon Spear Enhancer",
+        "max_lv": "Max Lv 10",
+        "affects": "Affects Cannon Spear",
+        "effect": "Adds a [10 × Registlet Level]% chance of inflicting \"Flinch\" to the first attack of the skill \"Cannon Spear\".",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Flash Stab Enhancer",
+        "max_lv": "Max Lv 20",
+        "affects": "Affects Flash Stab",
+        "effect": "Raises the power of \"Flash Stab\" by 5% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Cross Parry Enhancer",
+        "max_lv": "Max Lv 20",
+        "affects": "Affects Cross Parry",
+        "effect": "Raises the power of \"Cross Parry\" by 5% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Twin Slash Enhancer",
+        "max_lv": "Max Lv 20",
+        "affects": "Affects Twin Slash",
+        "effect": "Raises the critical damage from \"Twin Slash\" by 1% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Sonic Wave Enhancer",
+        "max_lv": "Max Lv 20",
+        "affects": "Affects Sonic Wave",
+        "effect": "Raises the power of \"Sonic Wave\" by 5% per Registlet Level if used with knuckles.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Smash Enhancer",
+        "max_lv": "Max Lv 20",
+        "affects": "Affects Smash",
+        "effect": "Raises the power of \"Smash\" by 5% per Registlet Level if used with knuckles.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Magic: Wall Enhancer",
+        "max_lv": "Max Lv 20",
+        "affects": "Affects Magic: Wall",
+        "effect": "Raises the power of \"Magic: Wall\" by 5% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Magic: Arrows Enhancer",
+        "max_lv": "Max Lv 4",
+        "affects": "Affects Magic: Arrows",
+        "effect": "Adds 1 shot per Registlet Level to the skill \"Magic: Arrows\".",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Bullseye Enhancer",
+        "max_lv": "Max Lv 20",
+        "affects": "Affects Bullseye",
+        "effect": "Raises the power of \"Bullseye\" by 5% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Power Shot Boost",
+        "max_lv": "Max Lv 20",
+        "affects": "Affects Power Shot",
+        "effect": "Raises the power of \"Power Shot\" by 15% per Registlet Level when Tumble is inflicted.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Sonic Blade Extender",
+        "max_lv": "Max Lv 20",
+        "affects": "Affects Sonic Blade",
+        "effect": "Extends the time you must reuse \"Sonic Blade\" to turn it into \"Super Sonic Blade\" by 1 second per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Hard Hit Enhancer",
+        "max_lv": "Max Lv 20",
+        "affects": "Affects Hard Hit",
+        "effect": "Raises the power of \"Hard Hit\" by 5% per Registlet Level.",
+        "obtained_from": "Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Sunbath",
+        "max_lv": "Max Lv 4",
+        "affects": "",
+        "effect": "When using Emotions that increase Natural Regen, an additional [25 × Registlet Level]% of MP will be restored.",
+        "obtained_from": "Stoodie (Lv10) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro)"
+    },
+    {
+        "name": "Wayfarer",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Increases EXP Gain by 10% but lowers damage dealt by [15 - Registlet Level]%.",
+        "obtained_from": "Stoodie (Lv10) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Magic Speed Boost",
+        "max_lv": "Max Lv 100",
+        "affects": "",
+        "effect": "Increases CSPD by 1 per level.",
+        "obtained_from": "Stoodie (Lv10) (El Scaro), Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Attack Speed Boost",
+        "max_lv": "Max Lv 100",
+        "affects": "",
+        "effect": "Increases ASPD by 1 per level.",
+        "obtained_from": "Stoodie (Lv10) (El Scaro), Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Dodge Boost",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Increases Dodge by 1 per level.",
+        "obtained_from": "Stoodie (Lv10) (El Scaro), Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Accuracy Boost",
+        "max_lv": "Max Lv 10",
+        "affects": "",
+        "effect": "Increases Accuracy by 1 per level.",
+        "obtained_from": "Stoodie (Lv10) (El Scaro), Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Magic Defense Boost",
+        "max_lv": "Max Lv 50",
+        "affects": "",
+        "effect": "Increases MDEF by 1 per level.",
+        "obtained_from": "Stoodie (Lv10) (El Scaro), Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Physical Defense Boost",
+        "max_lv": "Max Lv 50",
+        "affects": "",
+        "effect": "Increases DEF by 1 per level.",
+        "obtained_from": "Stoodie (Lv10) (El Scaro), Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Max MP Boost",
+        "max_lv": "Max Lv 100",
+        "affects": "",
+        "effect": "Increases MP by 1 per level.",
+        "obtained_from": "Stoodie (Lv10) (El Scaro), Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Max HP Boost",
+        "max_lv": "Max Lv 100",
+        "affects": "",
+        "effect": "Increases HP by 10 per level.",
+        "obtained_from": "Stoodie (Lv10) (El Scaro), Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Magic Attack Boost",
+        "max_lv": "Max Lv 30",
+        "affects": "",
+        "effect": "Increases MATK by 1 per level.",
+        "obtained_from": "Stoodie (Lv10) (El Scaro), Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    },
+    {
+        "name": "Physical Attack Boost",
+        "max_lv": "Max Lv 30",
+        "affects": "",
+        "effect": "Increases ATK by 1 per level.",
+        "obtained_from": "Stoodie (Lv10) (El Scaro), Stoodie (Lv110) (El Scaro), Stoodie (Lv130) (El Scaro), Stoodie (Lv150) (El Scaro), Stoodie (Lv170) (El Scaro), Stoodie (Lv190) (El Scaro), Stoodie (Lv210) (El Scaro), Stoodie (Lv30) (El Scaro), Stoodie (Lv50) (El Scaro), Stoodie (Lv70) (El Scaro), Stoodie (Lv90) (El Scaro)"
+    }
+]

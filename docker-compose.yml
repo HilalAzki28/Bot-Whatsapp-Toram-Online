@@ -1,0 +1,19 @@
+services:
+  toram-bot:
+    build: .
+    container_name: ditdut-wa-bot
+    network_mode: "host"
+    restart: unless-stopped
+    volumes:
+      # Mount sesi & data agar login WhatsApp dan database tidak hilang
+      - ./whatsapp_session.sqlite3:/app/whatsapp_session.sqlite3
+      - ./data:/app/data
+    deploy:
+      resources:
+        limits:
+          memory: 450M # Batas aman agar tidak melebihi RAM VPS
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

@@ -1,0 +1,1290 @@
+{
+  "35005": {
+    "name": "Lunar Grace",
+    "upgrades_id": null
+  },
+  "35004": {
+    "name": "Blanc",
+    "upgrades_id": 7378
+  },
+  "8315": {
+    "name": "Aralago",
+    "upgrades_id": 7498
+  },
+  "8186": {
+    "name": "Gioco",
+    "upgrades_id": 7393
+  },
+  "8176": {
+    "name": "Cake Potum",
+    "upgrades_id": 2307
+  },
+  "8152": {
+    "name": "Colon Boss",
+    "upgrades_id": 283
+  },
+  "8140": {
+    "name": "Vevela",
+    "upgrades_id": 632
+  },
+  "8047": {
+    "name": "Wild Beast Lixi",
+    "upgrades_id": 5517
+  },
+  "8042": {
+    "name": "Piscruva",
+    "upgrades_id": 6357
+  },
+  "7729": {
+    "name": "Wiltileaf",
+    "upgrades_id": 4981
+  },
+  "7498": {
+    "name": "Limacina",
+    "upgrades_id": 3189
+  },
+  "7490": {
+    "name": "Torexesa",
+    "upgrades_id": 5251
+  },
+  "7393": {
+    "name": "Red Ash Dragon Rudis",
+    "upgrades_id": 4537
+  },
+  "7378": {
+    "name": "Kuffania",
+    "upgrades_id": 3524
+  },
+  "7115": {
+    "name": "Lilicarolla",
+    "upgrades_id": 4908
+  },
+  "7045": {
+    "name": "Charugon",
+    "upgrades_id": 300
+  },
+  "7001": {
+    "name": "Orictoceras",
+    "upgrades_id": 3339
+  },
+  "6643": {
+    "name": "Brassozard",
+    "upgrades_id": 2891
+  },
+  "6593": {
+    "name": "Melancia",
+    "upgrades_id": 4185
+  },
+  "6357": {
+    "name": "Guard Golem",
+    "upgrades_id": 2761
+  },
+  "6049": {
+    "name": "Blazingur",
+    "upgrades_id": 1840
+  },
+  "5933": {
+    "name": "Dutannen",
+    "upgrades_id": 4323
+  },
+  "5793": {
+    "name": "Bullamius",
+    "upgrades_id": 2243
+  },
+  "5517": {
+    "name": "Rhinosaur",
+    "upgrades_id": 312
+  },
+  "5251": {
+    "name": "Black Shadow",
+    "upgrades_id": 4083
+  },
+  "4981": {
+    "name": "Ageladanios",
+    "upgrades_id": 2841
+  },
+  "4908": {
+    "name": "Tappler",
+    "upgrades_id": 2536
+  },
+  "4307": {
+    "name": "Nuthoreth",
+    "upgrades_id": 1164
+  },
+  "4083": {
+    "name": "Tuscog",
+    "upgrades_id": 2349
+  },
+  "3189": {
+    "name": "Seraph Machina",
+    "upgrades_id": 281
+  },
+  "3172": {
+    "name": "Amoeba Machina",
+    "upgrades_id": 287
+  },
+  "2891": {
+    "name": "Volotur",
+    "upgrades_id": 306
+  },
+  "2841": {
+    "name": "Lyark Master Specialist",
+    "upgrades_id": 1312
+  },
+  "2761": {
+    "name": "Guignol",
+    "upgrades_id": 1164
+  },
+  "2349": {
+    "name": "York",
+    "upgrades_id": 285
+  },
+  "2307": {
+    "name": "Platinum Potum",
+    "upgrades_id": 310
+  },
+  "2243": {
+    "name": "Salamander",
+    "upgrades_id": 304
+  },
+  "8435": {
+    "name": "Doy",
+    "upgrades_id": null
+  },
+  "8419": {
+    "name": "Zega IX",
+    "upgrades_id": 8418
+  },
+  "8418": {
+    "name": "Zega VIII",
+    "upgrades_id": 6779
+  },
+  "8294": {
+    "name": "Rondine",
+    "upgrades_id": 6962
+  },
+  "8284": {
+    "name": "Megiston the Champion VIII",
+    "upgrades_id": 7894
+  },
+  "8282": {
+    "name": "Sakura Dango",
+    "upgrades_id": 5768
+  },
+  "8278": {
+    "name": "Neo Mage Filecia",
+    "upgrades_id": 6781
+  },
+  "8277": {
+    "name": "Zega X",
+    "upgrades_id": 8419
+  },
+  "8180": {
+    "name": "Phantom Melody Margrave",
+    "upgrades_id": 6746
+  },
+  "8175": {
+    "name": "Pomie Chan III",
+    "upgrades_id": 6730
+  },
+  "8151": {
+    "name": "Ultra Potum",
+    "upgrades_id": 313
+  },
+  "8106": {
+    "name": "Supreme Evil Crystal Beast",
+    "upgrades_id": 6054
+  },
+  "8103": {
+    "name": "Supreme Evil Crystal Beast",
+    "upgrades_id": 6054
+  },
+  "8102": {
+    "name": "Springtime Sakura",
+    "upgrades_id": 4398
+  },
+  "8085": {
+    "name": "Bakuzan",
+    "upgrades_id": 6648
+  },
+  "8023": {
+    "name": "Meduso",
+    "upgrades_id": 2357
+  },
+  "7902": {
+    "name": "Queen Rosemee",
+    "upgrades_id": 5487
+  },
+  "7897": {
+    "name": "Menti",
+    "upgrades_id": 6202
+  },
+  "7895": {
+    "name": "Fubbit",
+    "upgrades_id": 5768
+  },
+  "7894": {
+    "name": "Megiston The Champion VII",
+    "upgrades_id": 7339
+  },
+  "7893": {
+    "name": "Hero Potum IV",
+    "upgrades_id": null
+  },
+  "7736": {
+    "name": "Deformis",
+    "upgrades_id": 6139
+  },
+  "7512": {
+    "name": "Raging Dragon Bovinari",
+    "upgrades_id": null
+  },
+  "7496": {
+    "name": "Doridodi",
+    "upgrades_id": 5718
+  },
+  "7493": {
+    "name": "Vatudo",
+    "upgrades_id": 5461
+  },
+  "7471": {
+    "name": "Don Profundo",
+    "upgrades_id": 5108
+  },
+  "7366": {
+    "name": "Diark",
+    "upgrades_id": 4296
+  },
+  "7339": {
+    "name": "Megiston the Champion VI",
+    "upgrades_id": 6498
+  },
+  "7049": {
+    "name": "Brass Dragon Reguita",
+    "upgrades_id": 4632
+  },
+  "6962": {
+    "name": "Wicked Dragon Fazzino",
+    "upgrades_id": 4993
+  },
+  "6781": {
+    "name": "Cat Claw Guardkissa",
+    "upgrades_id": 4352
+  },
+  "6779": {
+    "name": "Zega VII",
+    "upgrades_id": 5992
+  },
+  "6730": {
+    "name": "Pomie Chan II",
+    "upgrades_id": 3355
+  },
+  "6729": {
+    "name": "Hero Potum III",
+    "upgrades_id": 5416
+  },
+  "6648": {
+    "name": "Trickster Dragon Mimyugon",
+    "upgrades_id": 4672
+  },
+  "6498": {
+    "name": "Megiston the Champion V",
+    "upgrades_id": 5698
+  },
+  "6486": {
+    "name": "Florizard",
+    "upgrades_id": 4296
+  },
+  "6321": {
+    "name": "Pedrio",
+    "upgrades_id": 3820
+  },
+  "6202": {
+    "name": "Oculasignio",
+    "upgrades_id": 3804
+  },
+  "6139": {
+    "name": "Velum",
+    "upgrades_id": 3576
+  },
+  "6054": {
+    "name": "Vlam the Flame Dragon",
+    "upgrades_id": 2900
+  },
+  "5992": {
+    "name": "Zega VI",
+    "upgrades_id": 4852
+  },
+  "5698": {
+    "name": "Megiston the Champion IV",
+    "upgrades_id": 4849
+  },
+  "5487": {
+    "name": "Clawed Iron Witch",
+    "upgrades_id": 2674
+  },
+  "5461": {
+    "name": "Irestida",
+    "upgrades_id": 3243
+  },
+  "5416": {
+    "name": "Hero Potum II",
+    "upgrades_id": 3206
+  },
+  "5108": {
+    "name": "Hexter",
+    "upgrades_id": 2830
+  },
+  "4993": {
+    "name": "Pisteus",
+    "upgrades_id": 2467
+  },
+  "4852": {
+    "name": "Zega V",
+    "upgrades_id": 4355
+  },
+  "4849": {
+    "name": "Megiston the Champion III",
+    "upgrades_id": 4848
+  },
+  "4848": {
+    "name": "Megiston the Champion II",
+    "upgrades_id": 3155
+  },
+  "4672": {
+    "name": "Vulture",
+    "upgrades_id": 2419
+  },
+  "4632": {
+    "name": "Repthon",
+    "upgrades_id": 1815
+  },
+  "4467": {
+    "name": "Blood Smeared Crystal",
+    "upgrades_id": 2300
+  },
+  "4355": {
+    "name": "Zega IV",
+    "upgrades_id": 3479
+  },
+  "4163": {
+    "name": "Usasama the Necromancer II",
+    "upgrades_id": 3264
+  },
+  "4092": {
+    "name": "Giant Moon Crab",
+    "upgrades_id": 303
+  },
+  "3804": {
+    "name": "Finstern the Dark Dragon",
+    "upgrades_id": 2032
+  },
+  "3605": {
+    "name": "Bubble Bogey",
+    "upgrades_id": 1904
+  },
+  "3576": {
+    "name": "Mardula",
+    "upgrades_id": 1975
+  },
+  "3479": {
+    "name": "Zega III",
+    "upgrades_id": 2249
+  },
+  "3243": {
+    "name": "Shampy",
+    "upgrades_id": 1529
+  },
+  "2900": {
+    "name": "Ultimate Machina",
+    "upgrades_id": 1051
+  },
+  "2830": {
+    "name": "Gwaimol",
+    "upgrades_id": 1470
+  },
+  "2467": {
+    "name": "Mozto Machina",
+    "upgrades_id": 293
+  },
+  "2419": {
+    "name": "Tyrant Machina",
+    "upgrades_id": 303
+  },
+  "2357": {
+    "name": "Builder Golem",
+    "upgrades_id": 299
+  },
+  "2249": {
+    "name": "Zega II",
+    "upgrades_id": 1338
+  },
+  "8436": {
+    "name": "Mari",
+    "upgrades_id": null
+  },
+  "8275": {
+    "name": "Black Peach Ninja",
+    "upgrades_id": 6924
+  },
+  "8257": {
+    "name": "Puiet",
+    "upgrades_id": 7168
+  },
+  "8238": {
+    "name": "Tulin Max",
+    "upgrades_id": 4129
+  },
+  "8207": {
+    "name": "Merzehal",
+    "upgrades_id": null
+  },
+  "8189": {
+    "name": "Dark Spinebore",
+    "upgrades_id": 7465
+  },
+  "8178": {
+    "name": "Glocke",
+    "upgrades_id": 6743
+  },
+  "8107": {
+    "name": "Squirinja",
+    "upgrades_id": 6924
+  },
+  "8098": {
+    "name": "Skelerow",
+    "upgrades_id": 4528
+  },
+  "8021": {
+    "name": "Biskyva",
+    "upgrades_id": 6305
+  },
+  "7976": {
+    "name": "Dandolion",
+    "upgrades_id": 2603
+  },
+  "7903": {
+    "name": "Bemoz",
+    "upgrades_id": 6595
+  },
+  "7670": {
+    "name": "Meteora",
+    "upgrades_id": 5524
+  },
+  "7465": {
+    "name": "Capo Profundo",
+    "upgrades_id": 2250
+  },
+  "7365": {
+    "name": "Gegner",
+    "upgrades_id": 5127
+  },
+  "7168": {
+    "name": "Zapo",
+    "upgrades_id": 5084
+  },
+  "7090": {
+    "name": "DX Fighter II",
+    "upgrades_id": 5913
+  },
+  "7089": {
+    "name": "Dr. Leonardo II",
+    "upgrades_id": 5911
+  },
+  "7017": {
+    "name": "Walican",
+    "upgrades_id": 5757
+  },
+  "6924": {
+    "name": "Baavgai",
+    "upgrades_id": 5386
+  },
+  "6861": {
+    "name": "Kruztor II",
+    "upgrades_id": 5273
+  },
+  "6743": {
+    "name": "Black Velly",
+    "upgrades_id": 4327
+  },
+  "6707": {
+    "name": "Filrocas",
+    "upgrades_id": 4129
+  },
+  "6546": {
+    "name": "Galegon",
+    "upgrades_id": 3799
+  },
+  "6305": {
+    "name": "Gordel",
+    "upgrades_id": 3440
+  },
+  "6135": {
+    "name": "Glaucius",
+    "upgrades_id": 302
+  },
+  "5767": {
+    "name": "Usamochi",
+    "upgrades_id": 3260
+  },
+  "5757": {
+    "name": "Ferzen the Rock Dragon",
+    "upgrades_id": 4474
+  },
+  "5686": {
+    "name": "Yuveria",
+    "upgrades_id": 4872
+  },
+  "5524": {
+    "name": "Gemma",
+    "upgrades_id": 4300
+  },
+  "5386": {
+    "name": "Dreamy Scarlet Sakura",
+    "upgrades_id": 3702
+  },
+  "5127": {
+    "name": "Yule Cat",
+    "upgrades_id": 3465
+  },
+  "4567": {
+    "name": "Demonic Eye",
+    "upgrades_id": 4563
+  },
+  "4474": {
+    "name": "Sapphire Roga",
+    "upgrades_id": 2954
+  },
+  "4300": {
+    "name": "Pyxtica",
+    "upgrades_id": 1742
+  },
+  "3702": {
+    "name": "Mimesia",
+    "upgrades_id": 1925
+  },
+  "3465": {
+    "name": "Noeliel the Ice Statue",
+    "upgrades_id": 3464
+  },
+  "3440": {
+    "name": "Mom Fluck",
+    "upgrades_id": 2135
+  },
+  "3260": {
+    "name": "Usami",
+    "upgrades_id": 3259
+  },
+  "3113": {
+    "name": "Goleps",
+    "upgrades_id": 286
+  },
+  "2954": {
+    "name": "Ornlarf",
+    "upgrades_id": 2069
+  },
+  "2603": {
+    "name": "Super Death Mushroom",
+    "upgrades_id": 1212
+  },
+  "2250": {
+    "name": "Daddy Finpen",
+    "upgrades_id": 328
+  },
+  "2069": {
+    "name": "Iconos",
+    "upgrades_id": 284
+  },
+  "8429": {
+    "name": "Grandanbit",
+    "upgrades_id": null
+  },
+  "8264": {
+    "name": "Shark Potum",
+    "upgrades_id": 3242
+  },
+  "8254": {
+    "name": "Obsia",
+    "upgrades_id": 7368
+  },
+  "8179": {
+    "name": "Top-Star Potum",
+    "upgrades_id": 1283
+  },
+  "8156": {
+    "name": "Forbidden Shawle",
+    "upgrades_id": 5934
+  },
+  "8142": {
+    "name": "Gula",
+    "upgrades_id": 5800
+  },
+  "8057": {
+    "name": "Royal Ox King II",
+    "upgrades_id": 5332
+  },
+  "8056": {
+    "name": "Pillorocas",
+    "upgrades_id": null
+  },
+  "8043": {
+    "name": "Goblin Zucotto",
+    "upgrades_id": 5269
+  },
+  "8041": {
+    "name": "Erkuch",
+    "upgrades_id": 5218
+  },
+  "7642": {
+    "name": "Jibril III",
+    "upgrades_id": 7641
+  },
+  "7641": {
+    "name": "Jibril II",
+    "upgrades_id": 7640
+  },
+  "7511": {
+    "name": "Jiva",
+    "upgrades_id": null
+  },
+  "7403": {
+    "name": "Eripmav",
+    "upgrades_id": 5901
+  },
+  "7368": {
+    "name": "Fantica",
+    "upgrades_id": 1530
+  },
+  "6979": {
+    "name": "Amargon",
+    "upgrades_id": 2686
+  },
+  "6978": {
+    "name": "Soldner",
+    "upgrades_id": 2614
+  },
+  "6692": {
+    "name": "Exdocus",
+    "upgrades_id": 1987
+  },
+  "6552": {
+    "name": "Burning Dragon Igneus",
+    "upgrades_id": 3748
+  },
+  "6487": {
+    "name": "Neo Wandering Wheel",
+    "upgrades_id": 2945
+  },
+  "6267": {
+    "name": "Goldigem",
+    "upgrades_id": 4554
+  },
+  "5934": {
+    "name": "Prudent Blue Shadow",
+    "upgrades_id": 2493
+  },
+  "5917": {
+    "name": "Gordo",
+    "upgrades_id": 2945
+  },
+  "5901": {
+    "name": "Neewollah",
+    "upgrades_id": 4183
+  },
+  "5442": {
+    "name": "Trocostida",
+    "upgrades_id": 2423
+  },
+  "5379": {
+    "name": "Yashiro Azuki's Mom II",
+    "upgrades_id": 4250
+  },
+  "5378": {
+    "name": "†Dark Lord†",
+    "upgrades_id": 4249
+  },
+  "5332": {
+    "name": "Royal Ox King",
+    "upgrades_id": 5330
+  },
+  "5331": {
+    "name": "Pillow Kitagawa",
+    "upgrades_id": 5330
+  },
+  "5269": {
+    "name": "Alfenix",
+    "upgrades_id": 3620
+  },
+  "5218": {
+    "name": "Garnache",
+    "upgrades_id": 3551
+  },
+  "5195": {
+    "name": "Stellar Ooze",
+    "upgrades_id": 2916
+  },
+  "4861": {
+    "name": "Underwater Ruins Monster",
+    "upgrades_id": 4856
+  },
+  "4612": {
+    "name": "Tardigrademon",
+    "upgrades_id": 321
+  },
+  "4554": {
+    "name": "Felicitoad",
+    "upgrades_id": 2842
+  },
+  "4391": {
+    "name": "Mega Alpoca",
+    "upgrades_id": 305
+  },
+  "4183": {
+    "name": "Zarth",
+    "upgrades_id": 3277
+  },
+  "3748": {
+    "name": "King Piton",
+    "upgrades_id": 2291
+  },
+  "3277": {
+    "name": "Zoe",
+    "upgrades_id": 2379
+  },
+  "3242": {
+    "name": "Solopy",
+    "upgrades_id": 307
+  },
+  "2945": {
+    "name": "Wandering Wheel",
+    "upgrades_id": 1119
+  },
+  "2686": {
+    "name": "Candela II",
+    "upgrades_id": 1849
+  },
+  "2614": {
+    "name": "Chocolate Ooze II",
+    "upgrades_id": 1779
+  },
+  "2493": {
+    "name": "Baphomela",
+    "upgrades_id": 1649
+  },
+  "2379": {
+    "name": "Jeila",
+    "upgrades_id": 1500
+  },
+  "2291": {
+    "name": "Proto Leon",
+    "upgrades_id": 330
+  },
+  "2046": {
+    "name": "Ancient Empress II",
+    "upgrades_id": 641
+  },
+  "8190": {
+    "name": "Velcaroy",
+    "upgrades_id": 6977
+  },
+  "8137": {
+    "name": "Abyssal Crystal Monster",
+    "upgrades_id": 8136
+  },
+  "7639": {
+    "name": "Breeta",
+    "upgrades_id": 6253
+  },
+  "7608": {
+    "name": "Seele Zauga II",
+    "upgrades_id": null
+  },
+  "7482": {
+    "name": "Humida",
+    "upgrades_id": 4927
+  },
+  "7134": {
+    "name": "Etoise",
+    "upgrades_id": 4304
+  },
+  "7119": {
+    "name": "Dominaredor",
+    "upgrades_id": 2602
+  },
+  "6863": {
+    "name": "Sicanokami",
+    "upgrades_id": 4644
+  },
+  "6485": {
+    "name": "Mysterious Crystal",
+    "upgrades_id": 297
+  },
+  "6253": {
+    "name": "Crysmort",
+    "upgrades_id": 4548
+  },
+  "5916": {
+    "name": "War Dragon Turba",
+    "upgrades_id": 3520
+  },
+  "5902": {
+    "name": "Teertocrit",
+    "upgrades_id": 292
+  },
+  "5076": {
+    "name": "Espectro",
+    "upgrades_id": 1052
+  },
+  "4927": {
+    "name": "Venena II",
+    "upgrades_id": 3135
+  },
+  "4703": {
+    "name": "Sand Bandits Leader",
+    "upgrades_id": 830
+  },
+  "4644": {
+    "name": "Patissia",
+    "upgrades_id": 2076
+  },
+  "4548": {
+    "name": "Amalgam",
+    "upgrades_id": 2785
+  },
+  "3520": {
+    "name": "Zelbuse",
+    "upgrades_id": 1901
+  },
+  "2785": {
+    "name": "Deniala",
+    "upgrades_id": 1078
+  },
+  "2602": {
+    "name": "Lalvada",
+    "upgrades_id": 318
+  },
+  "2076": {
+    "name": "Tapir",
+    "upgrades_id": 297
+  },
+  "2024": {
+    "name": "Memecoleous",
+    "upgrades_id": 325
+  },
+  "1051": {
+    "name": "Pillar Golem",
+    "upgrades_id": null
+  },
+  "1052": {
+    "name": "Shining Gentleman",
+    "upgrades_id": null
+  },
+  "4129": {
+    "name": "Eroded Pilz",
+    "upgrades_id": null
+  },
+  "3620": {
+    "name": "Handmade Cookie",
+    "upgrades_id": null
+  },
+  "1078": {
+    "name": "Viscum",
+    "upgrades_id": null
+  },
+  "3135": {
+    "name": "Venena",
+    "upgrades_id": null
+  },
+  "3155": {
+    "name": "Megiston The Champion",
+    "upgrades_id": null
+  },
+  "5718": {
+    "name": "Arbogazella",
+    "upgrades_id": null
+  },
+  "2135": {
+    "name": "Ifrid",
+    "upgrades_id": null
+  },
+  "4185": {
+    "name": "Radibat",
+    "upgrades_id": null
+  },
+  "6746": {
+    "name": "Xmas Princess in Black",
+    "upgrades_id": null
+  },
+  "1119": {
+    "name": "Grass Dragon Yelb",
+    "upgrades_id": null
+  },
+  "1649": {
+    "name": "Twilight Dragon",
+    "upgrades_id": null
+  },
+  "2674": {
+    "name": "Zahhak Machina",
+    "upgrades_id": null
+  },
+  "632": {
+    "name": "Caspy",
+    "upgrades_id": null
+  },
+  "641": {
+    "name": "Ancient Empress",
+    "upgrades_id": null
+  },
+  "3206": {
+    "name": "Hero Potum",
+    "upgrades_id": null
+  },
+  "5768": {
+    "name": "Devil Dango",
+    "upgrades_id": null
+  },
+  "1164": {
+    "name": "Nurethoth",
+    "upgrades_id": null
+  },
+  "4249": {
+    "name": "Yashiro Azuki's Dad",
+    "upgrades_id": null
+  },
+  "4250": {
+    "name": "Narumi Hina",
+    "upgrades_id": null
+  },
+  "5273": {
+    "name": "Kruztor",
+    "upgrades_id": null
+  },
+  "5800": {
+    "name": "Junior Dragon Zyvio",
+    "upgrades_id": null
+  },
+  "3259": {
+    "name": "Usakichi",
+    "upgrades_id": null
+  },
+  "1212": {
+    "name": "Jade Raptor",
+    "upgrades_id": null
+  },
+  "3264": {
+    "name": "Usasama the Necromancer",
+    "upgrades_id": null
+  },
+  "4296": {
+    "name": "Armasite",
+    "upgrades_id": null
+  },
+  "1742": {
+    "name": "Cerberus",
+    "upgrades_id": null
+  },
+  "4304": {
+    "name": "Volgagon",
+    "upgrades_id": null
+  },
+  "5330": {
+    "name": "Ox King",
+    "upgrades_id": null
+  },
+  "3799": {
+    "name": "Thug Golem",
+    "upgrades_id": null
+  },
+  "4323": {
+    "name": "Shawle",
+    "upgrades_id": null
+  },
+  "4327": {
+    "name": "Evil Shadow",
+    "upgrades_id": null
+  },
+  "3820": {
+    "name": "Neo Maton Sword",
+    "upgrades_id": null
+  },
+  "1779": {
+    "name": "Chocolate Ooze",
+    "upgrades_id": null
+  },
+  "4856": {
+    "name": "Adaro",
+    "upgrades_id": null
+  },
+  "2300": {
+    "name": "Evil Magic Sword",
+    "upgrades_id": null
+  },
+  "4352": {
+    "name": "Blancanine the White Fang",
+    "upgrades_id": null
+  },
+  "1283": {
+    "name": "Sunlight Potum",
+    "upgrades_id": null
+  },
+  "4872": {
+    "name": "Gopherga",
+    "upgrades_id": null
+  },
+  "3339": {
+    "name": "Fanadon",
+    "upgrades_id": null
+  },
+  "1815": {
+    "name": "Zolban",
+    "upgrades_id": null
+  },
+  "5911": {
+    "name": "Dr. Leonardo",
+    "upgrades_id": null
+  },
+  "281": {
+    "name": "Big Coryn",
+    "upgrades_id": null
+  },
+  "5913": {
+    "name": "DX Fighter",
+    "upgrades_id": null
+  },
+  "283": {
+    "name": "Boss Goblin",
+    "upgrades_id": null
+  },
+  "3355": {
+    "name": "Pomie Chan",
+    "upgrades_id": null
+  },
+  "285": {
+    "name": "Brutal Dragon Decel",
+    "upgrades_id": null
+  },
+  "286": {
+    "name": "Colon Commander",
+    "upgrades_id": null
+  },
+  "287": {
+    "name": "Crimsosch",
+    "upgrades_id": null
+  },
+  "1312": {
+    "name": "Metal Stinger",
+    "upgrades_id": null
+  },
+  "284": {
+    "name": "Boss Roga",
+    "upgrades_id": null
+  },
+  "2842": {
+    "name": "G. Iconos",
+    "upgrades_id": null
+  },
+  "292": {
+    "name": "Dark Mushroom",
+    "upgrades_id": null
+  },
+  "293": {
+    "name": "Demon's Gate",
+    "upgrades_id": null
+  },
+  "297": {
+    "name": "Eerie Crystal",
+    "upgrades_id": null
+  },
+  "299": {
+    "name": "Excavated Golem",
+    "upgrades_id": null
+  },
+  "300": {
+    "name": "Flare Volg",
+    "upgrades_id": null
+  },
+  "4398": {
+    "name": "Kuzto",
+    "upgrades_id": null
+  },
+  "303": {
+    "name": "Ganglef",
+    "upgrades_id": null
+  },
+  "1840": {
+    "name": "Aranea",
+    "upgrades_id": null
+  },
+  "304": {
+    "name": "Gespenst",
+    "upgrades_id": null
+  },
+  "306": {
+    "name": "Gigant Knight",
+    "upgrades_id": null
+  },
+  "302": {
+    "name": "Forestia",
+    "upgrades_id": null
+  },
+  "305": {
+    "name": "Giant Boar",
+    "upgrades_id": null
+  },
+  "307": {
+    "name": "Golden Skeleton",
+    "upgrades_id": null
+  },
+  "310": {
+    "name": "King Potum",
+    "upgrades_id": null
+  },
+  "312": {
+    "name": "Minotaur",
+    "upgrades_id": null
+  },
+  "313": {
+    "name": "Miracle Potum",
+    "upgrades_id": null
+  },
+  "1338": {
+    "name": "Zega",
+    "upgrades_id": null
+  },
+  "1849": {
+    "name": "Candela",
+    "upgrades_id": null
+  },
+  "830": {
+    "name": "Violaccoon",
+    "upgrades_id": null
+  },
+  "318": {
+    "name": "Ooze",
+    "upgrades_id": null
+  },
+  "321": {
+    "name": "Seltirios",
+    "upgrades_id": null
+  },
+  "6977": {
+    "name": "Broker Goblin",
+    "upgrades_id": null
+  },
+  "325": {
+    "name": "Stone Mercenary",
+    "upgrades_id": null
+  },
+  "328": {
+    "name": "Tortuga",
+    "upgrades_id": null
+  },
+  "330": {
+    "name": "Warmonger",
+    "upgrades_id": null
+  },
+  "2916": {
+    "name": "Gespenst II",
+    "upgrades_id": null
+  },
+  "1901": {
+    "name": "Bexiz",
+    "upgrades_id": null
+  },
+  "1904": {
+    "name": "Lapin The Necromancer",
+    "upgrades_id": null
+  },
+  "2423": {
+    "name": "Dusk Machina",
+    "upgrades_id": null
+  },
+  "1925": {
+    "name": "Cerabes",
+    "upgrades_id": null
+  },
+  "3464": {
+    "name": "Noeliel",
+    "upgrades_id": null
+  },
+  "4528": {
+    "name": "Canemofish",
+    "upgrades_id": null
+  },
+  "1975": {
+    "name": "Imitator",
+    "upgrades_id": null
+  },
+  "4537": {
+    "name": "Gravicep",
+    "upgrades_id": null
+  },
+  "1470": {
+    "name": "Black Knight of Delusion",
+    "upgrades_id": null
+  },
+  "6595": {
+    "name": "Sibylares",
+    "upgrades_id": null
+  },
+  "3524": {
+    "name": "Mithurna Lynx",
+    "upgrades_id": null
+  },
+  "1987": {
+    "name": "Corroded Knight Captain",
+    "upgrades_id": null
+  },
+  "8136": {
+    "name": "Zeagrysta",
+    "upgrades_id": null
+  },
+  "4563": {
+    "name": "Demonic Quasar",
+    "upgrades_id": null
+  },
+  "7640": {
+    "name": "Jibril",
+    "upgrades_id": null
+  },
+  "5084": {
+    "name": "Arachnidemon",
+    "upgrades_id": null
+  },
+  "1500": {
+    "name": "Pumpking",
+    "upgrades_id": null
+  },
+  "3551": {
+    "name": "Eidenliebe",
+    "upgrades_id": null
+  },
+  "2536": {
+    "name": "Odelon Machina",
+    "upgrades_id": null
+  },
+  "2032": {
+    "name": "Imitacia",
+    "upgrades_id": null
+  },
+  "1529": {
+    "name": "Evil Crystal Beast",
+    "upgrades_id": null
+  },
+  "1530": {
+    "name": "Grylle",
+    "upgrades_id": null
+  },
+  "35001": {
+    "name": "Arnold",
+    "upgrades_id": null
+  },
+  "35002": {
+    "name": "Arnold II",
+    "upgrades_id": 35001
+  },
+  "35003": {
+    "name": "Crashing Lightning",
+    "upgrades_id": 35002
+  }
+}

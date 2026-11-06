@@ -1,0 +1,11 @@
+neonize
+beautifulsoup4
+segno
+protobuf
+requests
+cloudscraper
+curl-cffi
+yt-dlp
+
+
+

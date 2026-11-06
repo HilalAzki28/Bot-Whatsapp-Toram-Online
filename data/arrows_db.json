@@ -1,0 +1,2151 @@
+[
+  {
+    "name": "Sakura Wind Arrow",
+    "atk": "206",
+    "element": "Wind",
+    "is_event": true,
+    "event_badge": "Event (Sakura)",
+    "note": "",
+    "stats": [
+      "Base ATK: 206",
+      "Physical Pierce %: 5",
+      "Fire resistance %: -5",
+      "Wind Element: 1",
+      "Base Stability %: 20",
+      "Reduce Dmg (Floor) %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "Plantara (Lv 262)",
+        "map": "Mt. White Peach: Outskirts"
+      }
+    ]
+  },
+  {
+    "name": "Stardust Arrow",
+    "atk": "307",
+    "element": "Water",
+    "is_event": true,
+    "event_badge": "White Day 2026",
+    "note": "Dropped by Mycodian (Coffee difficulty).\nUntradable.",
+    "stats": [
+      "Base ATK: 307",
+      "Water Element: 1",
+      "Long Range Damage %: 1",
+      "Motion Speed %: 3",
+      "Base Stability %: 20",
+      "Heavy Armor only:Physical Resistance %: 10",
+      "Magic Resistance %: 10",
+      "Light Armor only:Aggro %: -15"
+    ],
+    "drops": [
+      {
+        "monster": "Drop: Mycodian (Coffee difficulty)",
+        "map": "Event Map / Boss"
+      }
+    ]
+  },
+  {
+    "name": "Chromatic Arrow",
+    "atk": "169",
+    "element": "Wind",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 169",
+      "% stronger against Fire: 5",
+      "Water resistance %: 10",
+      "Wind Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Craft Blacksmith / NPC",
+        "map": "Blacksmith / Pandai Besi"
+      }
+    ]
+  },
+  {
+    "name": "Curvy Horn Arrow",
+    "atk": "206",
+    "element": "Earth",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 206",
+      "Accuracy %: 25",
+      "Earth resistance %: 10",
+      "Earth Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Craft Blacksmith / NPC",
+        "map": "Blacksmith / Pandai Besi"
+      }
+    ]
+  },
+  {
+    "name": "Phantom Melody Arrow",
+    "atk": "292",
+    "element": "Light",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 292",
+      "DEX %: 2",
+      "MaxMP: 100",
+      "Light Element: 1",
+      "Attack MP Recovery: 5",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Craft Blacksmith / NPC",
+        "map": "Blacksmith / Pandai Besi"
+      }
+    ]
+  },
+  {
+    "name": "Reefy Coast Arrow",
+    "atk": "213",
+    "element": "Water",
+    "is_event": true,
+    "event_badge": "Summer Event 2025",
+    "note": "",
+    "stats": [
+      "Base ATK: 213",
+      "Magic Resistance %: 5",
+      "Accuracy %: 10",
+      "Water Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Anemona (Lv 240)",
+        "map": "Pirates' Hideout: Area 1"
+      }
+    ]
+  },
+  {
+    "name": "Candle Arrow (Blue Flame)",
+    "atk": "247",
+    "element": "Fire",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 247",
+      "INT %: 1",
+      "Stability %: 5",
+      "Water resistance %: -10",
+      "Fire Element: 1",
+      "Attack MP Recovery: 3",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Craft Blacksmith / NPC",
+        "map": "Blacksmith / Pandai Besi"
+      }
+    ]
+  },
+  {
+    "name": "Eerie Bird Piercing Arrow",
+    "atk": "254",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 254",
+      "Physical Pierce %: 10",
+      "CSPD %: 10",
+      "Base Stability %: 20",
+      "Guard Break %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "Craft Blacksmith / NPC",
+        "map": "Blacksmith / Pandai Besi"
+      }
+    ]
+  },
+  {
+    "name": "Maple Arrow",
+    "atk": "158",
+    "element": "Earth",
+    "is_event": true,
+    "event_badge": "Event (Maple)",
+    "note": "",
+    "stats": [
+      "Base ATK: 158",
+      "DEX %: 1",
+      "Ailment Resistance %: 5",
+      "Earth Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Honey Insector (Lv 221)",
+        "map": "Anglaise Forest"
+      }
+    ]
+  },
+  {
+    "name": "Moonlight Arrow",
+    "atk": "181",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": true,
+    "event_badge": "Event (Moonlight)",
+    "note": "",
+    "stats": [
+      "Base ATK: 181",
+      "MATK %: 1",
+      "Magic Pierce %: 10",
+      "Attack MP Recovery: 1",
+      "Guard Break %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "Craft Blacksmith (Event Limited)",
+        "map": "Event Venue"
+      }
+    ]
+  },
+  {
+    "name": "Herb Arrow",
+    "atk": "125",
+    "element": "Wind",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 125",
+      "Dodge: 40",
+      "Dark resistance %: 10",
+      "Wind Element: 1",
+      "Base Stability %: 20",
+      "Evasion Recharge %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Craft Blacksmith / NPC",
+        "map": "Blacksmith / Pandai Besi"
+      }
+    ]
+  },
+  {
+    "name": "Joyful Arrow",
+    "atk": "100",
+    "element": "Light",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 100",
+      "MaxMP: 100",
+      "Light Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Crestollar (Lv 253)",
+        "map": "Latum Wetlands"
+      },
+      {
+        "monster": "Crestollar (Lv 256)",
+        "map": "Latum Wetlands"
+      }
+    ]
+  },
+  {
+    "name": "Dry Water Arrow",
+    "atk": "206",
+    "element": "Water",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 206",
+      "MaxHP %: 15",
+      "Aggro %: 30",
+      "Water Element: 1",
+      "Base Stability %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "Coofer (Lv 255)",
+        "map": "Umidus Valley: Area 1"
+      },
+      {
+        "monster": "Coofer (Lv 256)",
+        "map": "Umidus Valley: Area 2"
+      },
+      {
+        "monster": "Coofer (Lv 257)",
+        "map": "Umidus Valley: Cliff Path"
+      }
+    ]
+  },
+  {
+    "name": "Starhammer Arrow",
+    "atk": "187",
+    "element": "Light",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 187",
+      "Accuracy %: -10",
+      "Critical Rate: 20",
+      "Light Element: 1",
+      "Base Stability %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "Spectern (Lv 226)",
+        "map": "Deusania's Lab"
+      }
+    ]
+  },
+  {
+    "name": "Spiral Shell Arrow",
+    "atk": "163",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 163",
+      "Physical Pierce %: 10",
+      "Base Stability %: 20",
+      "Anticipate %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "Spirulida (Lv 243)",
+        "map": "Deep Sea: Zone 1"
+      },
+      {
+        "monster": "Spirulida (Lv 244)",
+        "map": "Deep Sea: Zone 2"
+      },
+      {
+        "monster": "Spirulida (Lv 245)",
+        "map": "Deep Sea: Zone 3"
+      }
+    ]
+  },
+  {
+    "name": "Eumano Arrow",
+    "atk": "226",
+    "element": "Earth",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 226",
+      "Critical Rate: 5",
+      "Earth Element: 1",
+      "Long Range Damage %: 1",
+      "Motion Speed %: 3",
+      "Base Stability %: 25"
+    ],
+    "drops": [
+      {
+        "monster": "Craft Blacksmith / NPC",
+        "map": "Blacksmith / Pandai Besi"
+      }
+    ]
+  },
+  {
+    "name": "Evil Gaze Arrow",
+    "atk": "190",
+    "element": "Dark",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 190",
+      "Accuracy %: 30",
+      "Wind resistance %: 10",
+      "Dark Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Corey (Lv 232)",
+        "map": "Tower of Clamor: Area 1 (230-234)"
+      },
+      {
+        "monster": "Corey (Lv 233)",
+        "map": "Tower of Clamor: Area 2 (230-234)"
+      },
+      {
+        "monster": "Corey (Lv 234)",
+        "map": "Tower of Clamor: Area 3 (230-234)"
+      }
+    ]
+  },
+  {
+    "name": "Bat Fang Arrow",
+    "atk": "136",
+    "element": "Wind",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 136",
+      "Physical Pierce %: 10",
+      "Accuracy: -20",
+      "Critical Rate: 10",
+      "Wind Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Kuffa (Lv 181)",
+        "map": "Risus Valley: Area 2"
+      },
+      {
+        "monster": "Kuffa (Lv 180)",
+        "map": "Risus Valley: Area 1"
+      },
+      {
+        "monster": "Kuffa (Lv 182)",
+        "map": "Risus Valley: Area 3"
+      }
+    ]
+  },
+  {
+    "name": "Lovely Autumn Arrow",
+    "atk": "142",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": true,
+    "event_badge": "Event (Autumn)",
+    "note": "",
+    "stats": [
+      "Base ATK: 142",
+      "MaxHP: 2000",
+      "Weapon ATK %: 10",
+      "Base Stability %: 20",
+      "Guard Break %: 15"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 3200 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 30x Fallen in Fall - 40x Withered Leaf - 20x Quake Sound - 2x Amethyst Flower"
+      }
+    ]
+  },
+  {
+    "name": "Dragon Palace Arrow",
+    "atk": "200",
+    "element": "Water",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 200",
+      "MaxHP %: 25",
+      "Critical Rate %: 25",
+      "Water Element: 1",
+      "% stronger against Neutral: -25",
+      "Base Stability %: 20",
+      "Stun Unavailable: 1"
+    ],
+    "drops": [
+      {
+        "monster": "Sea Ghost Wooden Box",
+        "map": "-"
+      }
+    ]
+  },
+  {
+    "name": "Anniv Festive Arrow II",
+    "atk": "101",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": true,
+    "event_badge": "Event (Anniv)",
+    "note": "",
+    "stats": [
+      "Base ATK: 101",
+      "ASPD: 200",
+      "Aggro %: -12",
+      "Base Stability %: 20",
+      "Fractional Barrier %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "Anniv Equipment Box III",
+        "map": "-"
+      }
+    ]
+  },
+  {
+    "name": "Anniv Festive Arrow",
+    "atk": "50",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": true,
+    "event_badge": "Event (Anniv)",
+    "note": "",
+    "stats": [
+      "Base ATK: 50",
+      "ASPD: 100",
+      "Aggro %: -10",
+      "Base Stability %: 20",
+      "Fractional Barrier %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "Anniv Equipment Box I",
+        "map": "-"
+      }
+    ]
+  },
+  {
+    "name": "Anniv Festive Arrow IV",
+    "atk": "194",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": true,
+    "event_badge": "Event (Anniv)",
+    "note": "",
+    "stats": [
+      "Base ATK: 194",
+      "ASPD: 400",
+      "Aggro %: -16",
+      "Base Stability %: 20",
+      "Fractional Barrier %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "Anniv Equipment Box VII",
+        "map": "-"
+      }
+    ]
+  },
+  {
+    "name": "Sunny Spring Arrow",
+    "atk": "181",
+    "element": "Light",
+    "is_event": true,
+    "event_badge": "Event (Spring)",
+    "note": "",
+    "stats": [
+      "Base ATK: 181",
+      "Physical Pierce %: 5",
+      "Magic Pierce %: 5",
+      "Light Element: 1",
+      "Base Stability %: 20",
+      "Guard Break %: 5"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 5000 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 10x Cherry Pink Certificate - 300x Wood - 100x Mana"
+      }
+    ]
+  },
+  {
+    "name": "Spiny Leaf Arrow",
+    "atk": "110",
+    "element": "Earth",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 110",
+      "MaxHP %: 10",
+      "Aggro %: 10",
+      "Earth Element: 1",
+      "Base Stability %: 20",
+      "Fractional Barrier %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "Ghilly (Lv 182)",
+        "map": "Sable Plains"
+      }
+    ]
+  },
+  {
+    "name": "Dragon Guard Arrow",
+    "atk": "187",
+    "element": "Fire",
+    "is_event": true,
+    "event_badge": "Event (Megiston)",
+    "note": "",
+    "stats": [
+      "Base ATK: 187",
+      "Critical Rate: 10",
+      "Earth resistance %: -5",
+      "Fire Element: 1",
+      "Attack MP Recovery: 3",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Guard Golem (Megiston 2022) (Lv 250)",
+        "map": "Event"
+      }
+    ]
+  },
+  {
+    "name": "Blazing Tail Arrow",
+    "atk": "152",
+    "element": "Fire",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 152",
+      "Fire resistance %: 10",
+      "Fire Element: 1",
+      "Base Stability %: 20",
+      "Reduce Dmg (Bowling) %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Tailgon (Lv 213)",
+        "map": "Tunnel of Trials"
+      },
+      {
+        "monster": "Tailgon (Lv 216)",
+        "map": "Tunnel of Trials"
+      }
+    ]
+  },
+  {
+    "name": "Specter Arrow",
+    "atk": "120",
+    "element": "Dark",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 120",
+      "Dark Element: 1",
+      "Base Stability %: 20",
+      "Additional Magic %: 50",
+      "Invincible Aid (sec): 1"
+    ],
+    "drops": [
+      {
+        "monster": "Manomare (Lv 169)",
+        "map": "Phasma Forest: Area 1"
+      },
+      {
+        "monster": "Manomare (Lv 170)",
+        "map": "Phasma Forest: Area 2"
+      },
+      {
+        "monster": "Manomare (Lv 171)",
+        "map": "Phasma Forest: Area 3"
+      },
+      {
+        "monster": "Manomare (Lv 172)",
+        "map": "Phasma Forest: Area 3"
+      }
+    ]
+  },
+  {
+    "name": "Devil's Arrow",
+    "atk": "130",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 130",
+      "Physical Pierce %: 8",
+      "Short Range Damage %: 2",
+      "Base Stability %: 20",
+      "Anticipate %: 4"
+    ],
+    "drops": [
+      {
+        "monster": "Skullpion (Lv 198)",
+        "map": "Vulcani Underground Passage"
+      },
+      {
+        "monster": "Skullpion (Lv 200)",
+        "map": "Vulcani Underground Passage"
+      }
+    ]
+  },
+  {
+    "name": "Pearl Sakura Arrow",
+    "atk": "160",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": true,
+    "event_badge": "Event (Sakura)",
+    "note": "",
+    "stats": [
+      "Base ATK: 160",
+      "MaxMP: 200",
+      "Critical Rate: 10",
+      "Base Stability %: 20",
+      "Bow only:Long Range Damage %: 2"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 2000 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 25x Fine Sake (Pearl Sakura) - 1x Sinister Origami - 1x Torn Paper Crane - 180x Wood"
+      }
+    ]
+  },
+  {
+    "name": "Queen Bee Arrow",
+    "atk": "150",
+    "element": "Wind",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 150",
+      "Water resistance %: 5",
+      "Wind Element: 1",
+      "Base Stability %: 20",
+      "Tumble Unavailable: 1",
+      "Additional Melee %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 1000 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 4x Royal Jelly - 2x Gold Flower - 500x Medicine - 500x Mana"
+      }
+    ]
+  },
+  {
+    "name": "Guardian Forest Arrow",
+    "atk": "163",
+    "element": "Earth",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 163",
+      "Accuracy %: 50",
+      "% stronger against Fire: -10",
+      "% stronger against Light: -20",
+      "Aggro %: -25",
+      "Earth Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Arbogazella (Lv 236)",
+        "map": "Guardian Forest: Lost Woods"
+      }
+    ]
+  },
+  {
+    "name": "Anniv Festive Arrow III",
+    "atk": "146",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": true,
+    "event_badge": "Event (Anniv)",
+    "note": "",
+    "stats": [
+      "Base ATK: 146",
+      "ASPD: 300",
+      "Aggro %: -14",
+      "Base Stability %: 20",
+      "Fractional Barrier %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "Anniv Equipment Box V",
+        "map": "-"
+      }
+    ]
+  },
+  {
+    "name": "Quartz Arrow",
+    "atk": "115",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 115",
+      "Critical Rate: 10",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Rollitida (Lv 191)",
+        "map": "Fugitive Lake Swamp: Area 2"
+      },
+      {
+        "monster": "Rollitida (Lv 193)",
+        "map": "Fugitive Lake Swamp: Area 3"
+      }
+    ]
+  },
+  {
+    "name": "Dreamy Arrow",
+    "atk": "136",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": true,
+    "event_badge": "Event (Sakura)",
+    "note": "",
+    "stats": [
+      "Base ATK: 136",
+      "Natural HP Regen %: 10",
+      "Aggro %: -20",
+      "% stronger against Neutral: 5",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Dreamy Scarlet Sakura (Nightmare) (Lv 220)",
+        "map": "Lush Falls : Upstream"
+      }
+    ]
+  },
+  {
+    "name": "Kijimu's Arrow",
+    "atk": "106",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": true,
+    "event_badge": "Event (Valentine)",
+    "note": "",
+    "stats": [
+      "Base ATK: 106",
+      "Magic Pierce %: 10",
+      "Magic Barrier: 1000"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Kijimu (Lv 124)",
+        "map": "Creme Cliff (Valentine's Day Event)"
+      }
+    ]
+  },
+  {
+    "name": "Holy Tree Arrow",
+    "atk": "100",
+    "element": "Light",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 100",
+      "Dark resistance %: 10",
+      "Light Element: 1",
+      "Attack MP Recovery: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Santaby (Lv 159)",
+        "map": "Tomte Pavillion (150-170)"
+      }
+    ]
+  },
+  {
+    "name": "Demon Empress Arrow",
+    "atk": "120",
+    "element": "Fire",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 120",
+      "Accuracy %: 15",
+      "Aggro %: -15",
+      "Fire Element: 1",
+      "Base Stability %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "Venena Metacoenubia (Lv 185)",
+        "map": "Neo Plastida"
+      },
+      {
+        "monster": "Venena Metacoenubia (Lv 195)",
+        "map": "Neo Plastida"
+      },
+      {
+        "monster": "Venena Metacoenubia (Lv 205)",
+        "map": "Neo Plastida"
+      },
+      {
+        "monster": "Venena Metacoenubia (Lv 215)",
+        "map": "Neo Plastida"
+      },
+      {
+        "monster": "Venena Metacoenubia (Lv 235)",
+        "map": "Neo Plastida"
+      }
+    ]
+  },
+  {
+    "name": "Ocean Arrow",
+    "atk": "110",
+    "element": "Water",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 110",
+      "MaxMP: 200",
+      "Wind resistance %: -3",
+      "Water Element: 1",
+      "Attack MP Recovery: 1",
+      "Base Stability %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 1000 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 10x Deep-Sea Coral - 1x Sea Current Crystal - 150x Metal - 150x Mana"
+      }
+    ]
+  },
+  {
+    "name": "Elven Arrow",
+    "atk": "96",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 96",
+      "Accuracy %: 20",
+      "Base Stability %: 20",
+      "Anticipate %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "Lazulligator (Lv 160)",
+        "map": "Old Lufenas Mansion Ruins"
+      },
+      {
+        "monster": "Lazulligator (Lv 163)",
+        "map": "Old Lufenas Mansion Ruins"
+      }
+    ]
+  },
+  {
+    "name": "Twilight Sakura Arrow",
+    "atk": "100",
+    "element": "Dark",
+    "is_event": true,
+    "event_badge": "Event (Sakura)",
+    "note": "",
+    "stats": [
+      "Base ATK: 100",
+      "Light resistance %: 5",
+      "Dark Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Amalgam (Lv 140)",
+        "map": "Twilight Sakura Castle: Top"
+      },
+      {
+        "monster": "Amalgam (Lv 160)",
+        "map": "Twilight Sakura Castle: Top"
+      },
+      {
+        "monster": "Amalgam (Lv 180)",
+        "map": "Twilight Sakura Castle: Top"
+      }
+    ]
+  },
+  {
+    "name": "Poison Needle",
+    "atk": "106",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 106",
+      "Ailment Resistance %: -3",
+      "Short Range Damage %: 1",
+      "1-Handed Sword only:Critical Rate: 15"
+    ],
+    "drops": [
+      {
+        "monster": "Weltacle (Lv 168)",
+        "map": "Recetacula Sector: Area 1"
+      },
+      {
+        "monster": "Weltacle (Lv 170)",
+        "map": "Recetacula Sector: Area 3"
+      }
+    ]
+  },
+  {
+    "name": "Apple Arrow",
+    "atk": "92",
+    "element": "Wind",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 92",
+      "Aggro %: -10",
+      "Wind Element: 1",
+      "Base Stability %: 15"
+    ],
+    "drops": [
+      {
+        "monster": "Coryn (Lv 154)",
+        "map": "Dikkit Sector"
+      },
+      {
+        "monster": "Coryn (Lv 156)",
+        "map": "Dikkit Sector"
+      }
+    ]
+  },
+  {
+    "name": "Driver Bolt",
+    "atk": "200",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 200",
+      "Accuracy %: -25",
+      "Attack MP Recovery: 3",
+      "Neutral Resistance %: 15",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Inspector Golem (Lv 164)",
+        "map": "Joulu House: Depot (Lv 150)"
+      }
+    ]
+  },
+  {
+    "name": "Driver Bolt",
+    "atk": "200",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 200",
+      "Accuracy %: -50",
+      "Attack MP Recovery: 2",
+      "Neutral Resistance %: 10",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Inspector Golem (Lv 143)",
+        "map": "Joulu House: Depot (Lv 130)"
+      }
+    ]
+  },
+  {
+    "name": "Driver Bolt",
+    "atk": "200",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 200",
+      "Accuracy %: -75",
+      "Attack MP Recovery: 1",
+      "Neutral Resistance %: 5",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Inspector Golem (Lv 122)",
+        "map": "Joulu House: Depot (Lv 100)"
+      }
+    ]
+  },
+  {
+    "name": "Serein Arrow",
+    "atk": "84",
+    "element": "Bowgun,Bow only:Water",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 84",
+      "Base Stability %: 20",
+      "Tumble Unavailable: 1",
+      "Absolute Accuracy %: 1",
+      "Bowgun,Bow only:Water Element: 1"
+    ],
+    "drops": [
+      {
+        "monster": "Floragonet (Lv 159)",
+        "map": "Fractum Sector: Area 1"
+      },
+      {
+        "monster": "Floragonet (Lv 160)",
+        "map": "Fractum Sector: Area 2"
+      }
+    ]
+  },
+  {
+    "name": "Treat Arrow",
+    "atk": "77",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": true,
+    "event_badge": "Event (Treat)",
+    "note": "",
+    "stats": [
+      "Base ATK: 77",
+      "ATK %: 1",
+      "Critical Rate %: 1",
+      "Aggro %: -1",
+      "Base Stability %: 30"
+    ],
+    "drops": [
+      {
+        "monster": "Zarth (Lv 175)",
+        "map": "Zarth's Mansion: Back"
+      }
+    ]
+  },
+  {
+    "name": "Aquamirror Arrow",
+    "atk": "37",
+    "element": "Water",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 37",
+      "CSPD: 100",
+      "Water Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Craft Blacksmith / NPC",
+        "map": "Blacksmith / Pandai Besi"
+      }
+    ]
+  },
+  {
+    "name": "Spiky Arrow",
+    "atk": "79",
+    "element": "Dark",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 79",
+      "Magic Resistance %: 5",
+      "Dark Element: 1",
+      "Base Stability %: 20",
+      "Reduce Dmg (Floor) %: 5"
+    ],
+    "drops": [
+      {
+        "monster": "Ivy (Lv 150)",
+        "map": "Dark Dragon Shrine: Lower"
+      },
+      {
+        "monster": "Ivy (Lv 151)",
+        "map": "Dark Dragon Shrine: Middle"
+      },
+      {
+        "monster": "Ivy (Lv 152)",
+        "map": "Dark Dragon Shrine: Upper"
+      }
+    ]
+  },
+  {
+    "name": "Split Arrow",
+    "atk": "40",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 40",
+      "Attack MP Recovery: 1",
+      "Base Stability %: 20",
+      "Bow only:Additional Melee %: 100"
+    ],
+    "drops": [
+      {
+        "monster": "Craft Blacksmith / NPC",
+        "map": "Blacksmith / Pandai Besi"
+      }
+    ]
+  },
+  {
+    "name": "Sakura Princess Arrow",
+    "atk": "88",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": true,
+    "event_badge": "Event (Sakura)",
+    "note": "",
+    "stats": [
+      "Base ATK: 88",
+      "MaxHP: 1000",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Mimesia (Easy) (Lv 120)",
+        "map": "Sakura Castle Donjon: Top"
+      },
+      {
+        "monster": "Mimesia (Normal) (Lv 140)",
+        "map": "Sakura Castle Donjon: Top"
+      },
+      {
+        "monster": "Mimesia (Hard) (Lv 160)",
+        "map": "Sakura Castle Donjon: Top"
+      }
+    ]
+  },
+  {
+    "name": "Crystal Arrow",
+    "atk": "70",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 70",
+      "Aggro %: -20",
+      "Weapon ATK: 10",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Aeternus (Lv 130)",
+        "map": "Barbaros Corridor"
+      }
+    ]
+  },
+  {
+    "name": "Love Arrow",
+    "atk": "71",
+    "element": "Fire",
+    "is_event": true,
+    "event_badge": "Event (Love)",
+    "note": "",
+    "stats": [
+      "Base ATK: 71",
+      "Critical Rate: 5",
+      "Fire Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 130 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 9x Prime Chocolate Chip - 3x Love Cacao - 130x Wood"
+      }
+    ]
+  },
+  {
+    "name": "Lil Empress Arrow",
+    "atk": "83",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 83",
+      "Physical Pierce %: 10",
+      "DEF %: -30",
+      "ASPD %: 10",
+      "Aggro %: -10",
+      "Base Stability %: 15"
+    ],
+    "drops": [
+      {
+        "monster": "Venena Coenubia (Lv 140)",
+        "map": "Ultimea Palace: Throne"
+      },
+      {
+        "monster": "Venena Coenubia (Lv 150)",
+        "map": "Ultimea Palace: Throne"
+      },
+      {
+        "monster": "Venena Coenubia (Lv 160)",
+        "map": "Ultimea Palace: Throne"
+      },
+      {
+        "monster": "Venena Coenubia (Lv 170)",
+        "map": "Ultimea Palace: Throne"
+      },
+      {
+        "monster": "Venena Coenubia (Lv 190)",
+        "map": "Ultimea Palace: Throne"
+      }
+    ]
+  },
+  {
+    "name": "Arrow of Penetration",
+    "atk": "64",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 64",
+      "Critical Rate: 5",
+      "Critical Damage: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Pond Snake (Lv 115)",
+        "map": "Copia Reservoir"
+      }
+    ]
+  },
+  {
+    "name": "Drill Bolt",
+    "atk": "120",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 120",
+      "Physical Pierce %: 10",
+      "Critical Damage: 2",
+      "Aggro %: 20",
+      "Base Stability %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "Mine Digger (Lv 113)",
+        "map": "Ultimea Sewer: South"
+      }
+    ]
+  },
+  {
+    "name": "Candy Arrow",
+    "atk": "56",
+    "element": "Light",
+    "is_event": true,
+    "event_badge": "Event (Candy)",
+    "note": "",
+    "stats": [
+      "Base ATK: 56",
+      "MDEF %: 10",
+      "Magic Resistance %: 10",
+      "Light Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 40 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 9x Candy Fragment - 3x Mysterious Fruit - 40x Mana"
+      }
+    ]
+  },
+  {
+    "name": "Cacao Arrow",
+    "atk": "50",
+    "element": "Earth",
+    "is_event": true,
+    "event_badge": "Event (Cacao)",
+    "note": "",
+    "stats": [
+      "Base ATK: 50",
+      "Critical Rate: 3",
+      "Aggro %: -6",
+      "Earth Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 40 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 9x Chocolate Chip - 3x Mysterious Cacao - 40x Wood"
+      }
+    ]
+  },
+  {
+    "name": "Sharp Wood Arrow",
+    "atk": "40",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": true,
+    "event_badge": "Event (Maple)",
+    "note": "",
+    "stats": [
+      "Base ATK: 40",
+      "Accuracy: 6",
+      "Critical Damage: 3",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Maple Fox (Lv 91)",
+        "map": "Navida City: Crossroad (80-100)"
+      },
+      {
+        "monster": "Maple Fox (Lv 91)",
+        "map": "Navida City: East (80-100)"
+      }
+    ]
+  },
+  {
+    "name": "Chimera Arrow",
+    "atk": "67",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 67",
+      "MaxHP %: -9",
+      "MaxMP: 300",
+      "Critical Rate: 6",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Mozto Machina (Lv 114)",
+        "map": "Large Demi Machina Factory: Deepest Part"
+      },
+      {
+        "monster": "Mozto Machina (Lv 124)",
+        "map": "Large Demi Machina Factory: Deepest Part"
+      },
+      {
+        "monster": "Mozto Machina (Lv 134)",
+        "map": "Large Demi Machina Factory: Deepest Part"
+      },
+      {
+        "monster": "Mozto Machina (Lv 144)",
+        "map": "Large Demi Machina Factory: Deepest Part"
+      },
+      {
+        "monster": "Mozto Machina (Lv 164)",
+        "map": "Large Demi Machina Factory: Deepest Part"
+      }
+    ]
+  },
+  {
+    "name": "Flash Volt",
+    "atk": "3",
+    "element": "Light",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 3",
+      "Accuracy: 10",
+      "% stronger against Light: -50",
+      "Light Element: 1",
+      "Base Stability %: 15",
+      "Bowgun only:Critical Rate: 10"
+    ],
+    "drops": [
+      {
+        "monster": "Craft Blacksmith / NPC",
+        "map": "Blacksmith / Pandai Besi"
+      }
+    ]
+  },
+  {
+    "name": "Pointed Ore Arrow",
+    "atk": "43",
+    "element": "Earth",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 43",
+      "DEF: 50",
+      "Physical Resistance %: 3",
+      "Accuracy %: -1",
+      "Earth Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Cavern Rat (Lv 99)",
+        "map": "Singolare Ruins: 1st Floor"
+      }
+    ]
+  },
+  {
+    "name": "Evil Beast Arrow",
+    "atk": "100",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 100",
+      "Base Stability %: 20",
+      "Bow only:Attack MP Recovery: 3",
+      "Short Range Damage %: -10"
+    ],
+    "drops": [
+      {
+        "monster": "Memecoleous (Lv 100)",
+        "map": "Dark Castle: Area 2"
+      },
+      {
+        "monster": "Memecoleous (Lv 90)",
+        "map": "Dark Castle: Area 2"
+      },
+      {
+        "monster": "Memecoleous (Lv 110)",
+        "map": "Dark Castle: Area 2"
+      },
+      {
+        "monster": "Memecoleous (Lv 120)",
+        "map": "Dark Castle: Area 2"
+      },
+      {
+        "monster": "Memecoleous (Lv 140)",
+        "map": "Dark Castle: Area 2"
+      }
+    ]
+  },
+  {
+    "name": "Flame Arrow",
+    "atk": "34",
+    "element": "Fire",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 34",
+      "MaxMP: 100",
+      "Fire Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Sunion (Lv 73)",
+        "map": "Dark Mirror"
+      },
+      {
+        "monster": "Sunion (Lv 76)",
+        "map": "Dark Mirror"
+      }
+    ]
+  },
+  {
+    "name": "Twilight Arrow",
+    "atk": "40",
+    "element": "Dark",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 40",
+      "MaxHP %: -10",
+      "Ailment Resistance %: 5",
+      "Dark Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Twilight Dragon (Lv 100)",
+        "map": "Fort Solfini: Roof"
+      },
+      {
+        "monster": "Twilight Dragon (Lv 90)",
+        "map": "Fort Solfini: Roof"
+      },
+      {
+        "monster": "Twilight Dragon (Lv 110)",
+        "map": "Fort Solfini: Roof"
+      },
+      {
+        "monster": "Twilight Dragon (Lv 120)",
+        "map": "Fort Solfini: Roof"
+      },
+      {
+        "monster": "Twilight Dragon (Lv 140)",
+        "map": "Fort Solfini: Roof"
+      }
+    ]
+  },
+  {
+    "name": "Mithril Arrow",
+    "atk": "32",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 32",
+      "Critical Rate %: 1",
+      "Long Range Damage %: 1",
+      "Base Stability %: 20",
+      "Bow only:Critical Damage: 3"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 350 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 1x Mithril - 1x Mithril Ore - 90x Metal - 85x Mana"
+      }
+    ]
+  },
+  {
+    "name": "Heavy Bolt",
+    "atk": "32",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 32",
+      "Physical Pierce %: 3",
+      "Accuracy %: -25",
+      "Base Stability %: 20",
+      "Bowgun only:Weapon ATK: 10"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 350 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 35x Old Wood - 35x Fractured Rock - 100x Wood - 75x Metal"
+      }
+    ]
+  },
+  {
+    "name": "Magic Arrow",
+    "atk": "3",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 3",
+      "Base Stability %: 30",
+      "Bow only:Accuracy: 100",
+      "Critical Damage: -10",
+      "% stronger against Neutral: 1"
+    ],
+    "drops": [
+      {
+        "monster": "Cursed Clock (Lv 71)",
+        "map": "Magic Waste Site: Area 2"
+      },
+      {
+        "monster": "Cursed Clock (Lv 71)",
+        "map": "Magic Waste Site: Area 3"
+      },
+      {
+        "monster": "Dirty Antique",
+        "map": "-"
+      }
+    ]
+  },
+  {
+    "name": "Caravan Arrow",
+    "atk": "2",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 2",
+      "Accuracy: 2",
+      "Base Stability %: 15"
+    ],
+    "drops": [
+      {
+        "monster": "Craft Blacksmith / NPC",
+        "map": "Blacksmith / Pandai Besi"
+      }
+    ]
+  },
+  {
+    "name": "Artisan Arrow",
+    "atk": "30",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 30",
+      "MaxMP: 100",
+      "Motion Speed %: 1",
+      "Base Stability %: 24"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 300 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 30x Soft Twig - 12x Scorpion Tail - 1x Frog Ointment - 150x Wood"
+      }
+    ]
+  },
+  {
+    "name": "Shooting Star Arrow",
+    "atk": "58",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 58",
+      "Stability %: -50",
+      "Critical Rate: 25",
+      "Base Stability %: 1",
+      "Bowgun only:ASPD: 250"
+    ],
+    "drops": [
+      {
+        "monster": "Nurethoth (Lv 76)",
+        "map": "Gate to Another World: Front"
+      },
+      {
+        "monster": "Nurethoth (Lv 66)",
+        "map": "Gate to Another World: Front"
+      },
+      {
+        "monster": "Nurethoth (Lv 86)",
+        "map": "Gate to Another World: Front"
+      },
+      {
+        "monster": "Nurethoth (Lv 96)",
+        "map": "Gate to Another World: Front"
+      },
+      {
+        "monster": "Nurethoth (Lv 116)",
+        "map": "Gate to Another World: Front"
+      }
+    ]
+  },
+  {
+    "name": "Iron Arrow",
+    "atk": "24",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 24",
+      "Weapon ATK %: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 250 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 25x Roost - 5x Huge Iron Ball - 125x Wood"
+      }
+    ]
+  },
+  {
+    "name": "Blade Arrow",
+    "atk": "22",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 22",
+      "Critical Rate: 3",
+      "Critical Damage: 1",
+      "Base Stability %: 15"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 250 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 25x Roost - 5x Broken Woodsman Axe - 125x Wood"
+      }
+    ]
+  },
+  {
+    "name": "Thin Sharp Arrow",
+    "atk": "12",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 12",
+      "ASPD: 30",
+      "Attack MP Recovery: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 250 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 25x Roost - 5x Sand Crystal - 125x Wood"
+      }
+    ]
+  },
+  {
+    "name": "Fire Arrow",
+    "atk": "5",
+    "element": "Fire",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 5",
+      "Fire Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 150 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 2x Minotaur Horn - 10x Twinkle Stone - 100x Metal - 50x Mana"
+      }
+    ]
+  },
+  {
+    "name": "Ice Arrow",
+    "atk": "17",
+    "element": "Water",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 17",
+      "Critical Rate: 2",
+      "Water Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 200 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 10x Crystal of Flowing Water - 10x Wet Wood - 50x Wood - 50x Mana"
+      }
+    ]
+  },
+  {
+    "name": "Tempest Arrow",
+    "atk": "15",
+    "element": "Wind",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 15",
+      "Critical Damage %: 1",
+      "Wind Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 175 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 10x Green Dragon Claw - 20x Sweet-smelling Wood - 125x Wood - 50x Mana"
+      }
+    ]
+  },
+  {
+    "name": "Hunter's Arrow",
+    "atk": "13",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 13",
+      "Accuracy %: 1",
+      "Long Range Damage %: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 150 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 5x Hard Fur - 30x Sharp Fang - 75x Metal"
+      }
+    ]
+  },
+  {
+    "name": "Wind Slash Arrow",
+    "atk": "10",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 10",
+      "DEX: 1",
+      "Physical Pierce %: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 100 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 6x Wind Slash Feather - 3x Thick Black Cloth - 50x Wood"
+      }
+    ]
+  },
+  {
+    "name": "Hardwood Arrow",
+    "atk": "6",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 6",
+      "Critical Rate: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 50 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 10x Animal Claw - 25x Wood"
+      }
+    ]
+  },
+  {
+    "name": "Wooden Arrow",
+    "atk": "4",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 4",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "[NPC] Blacksmith : Zaldo",
+        "map": "Sofya City: Blacksmith"
+      },
+      {
+        "monster": "Craft Blacksmith",
+        "map": "Fee 5 Spina Set 1 pcs Level N/A Difficulty 0 Materials - 10x Woodchip - 3x Wood"
+      }
+    ]
+  },
+  {
+    "name": "High-Quality Wood Arrow",
+    "atk": "18",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 18",
+      "DEX: 2",
+      "MaxMP: 50",
+      "Accuracy %: 4",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Arborgon (Lv 39)",
+        "map": "Harde Hill"
+      }
+    ]
+  },
+  {
+    "name": "Tempest Arrow",
+    "atk": "15",
+    "element": "Wind",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 15",
+      "Accuracy %: 10",
+      "Critical Damage %: 1",
+      "Wind Element: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Forestia (Lv 49)",
+        "map": "Land Of Chaos"
+      },
+      {
+        "monster": "Forestia (Lv 39)",
+        "map": "Land Of Chaos"
+      },
+      {
+        "monster": "Forestia (Lv 59)",
+        "map": "Land Of Chaos"
+      },
+      {
+        "monster": "Forestia (Lv 69)",
+        "map": "Land Of Chaos"
+      },
+      {
+        "monster": "Forestia (Lv 89)",
+        "map": "Land Of Chaos"
+      }
+    ]
+  },
+  {
+    "name": "Mushroom Arrow",
+    "atk": "20",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 20",
+      "Accuracy: -10",
+      "Aggro %: 5",
+      "Attack MP Recovery: 2",
+      "Base Stability %: 1"
+    ],
+    "drops": [
+      {
+        "monster": "Kinote (Lv 27)",
+        "map": "Nehelo Swamp"
+      }
+    ]
+  },
+  {
+    "name": "Hunter's Arrow",
+    "atk": "13",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 13",
+      "Long Range Damage %: 1",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Beak (Lv 32)",
+        "map": "Scaro Town: Area 1"
+      },
+      {
+        "monster": "Beak (Lv 33)",
+        "map": "Scaro Town: Area 2"
+      }
+    ]
+  },
+  {
+    "name": "Ceramic Arrow",
+    "atk": "22",
+    "element": "Earth",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 22",
+      "Earth Element: 1",
+      "Base Stability %: 10"
+    ],
+    "drops": [
+      {
+        "monster": "Craft Blacksmith / NPC",
+        "map": "Blacksmith / Pandai Besi"
+      }
+    ]
+  },
+  {
+    "name": "Hardwood Arrow",
+    "atk": "6",
+    "element": "Normal (Tanpa Elemen)",
+    "is_event": false,
+    "event_badge": "",
+    "note": "",
+    "stats": [
+      "Base ATK: 6",
+      "Base Stability %: 20"
+    ],
+    "drops": [
+      {
+        "monster": "Pomum (Lv 7)",
+        "map": "Reug Salt Plains: Wanderers Camp"
+      },
+      {
+        "monster": "Pomum (Lv 7)",
+        "map": "Reug Salt Plains: Wanderers Camp"
+      }
+    ]
+  }
+]
