@@ -5,6 +5,7 @@ import time
 import re
 import threading
 import logging
+from difflib import SequenceMatcher
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
@@ -92,7 +93,196 @@ def load_game_dataset(filename: str) -> list:
 # ----------------- GAME CONTROLLERS -----------------
 
 def clean_answer_text(text: str) -> str:
-    return re.sub(r'[^a-zA-Z0-9\s]', '', text.strip().lower())
+    return " ".join(re.sub(r'[^a-zA-Z0-9\s]', ' ', str(text).strip().lower()).split())
+
+# ----------------- FAMILY 100 SMART MATCHER -----------------
+
+FAMILY100_STOP_WORDS = {
+    'di', 'ke', 'dari', 'yang', 'dan', 'atau', 'ini', 'itu', 'pada', 'untuk',
+    'dengan', 'ada', 'bisa', 'si', 'sang', 'para', 'oleh', 'karena', 'jika',
+    'agar', 'supaya', 'saat', 'ketika', 'pun', 'lah', 'kah', 'saja', 'juga',
+    'mau', 'akan', 'sudah', 'telah', 'sedang', 'lagi', 'sih', 'dong', 'deh',
+    'ya', 'kan', 'kok', 'nah', 'hal', 'sering', 'apa', 'siapa', 'mana', 'gak',
+    'nggak', 'tidak', 'paling', 'biasa', 'biasanya', 'orang'
+}
+
+RAW_FAMILY100_SYNONYMS = {
+    # Waktu / Chat / Komunikasi
+    "telat": {"lama", "lambat", "terlambat", "keterlambatan", "ngaret", "lelet", "slow"},
+    "chat": {"pesan", "wa", "whatsapp", "sms", "inbox", "dm"},
+    "balas": {"bales", "jawab", "respon"},
+    "kabar": {"ngabarin", "mengabari", "berita", "info"},
+    # Keuangan / Belanja
+    "uang": {"duit", "keuangan", "dana", "ongkos", "biaya", "bayar", "fulus", "bokek"},
+    "biaya": {"uang", "duit", "dana", "bayar", "ongkos"},
+    "keuangan": {"uang", "duit", "finansial"},
+    # Hubungan / Kencan
+    "kencan": {"pacaran", "dating", "jalan", "date", "ketemuan"},
+    "teman": {"kawan", "sahabat", "temen"},
+    "pacar": {"pasangan", "doi", "ayang", "gebetan"},
+    "cemburu": {"curiga", "posesif", "iri"},
+    # Makanan / Minuman
+    "makan": {"makanan", "kuliner", "laper", "lapar", "nyemil", "ngemil", "pangan"},
+    "minum": {"minuman", "air"},
+    "terserah": {"bebas", "gatau", "bingung", "manasaja", "mana aja"},
+    # Gadget / Transportasi
+    "hp": {"handphone", "ponsel", "gadget", "telepon", "smartphone"},
+    "motor": {"sepeda motor", "kendaraan"},
+    "mobil": {"kendaraan"},
+    # Tidur / Bangun
+    "tidur": {"bobo", "merem", "ngantuk", "lelap"},
+    "kesiangan": {"bangun siang", "telat bangun", "siang"},
+    # Aktivitas
+    "curhat": {"ngobrol", "cerita"},
+    "buku": {"bacaan", "novel", "komik"},
+    "bohong": {"dusta", "nipu", "ngibul"},
+    "capek": {"lelah", "letih"}
+}
+
+def _build_bidirectional_synonyms(raw_map: dict) -> dict:
+    res = {}
+    for k, v_set in raw_map.items():
+        res.setdefault(k, set()).update(v_set)
+        for v in v_set:
+            res.setdefault(v, set()).add(k)
+            res[v].update(v_set - {v})
+    return res
+
+FAMILY100_SYNONYMS = _build_bidirectional_synonyms(RAW_FAMILY100_SYNONYMS)
+
+def prepare_family100_answers(question: str, raw_answers: list) -> list:
+    """Mempersiapkan state jawaban Family 100 dengan mengekstrak frasa alternatif, kata kunci, dan sinonim."""
+    q_words = set(re.findall(r'[a-zA-Z0-9]+', clean_answer_text(question)))
+    
+    prepared = []
+    kw_frequency = {}
+    
+    for a in raw_answers:
+        raw_text = clean_answer_text(a.get("text", ""))
+        raw_display = a.get("display", a.get("text", ""))
+        
+        # Pisahkan display berdasarkan pemisah umum (/ , | ( ) -)
+        parts = re.split(r'[/|,()\-]+', raw_display)
+        phrases = set()
+        if raw_text:
+            phrases.add(raw_text)
+            
+        for p in parts:
+            cleaned_p = clean_answer_text(p)
+            if cleaned_p:
+                phrases.add(cleaned_p)
+                
+        full_disp = clean_answer_text(raw_display)
+        if full_disp:
+            phrases.add(full_disp)
+            
+        # Tambahkan aliases jika tersedia di database JSON
+        for alias in a.get("aliases", []):
+            cleaned_alias = clean_answer_text(alias)
+            if cleaned_alias:
+                phrases.add(cleaned_alias)
+                
+        # Ekstrak kata kunci bermakna
+        keywords = set()
+        for phrase in phrases:
+            for w in phrase.split():
+                if len(w) >= 2 and w not in FAMILY100_STOP_WORDS and w not in q_words:
+                    keywords.add(w)
+                    kw_frequency[w] = kw_frequency.get(w, 0) + 1
+                    
+        prepared.append({
+            "text": raw_text,
+            "display": raw_display,
+            "points": a.get("points", 10),
+            "phrases": phrases,
+            "keywords": keywords,
+            "found": False,
+            "found_by": ""
+        })
+        
+    for p in prepared:
+        p["shared_keywords"] = {k for k in p["keywords"] if kw_frequency.get(k, 0) > 1}
+        p["unique_keywords"] = p["keywords"] - p["shared_keywords"]
+        
+    return prepared
+
+def check_family100_match(user_input: str, ans: dict) -> float:
+    """Mengecek kemiripan jawaban pemain dengan salah satu kunci jawaban Family 100.
+    Mendukung kecocokan persis, substring, 1 kata kunci utama (misal: 'makan'), 
+    dan jawaban menyerempet/semantik (misal: 'telat balas chat' untuk 'Lupa Kabar / Lama Balas Chat').
+    Mengembalikan skor kecocokan 0.0 - 1.0 (threshold benar >= 0.72)."""
+    cleaned = clean_answer_text(user_input)
+    if not cleaned:
+        return 0.0
+        
+    phrases = ans["phrases"]
+    keywords = ans["keywords"]
+    unique_kws = ans.get("unique_keywords", keywords)
+    
+    # 1. Exact match dengan salah satu variasi frasa
+    if cleaned in phrases:
+        return 1.0
+        
+    # 2. Substring match (input terdapat di dalam frasa atau sebaliknya)
+    for p in phrases:
+        if len(cleaned) >= 3 and (cleaned == p or cleaned in p or p in cleaned):
+            overlap_ratio = min(len(cleaned), len(p)) / max(len(cleaned), len(p))
+            return 0.90 + (0.08 * overlap_ratio)
+            
+    # 3. Fuzzy match terhadap frasa (toleransi salah ketik ringan)
+    for p in phrases:
+        ratio = SequenceMatcher(None, cleaned, p).ratio()
+        if ratio >= 0.80:
+            return ratio * 0.95
+            
+    # 4. Analisis token & sinonim
+    user_words = [w for w in cleaned.split() if w not in FAMILY100_STOP_WORDS]
+    if not user_words:
+        return 0.0
+        
+    # Jika input terdiri dari 1 kata kunci (contoh: 'makan', 'terserah', 'duit', 'chat')
+    if len(user_words) == 1:
+        w = user_words[0]
+        if w in unique_kws:
+            return 0.90
+        if w in keywords:
+            return 0.78
+        syns = FAMILY100_SYNONYMS.get(w, set())
+        if syns & unique_kws:
+            return 0.85
+        if syns & keywords:
+            return 0.75
+        for kw in keywords:
+            if len(w) >= 4 and len(kw) >= 4 and SequenceMatcher(None, w, kw).ratio() >= 0.82:
+                return 0.80
+        return 0.0
+        
+    # Jika input terdiri dari beberapa kata (contoh: 'telat balas chat', 'masalah uang')
+    matched_count = 0
+    matched_unique = 0
+    for w in user_words:
+        if w in keywords:
+            matched_count += 1
+            if w in unique_kws:
+                matched_unique += 1
+        else:
+            syns = FAMILY100_SYNONYMS.get(w, set())
+            if syns & keywords:
+                matched_count += 1
+                if syns & unique_kws:
+                    matched_unique += 1
+            else:
+                for kw in keywords:
+                    if len(w) >= 4 and len(kw) >= 4 and SequenceMatcher(None, w, kw).ratio() >= 0.82:
+                        matched_count += 1
+                        break
+                        
+    if matched_count >= 2:
+        return 0.80 + (0.15 * (matched_count / len(user_words)))
+    elif matched_count == 1 and len(user_words) <= 2 and matched_unique >= 1:
+        return 0.75
+        
+    return 0.0
 
 def generate_scrambled_letters(word: str) -> str:
     """Mengacak huruf-huruf kata dan memastikan hasilnya benar-benar teracak (tidak sama dengan aslinya)"""
@@ -192,15 +382,7 @@ def start_family100(client, message, chat_jid: str):
             return
 
         question_data = get_unique_question(chat_jid, "family100", dataset)
-        answers_state = []
-        for a in question_data["answers"]:
-            answers_state.append({
-                "text": clean_answer_text(a["text"]),
-                "display": a.get("display", a["text"]),
-                "points": a.get("points", 10),
-                "found": False,
-                "found_by": ""
-            })
+        answers_state = prepare_family100_answers(question_data["question"], question_data["answers"])
 
         session = {
             "game_type": "family100",
@@ -378,22 +560,23 @@ def check_game_answer(client, message, chat_jid: str, sender_jid: str, sender_na
     # 1. LOGIKA CEK FAMILY 100
     if gtype == "family100":
         matched_idx = -1
+        best_score = 0.0
         with GAMES_LOCK:
             # Cari apakah input cocok dengan salah satu jawaban yang belum terjawab
             for idx, ans in enumerate(session["answers"]):
                 if not ans["found"]:
-                    # Exact match atau substring jika jawaban panjang
-                    if cleaned_input == ans["text"] or (len(cleaned_input) >= 4 and cleaned_input in ans["text"]):
-                        ans["found"] = True
-                        ans["found_by"] = sender_name
-                        session["found_count"] += 1
+                    score = check_family100_match(cleaned_input, ans)
+                    if score >= 0.72 and score > best_score:
+                        best_score = score
                         matched_idx = idx
-                        break
 
             if matched_idx == -1:
                 return False
 
             matched_ans = session["answers"][matched_idx]
+            matched_ans["found"] = True
+            matched_ans["found_by"] = sender_name
+            session["found_count"] += 1
             points = matched_ans["points"]
 
             # Catat skor sesi

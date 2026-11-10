@@ -1025,26 +1025,31 @@
       {
         "text": "mau makan di mana",
         "display": "Mau Makan di Mana Terserah",
+        "aliases": ["makan", "mau makan", "terserah", "mau makan dimana", "tempat makan"],
         "points": 45
       },
       {
         "text": "cemburu",
         "display": "Cemburu / Punya Teman Lawan Jenis",
+        "aliases": ["teman lawan jenis", "punya teman lawan jenis", "teman", "lawan jenis"],
         "points": 25
       },
       {
         "text": "kabar",
         "display": "Lupa Kabar / Lama Balas Chat",
+        "aliases": ["telat balas chat", "telat bales chat", "balas chat", "bales chat", "lama balas chat", "chat", "lupa kabar", "telat chat", "slow respon", "jarang ngabarin"],
         "points": 15
       },
       {
         "text": "uang",
         "display": "Masalah Keuangan / Biaya Kencan",
+        "aliases": ["duit", "biaya kencan", "masalah uang", "masalah keuangan", "bayar kencan"],
         "points": 10
       },
       {
         "text": "waktu kencan",
         "display": "Keterlambatan Waktu Kencan",
+        "aliases": ["telat", "keterlambatan", "telat kencan", "ngaret kencan", "jam kencan"],
         "points": 5
       }
     ]
