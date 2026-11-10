@@ -815,26 +815,31 @@
       {
         "text": "pakai jas hujan",
         "display": "Memakai Jas Hujan",
+        "aliases": ["jas hujan", "pakai jas hujan", "mantel"],
         "points": 45
       },
       {
         "text": "teduh di jembatan",
         "display": "Berteduh di Kolong Flyover / Jembatan",
+        "aliases": ["kolong flyover", "flyover", "jembatan", "kolong jembatan", "berteduh di jembatan", "berteduh di flyover", "kolong"],
         "points": 30
       },
       {
         "text": "teduh di pom bensin",
         "display": "Berteduh di SPBU / Halte",
+        "aliases": ["spbu", "pom bensin", "halte", "halte bus", "berteduh di spbu", "berteduh di halte", "pom"],
         "points": 15
       },
       {
         "text": "tetap jalan",
         "display": "Menerobos Hujan",
+        "aliases": ["menerobos", "terobos hujan", "terobos", "terobos aja"],
         "points": 7
       },
       {
         "text": "masuk kafe",
         "display": "Masuk Warung / Kafe",
+        "aliases": ["warung", "kafe", "cafe", "masuk warung", "masuk kafe", "nongkrong di warung"],
         "points": 3
       }
     ]

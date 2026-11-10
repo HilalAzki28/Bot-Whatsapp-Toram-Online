@@ -136,7 +136,8 @@ RAW_FAMILY100_SYNONYMS = {
     "curhat": {"ngobrol", "cerita"},
     "buku": {"bacaan", "novel", "komik"},
     "bohong": {"dusta", "nipu", "ngibul"},
-    "capek": {"lelah", "letih"}
+    "capek": {"lelah", "letih"},
+    "berteduh": {"teduh", "neduh"}
 }
 
 def _build_bidirectional_synonyms(raw_map: dict) -> dict:
@@ -155,7 +156,6 @@ def prepare_family100_answers(question: str, raw_answers: list) -> list:
     q_words = set(re.findall(r'[a-zA-Z0-9]+', clean_answer_text(question)))
     
     prepared = []
-    kw_frequency = {}
     
     for a in raw_answers:
         raw_text = clean_answer_text(a.get("text", ""))
@@ -182,50 +182,93 @@ def prepare_family100_answers(question: str, raw_answers: list) -> list:
             if cleaned_alias:
                 phrases.add(cleaned_alias)
                 
-        # Ekstrak kata kunci bermakna
-        keywords = set()
+        # Ekstrak kata kunci unik per jawaban ini
+        ans_keywords = set()
         for phrase in phrases:
             for w in phrase.split():
                 if len(w) >= 2 and w not in FAMILY100_STOP_WORDS and w not in q_words:
-                    keywords.add(w)
-                    kw_frequency[w] = kw_frequency.get(w, 0) + 1
+                    ans_keywords.add(w)
                     
         prepared.append({
             "text": raw_text,
             "display": raw_display,
             "points": a.get("points", 10),
             "phrases": phrases,
-            "keywords": keywords,
+            "keywords": ans_keywords,
             "found": False,
             "found_by": ""
         })
         
+    # Hitung berapa banyak JAWABAN BERBEDA yang memuat setiap kata kunci (atau sinonimnya)
+    kw_answer_count = {}
+    phrase_answer_count = {}
+    
     for p in prepared:
-        p["shared_keywords"] = {k for k in p["keywords"] if kw_frequency.get(k, 0) > 1}
-        p["unique_keywords"] = p["keywords"] - p["shared_keywords"]
+        expanded_kws = set(p["keywords"])
+        for kw in p["keywords"]:
+            expanded_kws.update(FAMILY100_SYNONYMS.get(kw, set()))
+        for w in expanded_kws:
+            kw_answer_count[w] = kw_answer_count.get(w, 0) + 1
+            
+        for ph in p["phrases"]:
+            phrase_answer_count[ph] = phrase_answer_count.get(ph, 0) + 1
+            
+    for p in prepared:
+        p["shared_keywords"] = set()
+        p["unique_keywords"] = set()
+        for k in p["keywords"]:
+            if kw_answer_count.get(k, 0) > 1:
+                p["shared_keywords"].add(k)
+            else:
+                p["unique_keywords"].add(k)
+                
+        p["shared_phrases"] = {ph for ph in p["phrases"] if phrase_answer_count.get(ph, 0) > 1}
+        p["unique_phrases"] = p["phrases"] - p["shared_phrases"]
         
     return prepared
 
 def check_family100_match(user_input: str, ans: dict) -> float:
     """Mengecek kemiripan jawaban pemain dengan salah satu kunci jawaban Family 100.
-    Mendukung kecocokan persis, substring, 1 kata kunci utama (misal: 'makan'), 
-    dan jawaban menyerempet/semantik (misal: 'telat balas chat' untuk 'Lupa Kabar / Lama Balas Chat').
-    Mengembalikan skor kecocokan 0.0 - 1.0 (threshold benar >= 0.72)."""
+    Mendukung kecocokan persis, substring, 1 kata kunci unik (misal: 'jembatan', 'spbu', 'makan'), 
+    dan jawaban menyerempet/semantik.
+    PENTING: Kata awalan umum/shared yang muncul di beberapa jawaban (contoh: 'berteduh') 
+    TIDAK boleh dijadikan patokan jawaban tanpa kata spesifiknya."""
     cleaned = clean_answer_text(user_input)
     if not cleaned:
         return 0.0
         
     phrases = ans["phrases"]
     keywords = ans["keywords"]
-    unique_kws = ans.get("unique_keywords", keywords)
+    unique_kws = ans.get("unique_keywords", set())
+    shared_kws = ans.get("shared_keywords", set())
+    unique_phrases = ans.get("unique_phrases", phrases)
     
-    # 1. Exact match dengan salah satu variasi frasa
-    if cleaned in phrases:
+    user_words = [w for w in cleaned.split() if w not in FAMILY100_STOP_WORDS]
+    if not user_words:
+        return 0.0
+        
+    # Helper untuk cek apakah sebuah kata adalah kata unik jawaban ini
+    def is_word_unique(w):
+        return (w in unique_kws) or bool(FAMILY100_SYNONYMS.get(w, set()) & unique_kws)
+
+    # Helper untuk cek apakah sebuah kata adalah kata yang dibagi bersama jawaban lain (shared)
+    def is_word_shared(w):
+        return (w in shared_kws) or bool(FAMILY100_SYNONYMS.get(w, set()) & shared_kws)
+
+    # 1. Exact match dengan salah satu variasi frasa unik jawaban ini
+    if cleaned in unique_phrases:
         return 1.0
+    if cleaned in phrases:
+        # Jika frasa ini shared di beberapa jawaban, tolak karena ambigu
+        return 0.0
         
     # 2. Substring match (input terdapat di dalam frasa atau sebaliknya)
     for p in phrases:
         if len(cleaned) >= 3 and (cleaned == p or cleaned in p or p in cleaned):
+            # Jika jawaban memiliki shared keywords (misal: 'berteduh' di 'berteduh di kolong flyover'),
+            # tebakan pemain WAJIB memuat setidaknya 1 kata unik (contoh: 'kolong', 'flyover', 'jembatan')!
+            if shared_kws and not any(is_word_unique(w) for w in user_words):
+                continue
             overlap_ratio = min(len(cleaned), len(p)) / max(len(cleaned), len(p))
             return 0.90 + (0.08 * overlap_ratio)
             
@@ -233,50 +276,46 @@ def check_family100_match(user_input: str, ans: dict) -> float:
     for p in phrases:
         ratio = SequenceMatcher(None, cleaned, p).ratio()
         if ratio >= 0.80:
+            if shared_kws and not any(is_word_unique(w) for w in user_words):
+                continue
             return ratio * 0.95
             
     # 4. Analisis token & sinonim
-    user_words = [w for w in cleaned.split() if w not in FAMILY100_STOP_WORDS]
-    if not user_words:
-        return 0.0
-        
-    # Jika input terdiri dari 1 kata kunci (contoh: 'makan', 'terserah', 'duit', 'chat')
+    # A. Jika input terdiri dari 1 kata kunci (contoh: 'jembatan', 'spbu', 'makan', 'berteduh')
     if len(user_words) == 1:
         w = user_words[0]
-        if w in unique_kws:
+        # JIKA KATA INI ADALAH KATA AWALAN/SHARED (misal: 'berteduh'): TOLAK!
+        if is_word_shared(w):
+            return 0.0
+            
+        if is_word_unique(w):
             return 0.90
-        if w in keywords:
-            return 0.78
-        syns = FAMILY100_SYNONYMS.get(w, set())
-        if syns & unique_kws:
-            return 0.85
-        if syns & keywords:
-            return 0.75
-        for kw in keywords:
+        for kw in unique_kws:
             if len(w) >= 4 and len(kw) >= 4 and SequenceMatcher(None, w, kw).ratio() >= 0.82:
                 return 0.80
         return 0.0
         
-    # Jika input terdiri dari beberapa kata (contoh: 'telat balas chat', 'masalah uang')
+    # B. Jika input terdiri dari beberapa kata (contoh: 'berteduh di jembatan', 'telat balas chat')
     matched_count = 0
     matched_unique = 0
     for w in user_words:
-        if w in keywords:
+        if is_word_unique(w):
             matched_count += 1
-            if w in unique_kws:
-                matched_unique += 1
+            matched_unique += 1
+        elif is_word_shared(w):
+            matched_count += 1
         else:
-            syns = FAMILY100_SYNONYMS.get(w, set())
-            if syns & keywords:
-                matched_count += 1
-                if syns & unique_kws:
-                    matched_unique += 1
-            else:
-                for kw in keywords:
-                    if len(w) >= 4 and len(kw) >= 4 and SequenceMatcher(None, w, kw).ratio() >= 0.82:
-                        matched_count += 1
-                        break
-                        
+            for kw in keywords:
+                if len(w) >= 4 and len(kw) >= 4 and SequenceMatcher(None, w, kw).ratio() >= 0.82:
+                    matched_count += 1
+                    if kw in unique_kws:
+                        matched_unique += 1
+                    break
+                    
+    # Jika jawaban memiliki shared keywords, WAJIB ada kata unik yang cocok
+    if shared_kws and matched_unique == 0:
+        return 0.0
+        
     if matched_count >= 2:
         return 0.80 + (0.15 * (matched_count / len(user_words)))
     elif matched_count == 1 and len(user_words) <= 2 and matched_unique >= 1:
