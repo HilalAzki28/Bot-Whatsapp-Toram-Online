@@ -106,6 +106,25 @@ def get_owner_numbers() -> set:
             logging.error(f"Gagal membaca owner_numbers.json: {e}")
     return owners
 
+VIP_WAIFU_FILE = os.path.join(DATA_DIR, "vip_waifu_numbers.json")
+DEFAULT_VIP_WAIFU_NUMBERS = {
+    "6287828697399", "087828697399", "205479875735664",
+    "274251395375109", "6281291678454"
+}
+
+def get_vip_waifu_numbers() -> set:
+    vips = set(DEFAULT_VIP_WAIFU_NUMBERS)
+    if os.path.exists(VIP_WAIFU_FILE):
+        try:
+            with open(VIP_WAIFU_FILE, "r") as f:
+                data = json.load(f)
+                if isinstance(data, list):
+                    for x in data:
+                        vips.add(str(x).strip())
+        except Exception as e:
+            logging.error(f"Gagal membaca vip_waifu_numbers.json: {e}")
+    return vips
+
 def send_reply_or_message(client: NewClient, text: str, message: MessageEv):
     """Kirim balasan dengan reply_message, jika gagal (misal pesan dari bot sendiri) fallback ke send_message langsung"""
     chat_jid = message.Info.MessageSource.Chat
@@ -5382,7 +5401,8 @@ def on_message(client: NewClient, message: MessageEv):
             
         sender_jid_str = f"{sender_user}@{sender_server}"
         clean_sender = sender_user.split('.')[0].split(':')[0].split('@')[0]
-        is_unlimited_user = clean_sender in ["6287828697399", "087828697399", "205479875735664"]
+        vip_waifu_set = get_vip_waifu_numbers()
+        is_unlimited_user = is_owner or (clean_sender in vip_waifu_set) or (sender_user in vip_waifu_set)
         
         print(f"DEBUG ,waifu: sender_user={sender_user}, clean_sender={clean_sender}, is_unlimited={is_unlimited_user}")
         
@@ -5425,7 +5445,8 @@ def on_message(client: NewClient, message: MessageEv):
             
         sender_jid_str = f"{sender_user}@{sender_server}"
         clean_sender = sender_user.split('.')[0].split(':')[0].split('@')[0]
-        is_unlimited_user = clean_sender in ["6287828697399", "087828697399", "205479875735664"]
+        vip_waifu_set = get_vip_waifu_numbers()
+        is_unlimited_user = is_owner or (clean_sender in vip_waifu_set) or (sender_user in vip_waifu_set)
         
         print(f"DEBUG ,husbu: sender_user={sender_user}, clean_sender={clean_sender}, is_unlimited={is_unlimited_user}")
         
