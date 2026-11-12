@@ -1,5 +1,32 @@
 [
   {
+    "id": 35007,
+    "name": "Hero Potum V",
+    "type_id": 210,
+    "type_label": "[Weapon Crysta / Enhancer Crysta (Red)]",
+    "sell": 67,
+    "process": 6,
+    "process_amount": 100,
+    "is_custom_local": true,
+    "upgrades_id": 7893,
+    "custom_stats_list": [
+      "- MaxHP: +14%",
+      "- Fractional Barrier: 18%",
+      "- Accuracy: +22%",
+      "- Aggro: +26%",
+      "- Upgrade dari Crysta: Hero Potum IV"
+    ],
+    "custom_obtained_list": [
+      "Hero Potum V | Weapon Crysta (Upgrade dari Crysta Hero Potum IV)"
+    ],
+    "stats": "- MaxHP: +14%\n- Fractional Barrier: 18%\n- Accuracy: +22%\n- Aggro: +26%\n- Upgrade dari Crysta: Hero Potum IV",
+    "obtaining": "- Upgrade dari Crysta: Hero Potum IV (Base: Hero Potum)\n- Jenis: Weapon Crysta [Enhancer Crysta (Red)]",
+    "meta": {
+      "badge": "Weapon Crysta (Upgrade)",
+      "note": "Upgrade dari Crysta Hero Potum IV"
+    }
+  },
+  {
     "id": 35006,
     "name": "Starship Potum",
     "type_id": 23,

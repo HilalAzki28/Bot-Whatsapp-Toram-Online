@@ -2114,5 +2114,9 @@
   "35006": {
     "name": "Starship Potum",
     "upgrades_id": null
+  },
+  "35007": {
+    "name": "Hero Potum V",
+    "upgrades_id": 7893
   }
 }
