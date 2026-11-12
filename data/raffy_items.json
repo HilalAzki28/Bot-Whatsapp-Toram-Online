@@ -1,5 +1,32 @@
 [
   {
+    "id": 35006,
+    "name": "Starship Potum",
+    "type_id": 23,
+    "type_label": "[Additional Crysta (Yellow) / Tambahan]",
+    "sell": 67,
+    "process": 6,
+    "process_amount": 100,
+    "is_custom_local": true,
+    "upgrades_id": null,
+    "custom_stats_list": [
+      "- MATK: +12%",
+      "- Critical Rate: +40%",
+      "- Dodge Absolute: +6%",
+      "- Dengan Pedang 1-T:",
+      "  └ INT: +10%"
+    ],
+    "custom_obtained_list": [
+      "Starship Potum | Additional Crysta / Crysta Kuning (Tambahan)"
+    ],
+    "stats": "- MATK: +12%\n- Critical Rate: +40%\n- Dodge Absolute: +6%\n- Dengan Pedang 1-T:\n  └ INT: +10%",
+    "obtaining": "- Jenis: Additional Crysta (Crysta Kuning / Tambahan)",
+    "meta": {
+      "badge": "Additional Crysta (Yellow)",
+      "note": "Crysta Kuning untuk Additional Gear (Perlengkapan Tambahan)"
+    }
+  },
+  {
     "id": 35005,
     "name": "Lunar Grace",
     "type_id": 204,
