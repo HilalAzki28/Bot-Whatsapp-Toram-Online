@@ -1,0 +1,328 @@
+================================================================================
+                    DAFTAR PERTANYAAN KUIS TORAM ONLINE
+================================================================================
+Total Pertanyaan : 40 Soal
+Format File      : Teks (.txt)
+Deskripsi        : Berisi daftar seluruh soal, kunci jawaban (display), variasi
+                   jawaban yang diterima (accepted answers), dan clue saat ini.
+================================================================================
+
+[SOAL NO. 1]
+Pertanyaan       : Crysta upgrade dari Kuffania yang memberikan Short Range Damage +10% dan Long Range Damage -15% adalah apa?
+Jawaban Tampilan : Blanc
+Jawaban Diterima : blanc
+Petunjuk (Clue)  : Crysta enhancer dari event Halloween; memiliki Stability +5% dan Evasion Recharge +5%.
+Poin Hadiah      : 50 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 2]
+Pertanyaan       : Apa nama kota utama tempat para petualang pertama kali memulai petualangan di Toram Online?
+Jawaban Tampilan : Sofya City (Kota Sofya)
+Jawaban Diterima : sofya, kota sofya, sofya city
+Petunjuk (Clue)  : Kota dengan air mancur dan tangga besar di tengahnya
+Poin Hadiah      : 40 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 3]
+Pertanyaan       : Crysta apakah yang merupakan hasil upgrade dari 'Evil Lefina' (Lefina Jahat)?
+Jawaban Tampilan : Mycodian
+Jawaban Diterima : mycodian
+Petunjuk (Clue)  : Additional Crysta dari event White Day 2026.
+Poin Hadiah      : 50 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 4]
+Pertanyaan       : Siapakah nama NPC pandai besi (Blacksmith) pria bertubuh kekar pembawa palu di Kota Sofya?
+Jawaban Tampilan : Zaldo
+Jawaban Diterima : zaldo
+Petunjuk (Clue)  : Menjaga meja Blacksmith NPC di Sofya City
+Poin Hadiah      : 45 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 5]
+Pertanyaan       : Siapakah nama NPC wanita peramu obat dan sintesis perlengkapan (Synthesist) di Kota Sofya?
+Jawaban Tampilan : Mubia
+Jawaban Diterima : mubia
+Petunjuk (Clue)  : Menjaga meja Synthesist di Sofya City
+Poin Hadiah      : 45 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 6]
+Pertanyaan       : Berapa batas maksimal jumlah pemain dalam satu Party standar di Toram Online (tanpa raid)?
+Jawaban Tampilan : 4 Pemain
+Jawaban Diterima : 4, empat
+Petunjuk (Clue)  : Angka antara 3 dan 5
+Poin Hadiah      : 35 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 7]
+Pertanyaan       : Boss naga berkulit cokelat batu yang berada di puncak Nisel Mountain (Gunung Nisel) adalah?
+Jawaban Tampilan : Brutal Dragon Decel
+Jawaban Diterima : brutal dragon decel, decel, naga brutal decel
+Petunjuk (Clue)  : Naga brutal bertubuh batu cokelat
+Poin Hadiah      : 45 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 8]
+Pertanyaan       : Mata uang apakah yang digunakan untuk bertransaksi antar pemain di Papan Pasar (Consignment Board) Toram?
+Jawaban Tampilan : Spina
+Jawaban Diterima : spina
+Petunjuk (Clue)  : Mata uang utama game Toram
+Poin Hadiah      : 35 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 9]
+Pertanyaan       : Apa nama Special Crysta yang dijatuhkan Venena Coenubia di Ultimea Palace: Throne dan memberikan MaxMP +500?
+Jawaban Tampilan : Venena
+Jawaban Diterima : venena
+Petunjuk (Clue)  : Crysta ini dapat di-upgrade menjadi Venena II.
+Poin Hadiah      : 45 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 10]
+Pertanyaan       : Item teleportasi khusus kota apakah yang digunakan untuk menuju Sofya City?
+Jawaban Tampilan : Teleport Ticket (Sofya City)
+Jawaban Diterima : teleport ticket (sofya city), teleport ticket sofya city, teleport ticket sofya, teleport sofya, tp sofya
+Petunjuk (Clue)  : Item teleportasi dengan tujuan Sofya City; Save Point tidak selalu mengarah ke Sofya.
+Poin Hadiah      : 40 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 11]
+Pertanyaan       : Stat apa yang meningkatkan Critical Damage dan turut meningkatkan ATK pengguna One-Handed Sword?
+Jawaban Tampilan : STR (Strength)
+Jawaban Diterima : str, strength
+Petunjuk (Clue)  : Stat kekuatan fisik; DEX juga berkontribusi pada ATK One-Handed Sword.
+Poin Hadiah      : 40 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 12]
+Pertanyaan       : Skill Tier 3 Dual Sword yang menebas target berkali-kali dan memberikan status Invincible selama animasinya adalah?
+Jawaban Tampilan : Phantom Slash
+Jawaban Diterima : phantom slash
+Petunjuk (Clue)  : Skill pedang ganda dengan rangkaian 12 tebasan.
+Poin Hadiah      : 50 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 13]
+Pertanyaan       : Crysta apakah yang merupakan upgrade langsung dari Hero Potum?
+Jawaban Tampilan : Hero Potum II
+Jawaban Diterima : hero potum ii, hero potum 2
+Petunjuk (Clue)  : Crysta enhancer weapon bertanda angka Romawi II.
+Poin Hadiah      : 45 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 14]
+Pertanyaan       : Boss raksasa berkepala banteng yang berada di Ruined Temple dan menjatuhkan Minotaur Skin adalah?
+Jawaban Tampilan : Minotaur
+Jawaban Diterima : minotaur
+Petunjuk (Clue)  : Monster banteng bertubuh manusia berotot
+Poin Hadiah      : 40 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 15]
+Pertanyaan       : Apa nama item material dari monster Colon di Nisel Mountain yang terkenal untuk quest leveling cepat di Sofya?
+Jawaban Tampilan : Nisel Wood (Kayu Nisel)
+Jawaban Diterima : nisel wood, kayu nisel
+Petunjuk (Clue)  : Material dari monster di Nisel Mountain untuk quest Timber Shortage milik NPC Yunis.
+Poin Hadiah      : 40 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 16]
+Pertanyaan       : Skill Tier 4 Magic yang membutuhkan waktu cast lama dan menciptakan pusaran sihir kehancuran dahsyat adalah?
+Jawaban Tampilan : Magic: Finale
+Jawaban Diterima : finale, magic finale
+Petunjuk (Clue)  : Skill pamungkas para Mage
+Poin Hadiah      : 45 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 17]
+Pertanyaan       : Boss naga berelemen api merah yang berada di Fiery Volcano adalah?
+Jawaban Tampilan : Flare Volg
+Jawaban Diterima : flare volg, volg
+Petunjuk (Clue)  : Naga api yang memiliki cakar membara
+Poin Hadiah      : 45 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 18]
+Pertanyaan       : Siapakah nama gadis mungil berambut oranye pedagang keliling yang menemani perjalanan karakter utama Toram?
+Jawaban Tampilan : Pelulu
+Jawaban Diterima : pelulu
+Petunjuk (Clue)  : Pedagang cilik cerdik dari bangsa Elves
+Poin Hadiah      : 40 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 19]
+Pertanyaan       : Apa nama Enhancer Crysta dari Boss di Rokoko City Ruins yang merupakan upgrade Tuscog dan memberikan ATK +8%, MATK +8%, serta MaxMP -150?
+Jawaban Tampilan : Black Shadow
+Jawaban Diterima : black shadow
+Petunjuk (Clue)  : Crysta dari Boss Black Shadow; dapat di-upgrade menjadi Torexesa.
+Poin Hadiah      : 50 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 20]
+Pertanyaan       : Apa nama bijih pemurnian dengan grade tertinggi pada daftar material refining standar Toram Online?
+Jawaban Tampilan : High-Purity Orichalcum
+Jawaban Diterima : high-purity orichalcum, high purity orichalcum
+Petunjuk (Clue)  : Material grade 12; refine +S tidak wajib menggunakan material ini.
+Poin Hadiah      : 50 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 21]
+Pertanyaan       : Kota terapung bernuansa istana megah tempat tinggal bangsa Elfo yang dipimpin oleh Raja Elbano adalah?
+Jawaban Tampilan : El Scaro
+Jawaban Diterima : el scaro, elscaro
+Petunjuk (Clue)  : Kota megah dengan air terjun dan kubah biru
+Poin Hadiah      : 45 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 22]
+Pertanyaan       : Boss pohon labu yang hanya muncul saat event perayaan Halloween di Toram Online adalah?
+Jawaban Tampilan : Pumpking
+Jawaban Diterima : pumpking
+Petunjuk (Clue)  : Raja berkepala labu seram oranye
+Poin Hadiah      : 40 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 23]
+Pertanyaan       : Skill dari pohon Halberd Tier 4 yang melompat tinggi menusuk target dan mengabaikan sebagian Physical Defense musuh adalah?
+Jawaban Tampilan : Dragon Tooth
+Jawaban Diterima : dragon tooth
+Petunjuk (Clue)  : Lompatan tinggi menusuk ke bawah
+Poin Hadiah      : 50 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 24]
+Pertanyaan       : Berapa slot maksimal (socket) yang bisa dimiliki oleh satu senjata di Toram Online?
+Jawaban Tampilan : 2 Slot
+Jawaban Diterima : 2, dua, 2 slot
+Petunjuk (Clue)  : Bisa dibuka menggunakan Piercer
+Poin Hadiah      : 35 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 25]
+Pertanyaan       : Item apakah yang digunakan untuk melubangi slot ke-1 pada senjata tipe Katana?
+Jawaban Tampilan : Katana Piercer
+Jawaban Diterima : katana piercer, piercer katana
+Petunjuk (Clue)  : Item spesial berbentuk jarum penembus
+Poin Hadiah      : 45 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 26]
+Pertanyaan       : Boss naga kegelapan yang memiliki sayap besar dan berada di Dark Dragon Shrine adalah?
+Jawaban Tampilan : Finstern the Dark Dragon
+Jawaban Diterima : finstern, finstern the dark dragon
+Petunjuk (Clue)  : Naga gelap perkasa penguasa kegelapan
+Poin Hadiah      : 45 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 27]
+Pertanyaan       : Apa nama Armor Crysta dari event kolaborasi Eagle Talon yang memberikan MaxHP +5000, ATK +2%, dan Short Range Damage +6%?
+Jawaban Tampilan : DX Fighter
+Jawaban Diterima : dx fighter
+Petunjuk (Clue)  : Crysta kolaborasi yang dapat di-upgrade menjadi DX Fighter II.
+Poin Hadiah      : 50 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 28]
+Pertanyaan       : Apa nama consumable ramuan pemulih HP warna merah yang paling umum dibuat oleh alchemist?
+Jawaban Tampilan : Revita
+Jawaban Diterima : revita, revita vi, revita v, revita iv
+Petunjuk (Clue)  : Obat merah pemulih darah
+Poin Hadiah      : 35 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 29]
+Pertanyaan       : Boss bernama apa yang ditemukan di Plastida: Deepest Part dan menjatuhkan Weapon Crysta dengan ATK +5% serta Anticipate +10%?
+Jawaban Tampilan : Imitator
+Jawaban Diterima : imitator
+Petunjuk (Clue)  : Jangan tertukar dengan Imitacia di Dark Castle.
+Poin Hadiah      : 45 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 30]
+Pertanyaan       : Skill Tier 2 Shot yang menembakkan banyak panah ke langit sehingga menghujani musuh secara berkala adalah?
+Jawaban Tampilan : Arrow Rain
+Jawaban Diterima : arrow rain, hujan panah
+Petunjuk (Clue)  : Skill area pada pohon Shot; bukan Cross Fire.
+Poin Hadiah      : 50 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 31]
+Pertanyaan       : Kota kuno di tengah gurun pasir tempat para pejuang bangsa Diel tinggal adalah?
+Jawaban Tampilan : Hora Diomedea
+Jawaban Diterima : hora diomedea, hora
+Petunjuk (Clue)  : Kota dengan bangunan tenda dan bebatuan gurun
+Poin Hadiah      : 45 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 32]
+Pertanyaan       : Apa sebutan karakteristik bawaan Pet yang memengaruhi perilakunya dalam pertempuran?
+Jawaban Tampilan : Nature
+Jawaban Diterima : nature, pet nature
+Petunjuk (Clue)  : Contohnya sifat perilaku Pet; bukan Trait pada perlengkapan.
+Poin Hadiah      : 40 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 33]
+Pertanyaan       : Crysta upgrade lanjutan dari 'Seele Zauga' adalah?
+Jawaban Tampilan : Seele Zauga II
+Jawaban Diterima : seele zauga ii
+Petunjuk (Clue)  : Menambah nomor angka romawi dua di belakangnya
+Poin Hadiah      : 45 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 34]
+Pertanyaan       : Siapakah nama NPC bangsawan wanita kaya bergaun merah muda yang sering memberikan quest mewah di Kota Sofya?
+Jawaban Tampilan : Lefina
+Jawaban Diterima : lefina
+Petunjuk (Clue)  : Gadis bangsawan kaya pencari Minotaur Skin
+Poin Hadiah      : 40 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 35]
+Pertanyaan       : Boss berkepala tiga menyerupai anjing atau serigala yang berada di Spring of Rebirth adalah?
+Jawaban Tampilan : Cerberus
+Jawaban Diterima : cerberus
+Petunjuk (Clue)  : Boss yang dapat ditemui di Mata Air Rebirth.
+Poin Hadiah      : 45 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 36]
+Pertanyaan       : Apa sebutan umum bonus stat yang diperoleh setelah menyantap masakan dari sistem Your Land?
+Jawaban Tampilan : Food Buff
+Jawaban Diterima : food buff, buff masakan, bonus masakan
+Petunjuk (Clue)  : Efek dari Cooking di Your Land; bukan nama item konsumsi tertentu.
+Poin Hadiah      : 40 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 37]
+Pertanyaan       : Crysta upgrade lanjutan dari 'Megiston the Champion VIII' adalah?
+Jawaban Tampilan : Megiston The Champion IX
+Jawaban Diterima : megiston ix, megiston the champion ix
+Petunjuk (Clue)  : Gelar sang juara arena turnamen tingkat sembilan
+Poin Hadiah      : 50 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 38]
+Pertanyaan       : Tempat apakah yang bisa dihias dengan perabotan, ditanami sayuran, dan memelihara hewan peliharaan di Toram?
+Jawaban Tampilan : Land (Your Land)
+Jawaban Diterima : land, your land, rumah
+Petunjuk (Clue)  : Lahan pribadi milik setiap pemain
+Poin Hadiah      : 35 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 39]
+Pertanyaan       : Stat dasar apa yang turut meningkatkan Cast Speed (CSPD), meskipun bukan satu-satunya cara mempercepat cast?
+Jawaban Tampilan : DEX (Dexterity)
+Jawaban Diterima : dex, dexterity
+Petunjuk (Clue)  : Stat ketangkasan; mage tidak wajib memaksimalkannya.
+Poin Hadiah      : 40 Poin
+--------------------------------------------------------------------------------
+
+[SOAL NO. 40]
+Pertanyaan       : Siapakah nama NPC pemilik Toko Serba Ada (General Store) di Kota Sofya?
+Jawaban Tampilan : Sololo
+Jawaban Diterima : sololo
+Petunjuk (Clue)  : Pria pedagang penjual item konsumsi di Sofya
+Poin Hadiah      : 45 Poin
+--------------------------------------------------------------------------------

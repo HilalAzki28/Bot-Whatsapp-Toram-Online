@@ -1,11 +1,11 @@
 [
   {
-    "question": "Crysta manakah yang merupakan Upgrade lanjutan dari Crysta 'Kuffania' dan memiliki efek: Short Range Damage +10%, Long Range Damage -15%?",
+    "question": "Crysta upgrade dari Kuffania yang memberikan Short Range Damage +10% dan Long Range Damage -15% adalah apa?",
     "answers": [
       "blanc"
     ],
     "display": "Blanc",
-    "clue": "Crysta Normal berelemen murni",
+    "clue": "Crysta enhancer dari event Halloween; memiliki Stability +5% dan Evasion Recharge +5%.",
     "points": 50
   },
   {
@@ -22,11 +22,10 @@
   {
     "question": "Crysta apakah yang merupakan hasil upgrade dari 'Evil Lefina' (Lefina Jahat)?",
     "answers": [
-      "mycodian",
-      "sanmurbon"
+      "mycodian"
     ],
-    "display": "Mycodian / Sanmurbon",
-    "clue": "Crysta berbentuk jamur mistis dari event",
+    "display": "Mycodian",
+    "clue": "Additional Crysta dari event White Day 2026.",
     "points": 50
   },
   {
@@ -78,54 +77,54 @@
     "points": 35
   },
   {
-    "question": "Apa nama Crysta legendaris penambah MaxMP +1000 yang dijatuhkan oleh Boss Venena Coenubia?",
+    "question": "Apa nama Special Crysta yang dijatuhkan Venena Coenubia di Ultimea Palace: Throne dan memberikan MaxMP +500?",
     "answers": [
-      "venena",
-      "venena coenubia"
+      "venena"
     ],
     "display": "Venena",
-    "clue": "Nama boss ratu raksasa di Ultimea Palace",
+    "clue": "Crysta ini dapat di-upgrade menjadi Venena II.",
     "points": 45
   },
   {
-    "question": "Item consumable apakah yang biasa digunakan untuk langsung kembali ke Kota Sofya secara instan?",
+    "question": "Item teleportasi khusus kota apakah yang digunakan untuk menuju Sofya City?",
     "answers": [
+      "teleport ticket (sofya city)",
+      "teleport ticket sofya city",
+      "teleport ticket sofya",
       "teleport sofya",
-      "teleport city of sofya",
-      "tp sofya",
-      "save point sofya"
+      "tp sofya"
     ],
-    "display": "Teleport City of Sofya",
-    "clue": "Gulungan teleportasi kota",
+    "display": "Teleport Ticket (Sofya City)",
+    "clue": "Item teleportasi dengan tujuan Sofya City; Save Point tidak selalu mengarah ke Sofya.",
     "points": 40
   },
   {
-    "question": "Status (Stat) apakah yang menaikkan Physical Attack (ATK) utama bagi pengguna senjata One-Handed Sword (Pedang 1 Tangan)?",
+    "question": "Stat apa yang meningkatkan Critical Damage dan turut meningkatkan ATK pengguna One-Handed Sword?",
     "answers": [
       "str",
       "strength"
     ],
     "display": "STR (Strength)",
-    "clue": "Singkatan 3 huruf status kekuatan fisik",
+    "clue": "Stat kekuatan fisik; DEX juga berkontribusi pada ATK One-Handed Sword.",
     "points": 40
   },
   {
-    "question": "Skill Tier 4 dari pohon skill Blade yang melakukan tebasan bayangan berkali-kali tanpa bisa diserang lawan adalah?",
+    "question": "Skill Tier 3 Dual Sword yang menebas target berkali-kali dan memberikan status Invincible selama animasinya adalah?",
     "answers": [
-      "shining cross"
+      "phantom slash"
     ],
-    "display": "Shining Cross",
-    "clue": "Skill tebasan silang bercahaya",
+    "display": "Phantom Slash",
+    "clue": "Skill pedang ganda dengan rangkaian 12 tebasan.",
     "points": 50
   },
   {
-    "question": "Crysta apakah yang merupakan kelanjutan upgrade dari 'Hero Potum' tingkat ke-2?",
+    "question": "Crysta apakah yang merupakan upgrade langsung dari Hero Potum?",
     "answers": [
       "hero potum ii",
-      "potum pahlawan ii"
+      "hero potum 2"
     ],
-    "display": "Hero Potum II (Potum Pahlawan II)",
-    "clue": "Tier kedua dari crysta potum pahlawan",
+    "display": "Hero Potum II",
+    "clue": "Crysta enhancer weapon bertanda angka Romawi II.",
     "points": 45
   },
   {
@@ -144,7 +143,7 @@
       "kayu nisel"
     ],
     "display": "Nisel Wood (Kayu Nisel)",
-    "clue": "Material kayu untuk quest NPC Zono",
+    "clue": "Material dari monster di Nisel Mountain untuk quest Timber Shortage milik NPC Yunis.",
     "points": 40
   },
   {
@@ -177,24 +176,22 @@
     "points": 40
   },
   {
-    "question": "Crysta apakah yang memberikan stat Critical Rate +20, ATK +5%, dan merupakan boss di Dark Castle?",
+    "question": "Apa nama Enhancer Crysta dari Boss di Rokoko City Ruins yang merupakan upgrade Tuscog dan memberikan ATK +8%, MATK +8%, serta MaxMP -150?",
     "answers": [
-      "black shadow",
-      "bayangan hitam"
+      "black shadow"
     ],
     "display": "Black Shadow",
-    "clue": "Bayangan berwujud sosok kegelapan",
+    "clue": "Crysta dari Boss Black Shadow; dapat di-upgrade menjadi Torexesa.",
     "points": 50
   },
   {
-    "question": "Item mineral apakah yang paling tinggi tingkatannya untuk melakukan penempaan (refining) perlengkapan ke tingkat +S?",
+    "question": "Apa nama bijih pemurnian dengan grade tertinggi pada daftar material refining standar Toram Online?",
     "answers": [
-      "high purity orichalcum",
-      "orichalcum",
-      "ori"
+      "high-purity orichalcum",
+      "high purity orichalcum"
     ],
-    "display": "High Purity Orichalcum",
-    "clue": "Logam kemurnian tinggi berkilau keemasan",
+    "display": "High-Purity Orichalcum",
+    "clue": "Material grade 12; refine +S tidak wajib menggunakan material ini.",
     "points": 50
   },
   {
@@ -257,12 +254,12 @@
     "points": 45
   },
   {
-    "question": "Crysta armor hasil upgrade dari 'Boss Roga' yang memberikan MaxHP +3000 dan Resistance adalah?",
+    "question": "Apa nama Armor Crysta dari event kolaborasi Eagle Talon yang memberikan MaxHP +5000, ATK +2%, dan Short Range Damage +6%?",
     "answers": [
       "dx fighter"
     ],
     "display": "DX Fighter",
-    "clue": "Crysta dari event kolaborasi robot tempur",
+    "clue": "Crysta kolaborasi yang dapat di-upgrade menjadi DX Fighter II.",
     "points": 50
   },
   {
@@ -278,22 +275,22 @@
     "points": 35
   },
   {
-    "question": "Boss berbentuk peti harta karun palsu yang menjebak petualang di Dark Anon Road adalah?",
+    "question": "Boss bernama apa yang ditemukan di Plastida: Deepest Part dan menjatuhkan Weapon Crysta dengan ATK +5% serta Anticipate +10%?",
     "answers": [
-      "imitator",
-      "imitacia"
+      "imitator"
     ],
     "display": "Imitator",
-    "clue": "Peti bergigi tajam yang bisa melompat",
+    "clue": "Jangan tertukar dengan Imitacia di Dark Castle.",
     "points": 45
   },
   {
-    "question": "Skill Tier 4 Bow yang menembakkan panah vertikal ke langit lalu menghujam tanah berulang kali adalah?",
+    "question": "Skill Tier 2 Shot yang menembakkan banyak panah ke langit sehingga menghujani musuh secara berkala adalah?",
     "answers": [
-      "cross fire"
+      "arrow rain",
+      "hujan panah"
     ],
-    "display": "Cross Fire",
-    "clue": "Memerlukan charging tembakan panah",
+    "display": "Arrow Rain",
+    "clue": "Skill area pada pohon Shot; bukan Cross Fire.",
     "points": 50
   },
   {
@@ -307,13 +304,13 @@
     "points": 45
   },
   {
-    "question": "Benda apakah yang dipasang pada Pet untuk meningkatkan stat dan memberikan kemampuan unik?",
+    "question": "Apa sebutan karakteristik bawaan Pet yang memengaruhi perilakunya dalam pertempuran?",
     "answers": [
-      "trait",
-      "pet trait"
+      "nature",
+      "pet nature"
     ],
-    "display": "Trait",
-    "clue": "Bakat alami bawaan pet peliharaan",
+    "display": "Nature",
+    "clue": "Contohnya sifat perilaku Pet; bukan Trait pada perlengkapan.",
     "points": 40
   },
   {
@@ -335,23 +332,23 @@
     "points": 40
   },
   {
-    "question": "Mini Boss serigala buas di Land of Chaos yang menjatuhkan bahan perlengkapan adalah?",
+    "question": "Boss berkepala tiga menyerupai anjing atau serigala yang berada di Spring of Rebirth adalah?",
     "answers": [
       "cerberus"
     ],
     "display": "Cerberus",
-    "clue": "Monster buas penjaga berkepala serigala",
+    "clue": "Boss yang dapat ditemui di Mata Air Rebirth.",
     "points": 45
   },
   {
-    "question": "Item konsumsi penambah stat yang dimasak dari kebun rumah sendiri di Land adalah?",
+    "question": "Apa sebutan umum bonus stat yang diperoleh setelah menyantap masakan dari sistem Your Land?",
     "answers": [
       "food buff",
       "buff masakan",
-      "masakan"
+      "bonus masakan"
     ],
     "display": "Food Buff",
-    "clue": "Masakan kuliner di kebun rumah sendiri",
+    "clue": "Efek dari Cooking di Your Land; bukan nama item konsumsi tertentu.",
     "points": 40
   },
   {
@@ -376,13 +373,13 @@
     "points": 35
   },
   {
-    "question": "Status apakah yang wajib ditingkatkan oleh karakter bertipe Magic untuk mempercepat waktu merapal mantra (CSPD)?",
+    "question": "Stat dasar apa yang turut meningkatkan Cast Speed (CSPD), meskipun bukan satu-satunya cara mempercepat cast?",
     "answers": [
       "dex",
       "dexterity"
     ],
-    "display": "DEX",
-    "clue": "Status ketangkasan tangan",
+    "display": "DEX (Dexterity)",
+    "clue": "Stat ketangkasan; mage tidak wajib memaksimalkannya.",
     "points": 40
   },
   {
