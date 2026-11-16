@@ -23,5 +23,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy seluruh source code
 COPY . .
 
+# Pastikan placeholder sesi adalah file biasa (bukan direktori)
+RUN touch /app/whatsapp_session.sqlite3
+
 CMD ["python", "src/bot.py"]
 

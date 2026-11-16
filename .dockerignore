@@ -8,4 +8,6 @@ venv
 env
 scratch
 *.sqlite3-journal
+whatsapp_session.sqlite3*
+whatsapp_qr.png
 
