@@ -5960,19 +5960,7 @@ def on_message(client: NewClient, message: MessageEv):
             except Exception as e:
                 client.reply_message(f"Gagal: Gagal kick. Jadiin atmin dulu oii!!! Detail: {e}", message)
 
-    elif lower_text == ",view" or lower_text.startswith(",view "):
-        # Cek apakah ini di grup
-        is_group = message.Info.MessageSource.IsGroup
-        if is_group:
-            # Ambil admins dari cache/API (force_refresh=True untuk validasi wewenang real-time)
-            group_data = get_group_members_info(client, chat_jid, force_refresh=True)
-            admins_list = group_data['admins']
-            
-            sender_user = message.Info.MessageSource.Sender.User if message.Info.MessageSource.Sender else ""
-            if sender_user not in admins_list:
-                client.reply_message("Lu bukan atmin kocak, tidak punya wewenang view!!!", message)
-                return
-
+    elif re.match(r"^,view(\s|$)", lower_text):
         extended_msg = message.Message.extendedTextMessage
         if not (extended_msg and extended_msg.contextInfo and extended_msg.contextInfo.HasField('quotedMessage')):
             client.reply_message("Peringatan: Silakan reply gambar/video/audio 1x lihat dengan menggunakan perintah `,view`.", message)
