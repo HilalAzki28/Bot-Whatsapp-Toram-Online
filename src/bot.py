@@ -206,7 +206,16 @@ def handle_set_subscription(client: NewClient, message: MessageEv, args: str, ch
     args_str = args.strip()
     args_lower = args_str.lower()
     if not args_lower:
-        send_reply_or_message(client, "Format: `,set [jumlah] hari` (contoh: `,set 30 hari`) atau `,set [id_grup] [jumlah] hari` atau `,set off` untuk menonaktifkan.", message)
+        send_reply_or_message(
+            client, 
+            "Format Perintah `,set`:\n"
+            "• `,set 30 hari` (Atur masa aktif 30 hari)\n"
+            "• `,set +1` atau `,set +1 hari` (Tambah 1 hari)\n"
+            "• `,set -1` atau `,set -1 hari` (Kurangi 1 hari)\n"
+            "• `,set [id_grup] [jumlah] hari` (Atur untuk grup tertentu)\n"
+            "• `,set off` (Menonaktifkan bot di grup ini)", 
+            message
+        )
         return
 
     # Cek apakah ada target grup spesifik di dalam args (misal: 120363411640694519@g.us atau ID grup angka panjang)
@@ -224,7 +233,7 @@ def handle_set_subscription(client: NewClient, message: MessageEv, args: str, ch
     if not is_group and target_group_jid == chat_jid_str:
         send_reply_or_message(
             client, 
-            "Gagal: Anda sedang berada di Personal Chat. Harap sertakan ID Grup!\nContoh: `,set 120363xxxxxxxx@g.us 30 hari`\n\nTips: Ketik `,id` di dalam grup untuk melihat ID grup tersebut.", 
+            "Gagal: Anda sedang berada di Personal Chat. Harap sertakan ID Grup!\nContoh: `,set 120363xxxxxxxx@g.us 30 hari` atau `,set 120363xxxxxxxx@g.us +1`\n\nTips: Ketik `,id` di dalam grup untuk melihat ID grup tersebut.", 
             message
         )
         return
@@ -239,14 +248,80 @@ def handle_set_subscription(client: NewClient, message: MessageEv, args: str, ch
         send_reply_or_message(client, f"Bot di grup `{target_group_jid}` telah dinonaktifkan oleh Owner.", message)
         return
 
-    # Ekstrak angka durasi hari dari remaining_args
-    m = re.search(r'(\d+)', remaining_args)
-    if not m:
-        send_reply_or_message(client, "Gagal: Jumlah hari tidak valid. Contoh penggunaan: `,set 30 hari` atau `,set 120363...@g.us 30 hari`", message)
+    # Ekstrak tanda (+/-) dan angka durasi hari dari remaining_args
+    signed_match = re.search(r'([+-])\s*(\d+)', remaining_args)
+    if signed_match:
+        sign = signed_match.group(1)
+        days_count = int(signed_match.group(2))
+    else:
+        m = re.search(r'(\d+)', remaining_args)
+        if not m:
+            send_reply_or_message(client, "Gagal: Jumlah hari tidak valid.\nContoh: `,set 30 hari`, `,set +1`, atau `,set -1`", message)
+            return
+        sign = ''
+        days_count = int(m.group(1))
+
+    info = subs.get(target_group_jid) or subs.get(target_group_jid.split('@')[0], {})
+    now = datetime.now()
+
+    # Logika Pengurangan Hari (misal: ,set -1 atau ,set -1 hari)
+    if sign == '-':
+        if days_count <= 0:
+            send_reply_or_message(client, "Gagal: Pengurangan masa aktif minimal 1 hari.", message)
+            return
+
+        if not info.get("active", False) or not info.get("expired_at"):
+            send_reply_or_message(client, f"Gagal: Grup `{target_group_jid}` belum memiliki masa aktif sewa yang berjalan sehingga tidak dapat dikurangi.", message)
+            return
+
+        try:
+            curr_exp = datetime.fromisoformat(info["expired_at"])
+        except Exception:
+            send_reply_or_message(client, f"Gagal: Format tanggal kedaluwarsa sebelumnya tidak valid.", message)
+            return
+
+        if curr_exp <= now:
+            send_reply_or_message(client, f"Gagal: Masa aktif grup `{target_group_jid}` sudah kedaluwarsa ({curr_exp.strftime('%d-%m-%Y %H:%M WIB')}) sehingga tidak dapat dikurangi.", message)
+            return
+
+        new_exp = curr_exp - timedelta(days=days_count)
+        if new_exp <= now:
+            info["active"] = False
+            info["expired_at"] = new_exp.isoformat()
+            subs[target_group_jid] = info
+            save_group_subscriptions(subs)
+            exp_formatted = new_exp.strftime("%d-%m-%Y %H:%M WIB")
+            reply = (
+                f"*MASA AKTIF BOT TELAH HABIS / DINONAKTIFKAN*\n\n"
+                f"• *Grup:* `{target_group_jid}`\n"
+                f"• *Pengurangan:* -{days_count} hari\n"
+                f"• *Status:* Masa aktif telah habis (Kedaluwarsa: {exp_formatted})\n\n"
+                f"Gunakan `,set [jumlah] hari` untuk mengaktifkan kembali."
+            )
+            send_reply_or_message(client, reply, message)
+            return
+
+        info["active"] = True
+        info["expired_at"] = new_exp.isoformat()
+        subs[target_group_jid] = info
+        save_group_subscriptions(subs)
+
+        diff = new_exp - now
+        total_days = diff.days
+        total_hours = diff.seconds // 3600
+        exp_formatted = new_exp.strftime("%d-%m-%Y %H:%M WIB")
+        reply = (
+            f"*MASA AKTIF BOT BERHASIL DIKURANGI*\n\n"
+            f"• *Grup:* `{target_group_jid}`\n"
+            f"• *Pengurangan:* -{days_count} hari\n"
+            f"• *Total Sisa Waktu:* {total_days} hari {total_hours} jam\n"
+            f"• *Berlaku sampai:* {exp_formatted}\n\n"
+            f"Ketik command `,cekbot` untuk memeriksa sisa waktu kapan saja."
+        )
+        send_reply_or_message(client, reply, message)
         return
 
-    days_count = int(m.group(1))
-    info = subs.get(target_group_jid) or subs.get(target_group_jid.split('@')[0], {})
+    # Logika Penambahan / Pengaturan Hari (misal: ,set +1 atau ,set 30 hari)
     if days_count <= 0:
         info["active"] = False
         subs[target_group_jid] = info
@@ -254,7 +329,6 @@ def handle_set_subscription(client: NewClient, message: MessageEv, args: str, ch
         send_reply_or_message(client, f"Bot di grup `{target_group_jid}` telah dinonaktifkan.", message)
         return
 
-    now = datetime.now()
     base_dt = now
     is_extended = False
 
@@ -278,21 +352,24 @@ def handle_set_subscription(client: NewClient, message: MessageEv, args: str, ch
     save_group_subscriptions(subs)
 
     exp_formatted = exp_dt.strftime("%d-%m-%Y %H:%M WIB")
-    if is_extended:
+    action_label = "DITAMBAH" if sign == '+' else ("DIPERPANJANG" if is_extended else "DIATUR")
+    count_prefix = "+" if (sign == '+' or is_extended) else ""
+
+    if is_extended or sign == '+':
         diff = exp_dt - now
         total_days = diff.days
         total_hours = diff.seconds // 3600
         reply = (
-            f"*MASA AKTIF BOT BERHASIL DIPERPANJANG*\n\n"
+            f"*MASA AKTIF BOT BERHASIL {action_label}*\n\n"
             f"• *Grup:* `{target_group_jid}`\n"
-            f"• *Penambahan:* +{days_count} hari\n"
+            f"• *Penambahan:* {count_prefix}{days_count} hari\n"
             f"• *Total Sisa Waktu:* {total_days} hari {total_hours} jam\n"
             f"• *Berlaku sampai:* {exp_formatted}\n\n"
             f"Ketik command `,cekbot` untuk memeriksa sisa waktu kapan saja."
         )
     else:
         reply = (
-            f"*MASA AKTIF BOT BERHASIL DIATUR*\n\n"
+            f"*MASA AKTIF BOT BERHASIL {action_label}*\n\n"
             f"• *Grup:* `{target_group_jid}`\n"
             f"• *Durasi:* {days_count} hari\n"
             f"• *Berlaku sampai:* {exp_formatted}\n\n"
