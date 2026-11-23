@@ -1631,12 +1631,12 @@ def handle_music_command(client: NewClient, message: MessageEv, query: str):
         send_reply_or_message(client, f"*Terjadi Kesalahan:*\n{e}", message)
 
 
-def get_group_members_info(client: NewClient, chat_jid: JID) -> dict:
-    """Mengambil informasi anggota grup dengan caching (10 menit)"""
+def get_group_members_info(client: NewClient, chat_jid: JID, force_refresh: bool = False) -> dict:
+    """Mengambil informasi anggota grup dengan caching (default 60 detik atau force_refresh)"""
     chat_jid_str = str(chat_jid)
     now = time.time()
     
-    if chat_jid_str in GROUP_CACHE and (now - GROUP_CACHE[chat_jid_str]['timestamp'] < 600):
+    if not force_refresh and chat_jid_str in GROUP_CACHE and (now - GROUP_CACHE[chat_jid_str]['timestamp'] < 60):
         return GROUP_CACHE[chat_jid_str]
         
     try:
@@ -1648,7 +1648,19 @@ def get_group_members_info(client: NewClient, chat_jid: JID) -> dict:
             jids_list.append(f"{participant.JID.User}@{participant.JID.Server}")
             jids_raw.append(participant.JID)
             if participant.IsAdmin or participant.IsSuperAdmin:
-                admins_list.append(participant.JID.User)
+                p_user = participant.JID.User
+                admins_list.append(p_user)
+                clean_p_user = p_user.split('.')[0].split(':')[0].split('@')[0]
+                if clean_p_user not in admins_list:
+                    admins_list.append(clean_p_user)
+                if hasattr(participant, "PhoneNumber") and participant.PhoneNumber:
+                    pn_user = getattr(participant.PhoneNumber, "User", str(participant.PhoneNumber))
+                    admins_list.append(pn_user)
+                    admins_list.append(pn_user.split('.')[0].split(':')[0].split('@')[0])
+                if hasattr(participant, "LID") and participant.LID:
+                    lid_user = getattr(participant.LID, "User", str(participant.LID))
+                    admins_list.append(lid_user)
+                    admins_list.append(lid_user.split('.')[0].split(':')[0].split('@')[0])
         
         data = {
             'jids': jids_list,
@@ -5260,11 +5272,11 @@ def on_message(client: NewClient, message: MessageEv):
         return
 
     # Command pengaturan masa aktif grup (KHUSUS BOT SENDIRI / OWNER)
-    if lower_text == ",set" or lower_text.startswith(",set "):
+    if re.match(r"^,set(\s|$)", lower_text):
         if not is_owner:
             send_reply_or_message(
                 client, 
-                f"Perintah `,set` hanya dapat digunakan oleh Akun Bot / Owner.\n(ID Pengirim Anda: `{clean_sender}`)", 
+                f"Peringatan: Perintah `,set` hanya dapat digunakan oleh Nomor Owner dan Akun Bot sendiri.\nAdmin grup maupun anggota lain tidak memiliki akses untuk mengatur masa aktif/sewa bot.\n(ID Pengirim Anda: `{clean_sender}`)", 
                 message
             )
             return
@@ -5348,7 +5360,7 @@ def on_message(client: NewClient, message: MessageEv):
         or lower_text == ",resetscore" or lower_text.startswith(",resetscore ")
     ):
         if is_group:
-            group_data = get_group_members_info(client, chat_jid)
+            group_data = get_group_members_info(client, chat_jid, force_refresh=True)
             admins_list = group_data.get('admins', [])
         else:
             admins_list = []
@@ -5481,13 +5493,13 @@ def on_message(client: NewClient, message: MessageEv):
         calc_result = safe_calc(expression)
         client.reply_message(calc_result, message)
         
-    elif lower_text == ",a" or lower_text.startswith(",a "):
+    elif re.match(r"^,a(\s|$)", lower_text):
         if not message.Info.MessageSource.IsGroup:
             client.reply_message("Peringatan: Perintah `,a` hanya dapat digunakan di dalam grup obrolan.", message)
         else:
             try:
-                # Ambil data anggota dari cache/API
-                group_data = get_group_members_info(client, chat_jid)
+                # Ambil data anggota terbaru secara real-time (force_refresh=True) agar mantan admin yang dicabut tidak bisa pakai
+                group_data = get_group_members_info(client, chat_jid, force_refresh=True)
                 jids_list = list(dict.fromkeys(group_data.get('jids', [])))
                 admins_list = group_data.get('admins', [])
 
@@ -5818,8 +5830,8 @@ def on_message(client: NewClient, message: MessageEv):
             client.reply_message("Peringatan: Perintah `,kick` hanya dapat digunakan di dalam grup obrolan.", message)
         else:
             try:
-                # Ambil data anggota dari cache/API
-                group_data = get_group_members_info(client, chat_jid)
+                # Ambil data anggota dari cache/API (force_refresh=True untuk validasi wewenang real-time)
+                group_data = get_group_members_info(client, chat_jid, force_refresh=True)
                 jids_list = group_data['jids']
                 admins_list = group_data['admins']
                 jids_raw = group_data['jids_raw']
@@ -5875,8 +5887,8 @@ def on_message(client: NewClient, message: MessageEv):
         # Cek apakah ini di grup
         is_group = message.Info.MessageSource.IsGroup
         if is_group:
-            # Ambil admins dari cache/API
-            group_data = get_group_members_info(client, chat_jid)
+            # Ambil admins dari cache/API (force_refresh=True untuk validasi wewenang real-time)
+            group_data = get_group_members_info(client, chat_jid, force_refresh=True)
             admins_list = group_data['admins']
             
             sender_user = message.Info.MessageSource.Sender.User if message.Info.MessageSource.Sender else ""
@@ -6071,7 +6083,7 @@ def on_message(client: NewClient, message: MessageEv):
 
         chat_jid_str = f"{chat_jid.User}@{chat_jid.Server}"
         now = time.time()
-        group_data = get_group_members_info(client, chat_jid)
+        group_data = get_group_members_info(client, chat_jid, force_refresh=True)
         admins_list = group_data.get('admins', [])
         jids_raw = group_data.get('jids_raw', [])
 
@@ -6153,7 +6165,7 @@ def on_message(client: NewClient, message: MessageEv):
 
         chat_jid_str = f"{chat_jid.User}@{chat_jid.Server}"
         now = time.time()
-        group_data = get_group_members_info(client, chat_jid)
+        group_data = get_group_members_info(client, chat_jid, force_refresh=True)
         admins_list = group_data.get('admins', [])
         jids_raw = group_data.get('jids_raw', [])
 
