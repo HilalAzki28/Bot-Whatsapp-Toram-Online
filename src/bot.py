@@ -657,22 +657,39 @@ VIEWONCE_CACHE_DIR = os.path.join(DATA_DIR, "viewonce_cache")
 os.makedirs(VIEWONCE_CACHE_DIR, exist_ok=True)
 
 def is_view_once_message(msg: pb.Message) -> bool:
-    """Mendeteksi apakah pesan memiliki pembungkus viewOnce (1x lihat)"""
+    """Mendeteksi apakah pesan memiliki pembungkus atau flag viewOnce (1x lihat)"""
     if not msg:
         return False
     curr = msg
-    for _ in range(5):
+    wrapper_fields = [
+        'ephemeralMessage', 'viewOnceMessage', 'viewOnceMessageV2',
+        'viewOnceMessageV2Extension', 'documentWithCaptionMessage',
+        'associatedChildMessage', 'botForwardedMessage', 'deviceSentMessage'
+    ]
+    for _ in range(8):
         if not curr:
             break
         for wf in ['viewOnceMessage', 'viewOnceMessageV2', 'viewOnceMessageV2Extension']:
             if hasattr(curr, 'HasField') and curr.HasField(wf):
                 return True
         if hasattr(curr, 'HasField'):
-            if curr.HasField('ephemeralMessage') and curr.ephemeralMessage.message:
-                curr = curr.ephemeralMessage.message
-            elif curr.HasField('documentWithCaptionMessage') and curr.documentWithCaptionMessage.message:
-                curr = curr.documentWithCaptionMessage.message
-            else:
+            # Cek jika image, video, atau audio memiliki flag viewOnce
+            if curr.HasField('imageMessage') and getattr(curr.imageMessage, 'viewOnce', False):
+                return True
+            if curr.HasField('videoMessage') and getattr(curr.videoMessage, 'viewOnce', False):
+                return True
+            if curr.HasField('audioMessage') and getattr(curr.audioMessage, 'viewOnce', False):
+                return True
+
+            unwrapped = False
+            for wf in wrapper_fields:
+                if curr.HasField(wf):
+                    sub = getattr(curr, wf)
+                    if hasattr(sub, 'message') and sub.HasField('message'):
+                        curr = sub.message
+                        unwrapped = True
+                        break
+            if not unwrapped:
                 break
         else:
             break
@@ -1927,9 +1944,9 @@ def extract_text(message: MessageEv) -> str:
     return extract_text_from_message_pb(message.Message)
 
 def cache_group_message(message: MessageEv):
-    """Menyimpan pesan grup terbaru ke memory cache untuk mendukung command ,a pada multi-gambar / 2 gambar"""
+    """Menyimpan pesan chat/grup terbaru ke memory cache untuk mendukung command ,a dan ,view"""
     try:
-        if not message.Info or not message.Info.MessageSource or not message.Info.MessageSource.IsGroup:
+        if not message.Info or not message.Info.MessageSource:
             return
         chat_jid = message.Info.MessageSource.Chat
         if not chat_jid:
@@ -5292,22 +5309,7 @@ def on_connected(client: NewClient, event: ConnectedEv):
 
 @client.event(MessageEv)
 def on_message(client: NewClient, message: MessageEv):
-    # Ekstrak waktu pesan dan abaikan pesan lampau yang dikirim saat bot sedang mati / offline
-    msg_ts = 0.0
-    if hasattr(message.Info, 'Timestamp') and message.Info.Timestamp:
-        raw_ts = message.Info.Timestamp
-        if hasattr(raw_ts, 'seconds'):
-            msg_ts = float(raw_ts.seconds)
-        elif isinstance(raw_ts, (int, float)):
-            msg_ts = float(raw_ts)
-            if msg_ts > 1e11:
-                msg_ts = msg_ts / 1000.0
-
-    # Jika pesan dikirim sebelum bot aktif (saat bot mati) atau usia pesan terlalu lama (> 120 detik saat bot baru hidup)
-    if msg_ts > 0 and (msg_ts < (BOT_START_TIME - 5) or (time.time() - msg_ts > 120 and time.time() - BOT_START_TIME < 60)):
-        return
-
-    # Simpan pesan grup ke cache riwayat pesan untuk mendukung fitur multi-media / 2 gambar pada command ,a
+    # Simpan semua pesan ke cache riwayat terlebih dahulu agar tidak ada media yang terlewat
     cache_group_message(message)
 
     # Jika ini adalah pesan 1x lihat (View Once), unduh dan simpan salinan aslinya secara otomatis di background
@@ -5327,25 +5329,30 @@ def on_message(client: NewClient, message: MessageEv):
                 caption = ""
                 m_type = ""
                 
+                # Coba download dari unwrapped_m dahulu, jika gagal coba dari m_ev.Message asli
+                try:
+                    media_bytes = client.download_any(unwrapped_m)
+                except Exception as ex1:
+                    logging.debug(f"Pre-cache unwrapped failed: {ex1}")
+                    try:
+                        media_bytes = client.download_any(m_ev.Message)
+                    except Exception as ex2:
+                        logging.debug(f"Pre-cache wrapped failed: {ex2}")
+                
                 if unwrapped_m.HasField('imageMessage'):
                     img = unwrapped_m.imageMessage
                     caption = img.caption or ""
                     m_type = "image"
-                    media_bytes = client.download_any(unwrapped_m)
                 elif unwrapped_m.HasField('videoMessage'):
                     vid = unwrapped_m.videoMessage
                     caption = vid.caption or ""
                     m_type = "video"
-                    media_bytes = client.download_any(unwrapped_m)
                 elif unwrapped_m.HasField('audioMessage'):
-                    aud = unwrapped_m.audioMessage
                     m_type = "audio"
-                    media_bytes = client.download_any(unwrapped_m)
                 elif unwrapped_m.HasField('documentMessage'):
                     doc = unwrapped_m.documentMessage
                     caption = doc.caption or ""
                     m_type = "document"
-                    media_bytes = client.download_any(unwrapped_m)
                     
                 if media_bytes:
                     with open(dat_path, "wb") as f:
@@ -5359,9 +5366,24 @@ def on_message(client: NewClient, message: MessageEv):
                         }, f)
                     logging.info(f"Berhasil pre-cache media 1x lihat (View Once): {m_id} [{m_type}]")
             except Exception as e:
-                logging.debug(f"Pre-cache view-once error: {e}")
+                logging.warning(f"Pre-cache view-once error for {m_id}: {e}")
                 
         threading.Thread(target=_pre_cache_vo_worker, args=(message,), daemon=True).start()
+
+    # Ekstrak waktu pesan dan abaikan perintah lampau yang dikirim saat bot sedang mati / offline
+    msg_ts = 0.0
+    if hasattr(message.Info, 'Timestamp') and message.Info.Timestamp:
+        raw_ts = message.Info.Timestamp
+        if hasattr(raw_ts, 'seconds'):
+            msg_ts = float(raw_ts.seconds)
+        elif isinstance(raw_ts, (int, float)):
+            msg_ts = float(raw_ts)
+            if msg_ts > 1e11:
+                msg_ts = msg_ts / 1000.0
+
+    # Jika pesan dikirim sebelum bot aktif (saat bot mati) atau usia pesan terlalu lama (> 120 detik saat bot baru hidup)
+    if msg_ts > 0 and (msg_ts < (BOT_START_TIME - 5) or (time.time() - msg_ts > 120 and time.time() - BOT_START_TIME < 60)):
+        return
 
     # Ekstrak teks pesan
     is_interactive_choice = False
@@ -6064,18 +6086,27 @@ def on_message(client: NewClient, message: MessageEv):
             client.reply_message("Peringatan: Silakan reply gambar/video/audio 1x lihat dengan menggunakan perintah `,view`.", message)
             return
 
-        stanza_id = context_info.stanzaID if context_info and context_info.stanzaID else ""
+        stanza_id = (context_info.stanzaID or "").strip()
         quoted_msg = context_info.quotedMessage
 
         media_bytes = None
         media_type = ""
         caption = None
         target_unwrapped = None
+        is_thumbnail_preview = False
 
         # TIER 1: Cek pre-cached file di disk (VIEWONCE_CACHE_DIR)
         if stanza_id:
             dat_path = os.path.join(VIEWONCE_CACHE_DIR, f"{stanza_id}.dat")
             meta_path = os.path.join(VIEWONCE_CACHE_DIR, f"{stanza_id}.json")
+            if not os.path.exists(dat_path):
+                # Cek jika ada file dengan id case-insensitive
+                for fn in os.listdir(VIEWONCE_CACHE_DIR):
+                    if fn.lower().startswith(stanza_id.lower()) and fn.endswith(".dat"):
+                        dat_path = os.path.join(VIEWONCE_CACHE_DIR, fn)
+                        meta_path = os.path.join(VIEWONCE_CACHE_DIR, fn.replace(".dat", ".json"))
+                        break
+
             if os.path.exists(dat_path) and os.path.getsize(dat_path) > 0:
                 try:
                     with open(dat_path, "rb") as f:
@@ -6091,16 +6122,19 @@ def on_message(client: NewClient, message: MessageEv):
         # TIER 2: Cari pesan asli dari GROUP_MESSAGE_CACHE berdasarkan stanza_id
         if not media_bytes and stanza_id:
             cached_item = None
-            # Cari di grup saat ini
+            # Cari di grup/chat saat ini
             for item in reversed(GROUP_MESSAGE_CACHE.get(chat_jid_str, [])):
-                if item.get("id") == stanza_id:
+                item_id = item.get("id", "").strip()
+                if item_id == stanza_id or item_id.lower() == stanza_id.lower() or stanza_id in item_id or item_id in stanza_id:
                     cached_item = item
                     break
+
             # Jika belum ketemu, cari di seluruh chat cache
             if not cached_item:
                 for gid, entries in GROUP_MESSAGE_CACHE.items():
                     for item in reversed(entries):
-                        if item.get("id") == stanza_id:
+                        item_id = item.get("id", "").strip()
+                        if item_id == stanza_id or item_id.lower() == stanza_id.lower() or stanza_id in item_id or item_id in stanza_id:
                             cached_item = item
                             break
                     if cached_item:
@@ -6110,11 +6144,12 @@ def on_message(client: NewClient, message: MessageEv):
                 target_unwrapped = deep_unwrap_message(cached_item["raw_message"])
                 try:
                     media_bytes = client.download_any(target_unwrapped)
-                except Exception:
+                except Exception as ex1:
+                    logging.debug(f"Download target_unwrapped failed: {ex1}")
                     try:
                         media_bytes = client.download_any(cached_item["raw_message"])
-                    except Exception:
-                        pass
+                    except Exception as ex2:
+                        logging.debug(f"Download raw_message failed: {ex2}")
                 if media_bytes and not caption:
                     caption = cached_item.get("caption", None)
 
@@ -6131,18 +6166,41 @@ def on_message(client: NewClient, message: MessageEv):
                 except Exception:
                     pass
 
+        # TIER 4: Ekstrak JPEGThumbnail langsung dari quoted_msg jika full media tidak sempat tersimpan di bot
+        if not media_bytes:
+            unwrapped_quote = deep_unwrap_message(quoted_msg)
+            for cand in [unwrapped_quote, quoted_msg]:
+                if not cand:
+                    continue
+                if hasattr(cand, 'HasField') and cand.HasField('imageMessage'):
+                    img_thumb = cand.imageMessage.JPEGThumbnail
+                    if img_thumb:
+                        media_bytes = img_thumb
+                        media_type = "image"
+                        caption = cand.imageMessage.caption or ""
+                        is_thumbnail_preview = True
+                        break
+                elif hasattr(cand, 'HasField') and cand.HasField('videoMessage'):
+                    vid_thumb = cand.videoMessage.JPEGThumbnail
+                    if vid_thumb:
+                        media_bytes = vid_thumb
+                        media_type = "image"
+                        caption = cand.videoMessage.caption or ""
+                        is_thumbnail_preview = True
+                        break
+
         # Jika masih gagal mendapatkan data media
         if not media_bytes:
             client.reply_message(
                 "Gagal: Tidak dapat mengunduh media 1x lihat tersebut.\n"
-                "Penyebab: Pesan 1x lihat tidak ditemukan di cache memori bot (kemungkinan dikirim sebelum bot aktif/bergabung di grup, atau tautan media dari WhatsApp telah kedaluwarsa).\n\n"
-                "Tips: Pastikan bot sedang aktif/online saat pesan 1x lihat dikirim ke grup agar dapat tersimpan secara otomatis.", 
+                "Penyebab: Pesan 1x lihat tidak ditemukan di cache bot dan tidak memiliki preview thumbnail.\n\n"
+                "Tips: Pastikan bot sedang aktif saat pesan 1x lihat dikirim ke grup agar bot dapat menyimpannya secara otomatis.", 
                 message
             )
             return
 
-        # Simpan ke VIEWONCE_CACHE_DIR untuk request berikutnya jika belum ada
-        if stanza_id and media_bytes:
+        # Simpan ke VIEWONCE_CACHE_DIR untuk request berikutnya jika bukan thumbnail preview
+        if stanza_id and media_bytes and not is_thumbnail_preview:
             try:
                 dat_path = os.path.join(VIEWONCE_CACHE_DIR, f"{stanza_id}.dat")
                 meta_path = os.path.join(VIEWONCE_CACHE_DIR, f"{stanza_id}.json")
@@ -6155,67 +6213,75 @@ def on_message(client: NewClient, message: MessageEv):
         # Kirim kembali media ke chat
         try:
             msg_to_send = None
-            # Deteksi tipe media jika belum terdefinisi
-            if target_unwrapped:
-                if target_unwrapped.HasField('imageMessage'):
-                    media_type = "image"
-                    caption = caption or target_unwrapped.imageMessage.caption or None
-                elif target_unwrapped.HasField('videoMessage'):
-                    media_type = "video"
-                    caption = caption or target_unwrapped.videoMessage.caption or None
-                elif target_unwrapped.HasField('audioMessage'):
-                    media_type = "audio"
-                elif target_unwrapped.HasField('documentMessage'):
-                    media_type = "document"
-
-            if media_type == "image" or (target_unwrapped and target_unwrapped.HasField('imageMessage')):
-                msg_to_send = client.build_image_message(file=media_bytes, caption=caption, quoted=message)
-            elif media_type == "video" or (target_unwrapped and target_unwrapped.HasField('videoMessage')):
-                try:
-                    msg_to_send = client.build_video_message(file=media_bytes, caption=caption, quoted=message)
-                except Exception:
-                    upload = client.upload(media_bytes)
-                    ctx_info = pb.ContextInfo()
-                    if message:
-                        ctx_info.MergeFrom(client._make_quoted_message(message))
-                    video_msg = pb.VideoMessage(
-                        URL=upload.url,
-                        caption=caption,
-                        directPath=upload.DirectPath,
-                        fileEncSHA256=upload.FileEncSHA256,
-                        fileLength=upload.FileLength,
-                        fileSHA256=upload.FileSHA256,
-                        mediaKey=upload.MediaKey,
-                        mimetype="video/mp4",
-                        contextInfo=ctx_info
-                    )
-                    msg_to_send = pb.Message(videoMessage=video_msg)
-            elif media_type == "audio" or (target_unwrapped and target_unwrapped.HasField('audioMessage')):
-                ptt = getattr(target_unwrapped.audioMessage, 'PTT', False) if target_unwrapped and target_unwrapped.HasField('audioMessage') else False
-                try:
-                    msg_to_send = client.build_audio_message(file=media_bytes, ptt=ptt, quoted=message)
-                except Exception:
-                    upload = client.upload(media_bytes)
-                    ctx_info = pb.ContextInfo()
-                    if message:
-                        ctx_info.MergeFrom(client._make_quoted_message(message))
-                    audio_msg = pb.AudioMessage(
-                        URL=upload.url,
-                        directPath=upload.DirectPath,
-                        fileEncSHA256=upload.FileEncSHA256,
-                        fileLength=upload.FileLength,
-                        fileSHA256=upload.FileSHA256,
-                        mediaKey=upload.MediaKey,
-                        mimetype="audio/ogg; codecs=opus",
-                        PTT=ptt,
-                        contextInfo=ctx_info
-                    )
-                    msg_to_send = pb.Message(audioMessage=audio_msg)
+            if is_thumbnail_preview:
+                preview_note = (
+                    f"*[MEDIA 1X LIHAT (PREVIEW)]*\n"
+                    f"{caption + chr(10) + chr(10) if caption else ''}"
+                    f"_(Catatan: Pesan 1x lihat ini dikirim saat bot belum aktif atau tautan server WhatsApp sudah kedaluwarsa. Di atas adalah gambar preview yang berhasil diselamatkan dari WhatsApp.)_"
+                )
+                msg_to_send = client.build_image_message(file=media_bytes, caption=preview_note.strip(), quoted=message)
             else:
-                try:
+                # Deteksi tipe media jika belum terdefinisi
+                if target_unwrapped:
+                    if target_unwrapped.HasField('imageMessage'):
+                        media_type = "image"
+                        caption = caption or target_unwrapped.imageMessage.caption or None
+                    elif target_unwrapped.HasField('videoMessage'):
+                        media_type = "video"
+                        caption = caption or target_unwrapped.videoMessage.caption or None
+                    elif target_unwrapped.HasField('audioMessage'):
+                        media_type = "audio"
+                    elif target_unwrapped.HasField('documentMessage'):
+                        media_type = "document"
+
+                if media_type == "image" or (target_unwrapped and target_unwrapped.HasField('imageMessage')):
                     msg_to_send = client.build_image_message(file=media_bytes, caption=caption, quoted=message)
-                except Exception:
-                    msg_to_send = client.build_document_message(file=media_bytes, caption=caption, filename="view_once_media.bin", quoted=message)
+                elif media_type == "video" or (target_unwrapped and target_unwrapped.HasField('videoMessage')):
+                    try:
+                        msg_to_send = client.build_video_message(file=media_bytes, caption=caption, quoted=message)
+                    except Exception:
+                        upload = client.upload(media_bytes)
+                        ctx_info = pb.ContextInfo()
+                        if message:
+                            ctx_info.MergeFrom(client._make_quoted_message(message))
+                        video_msg = pb.VideoMessage(
+                            URL=upload.url,
+                            caption=caption,
+                            directPath=upload.DirectPath,
+                            fileEncSHA256=upload.FileEncSHA256,
+                            fileLength=upload.FileLength,
+                            fileSHA256=upload.FileSHA256,
+                            mediaKey=upload.MediaKey,
+                            mimetype="video/mp4",
+                            contextInfo=ctx_info
+                        )
+                        msg_to_send = pb.Message(videoMessage=video_msg)
+                elif media_type == "audio" or (target_unwrapped and target_unwrapped.HasField('audioMessage')):
+                    ptt = getattr(target_unwrapped.audioMessage, 'PTT', False) if target_unwrapped and target_unwrapped.HasField('audioMessage') else False
+                    try:
+                        msg_to_send = client.build_audio_message(file=media_bytes, ptt=ptt, quoted=message)
+                    except Exception:
+                        upload = client.upload(media_bytes)
+                        ctx_info = pb.ContextInfo()
+                        if message:
+                            ctx_info.MergeFrom(client._make_quoted_message(message))
+                        audio_msg = pb.AudioMessage(
+                            URL=upload.url,
+                            directPath=upload.DirectPath,
+                            fileEncSHA256=upload.FileEncSHA256,
+                            fileLength=upload.FileLength,
+                            fileSHA256=upload.FileSHA256,
+                            mediaKey=upload.MediaKey,
+                            mimetype="audio/ogg; codecs=opus",
+                            PTT=ptt,
+                            contextInfo=ctx_info
+                        )
+                        msg_to_send = pb.Message(audioMessage=audio_msg)
+                else:
+                    try:
+                        msg_to_send = client.build_image_message(file=media_bytes, caption=caption, quoted=message)
+                    except Exception:
+                        msg_to_send = client.build_document_message(file=media_bytes, caption=caption, filename="view_once_media.bin", quoted=message)
 
             if msg_to_send:
                 client.send_message(chat_jid, msg_to_send)
