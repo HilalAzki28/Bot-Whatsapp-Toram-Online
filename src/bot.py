@@ -6089,18 +6089,97 @@ def on_message(client: NewClient, message: MessageEv):
         stanza_id = (context_info.stanzaID or "").strip()
         quoted_msg = context_info.quotedMessage
 
+        from neonize.utils.enum import MediaType, MediaTypeToMMS
+
+        def download_media_helper(msg_wrapped, msg_unwrapped):
+            if not msg_unwrapped and not msg_wrapped:
+                return None
+            
+            # 1. Coba download_any dari unwrapped dan wrapped
+            for cand in [msg_unwrapped, msg_wrapped]:
+                if cand:
+                    try:
+                        res = client.download_any(cand)
+                        if res:
+                            return res
+                    except Exception as e:
+                        logging.debug(f"download_any failed: {e}")
+                        
+            # 2. Coba manual dengan download_media_with_path menggunakan directPath & mediaKey
+            for cand in [msg_unwrapped, msg_wrapped]:
+                if not cand:
+                    continue
+                try:
+                    if hasattr(cand, 'HasField'):
+                        if cand.HasField('imageMessage'):
+                            img = cand.imageMessage
+                            if img.directPath and img.mediaKey:
+                                return client.download_media_with_path(
+                                    direct_path=img.directPath,
+                                    enc_file_hash=img.fileEncSHA256,
+                                    file_hash=img.fileSHA256,
+                                    media_key=img.mediaKey,
+                                    file_length=img.fileLength,
+                                    media_type=MediaType.MediaImage,
+                                    mms_type=MediaTypeToMMS.MediaImage
+                                )
+                        elif cand.HasField('videoMessage'):
+                            vid = cand.videoMessage
+                            if vid.directPath and vid.mediaKey:
+                                return client.download_media_with_path(
+                                    direct_path=vid.directPath,
+                                    enc_file_hash=vid.fileEncSHA256,
+                                    file_hash=vid.fileSHA256,
+                                    media_key=vid.mediaKey,
+                                    file_length=vid.fileLength,
+                                    media_type=MediaType.MediaVideo,
+                                    mms_type=MediaTypeToMMS.MediaVideo
+                                )
+                        elif cand.HasField('audioMessage'):
+                            aud = cand.audioMessage
+                            if aud.directPath and aud.mediaKey:
+                                return client.download_media_with_path(
+                                    direct_path=aud.directPath,
+                                    enc_file_hash=aud.fileEncSHA256,
+                                    file_hash=aud.fileSHA256,
+                                    media_key=aud.mediaKey,
+                                    file_length=aud.fileLength,
+                                    media_type=MediaType.MediaAudio,
+                                    mms_type=MediaTypeToMMS.MediaAudio
+                                )
+                        elif cand.HasField('documentMessage'):
+                            doc = cand.documentMessage
+                            if doc.directPath and doc.mediaKey:
+                                return client.download_media_with_path(
+                                    direct_path=doc.directPath,
+                                    enc_file_hash=doc.fileEncSHA256,
+                                    file_hash=doc.fileSHA256,
+                                    media_key=doc.mediaKey,
+                                    file_length=doc.fileLength,
+                                    media_type=MediaType.MediaDocument,
+                                    mms_type=MediaTypeToMMS.MediaDocument
+                                )
+                except Exception as e:
+                    logging.debug(f"download_media_with_path error: {e}")
+            return None
+
         media_bytes = None
         media_type = ""
         caption = None
         target_unwrapped = None
         is_thumbnail_preview = False
 
-        # TIER 1: Cek pre-cached file di disk (VIEWONCE_CACHE_DIR)
-        if stanza_id:
+        unwrapped_quote = deep_unwrap_message(quoted_msg)
+        target_unwrapped = unwrapped_quote
+
+        # METODE 1: Download langsung dari quoted_msg (metode utama yang terbukti berhasil!)
+        media_bytes = download_media_helper(quoted_msg, unwrapped_quote)
+
+        # METODE 2: Cek pre-cached file di disk (VIEWONCE_CACHE_DIR) jika download langsung belum dapat
+        if not media_bytes and stanza_id:
             dat_path = os.path.join(VIEWONCE_CACHE_DIR, f"{stanza_id}.dat")
             meta_path = os.path.join(VIEWONCE_CACHE_DIR, f"{stanza_id}.json")
             if not os.path.exists(dat_path):
-                # Cek jika ada file dengan id case-insensitive
                 for fn in os.listdir(VIEWONCE_CACHE_DIR):
                     if fn.lower().startswith(stanza_id.lower()) and fn.endswith(".dat"):
                         dat_path = os.path.join(VIEWONCE_CACHE_DIR, fn)
@@ -6119,17 +6198,15 @@ def on_message(client: NewClient, message: MessageEv):
                 except Exception as e:
                     logging.warning(f"Gagal membaca viewonce cache dari disk: {e}")
 
-        # TIER 2: Cari pesan asli dari GROUP_MESSAGE_CACHE berdasarkan stanza_id
+        # METODE 3: Cari pesan asli dari GROUP_MESSAGE_CACHE berdasarkan stanza_id
         if not media_bytes and stanza_id:
             cached_item = None
-            # Cari di grup/chat saat ini
             for item in reversed(GROUP_MESSAGE_CACHE.get(chat_jid_str, [])):
                 item_id = item.get("id", "").strip()
                 if item_id == stanza_id or item_id.lower() == stanza_id.lower() or stanza_id in item_id or item_id in stanza_id:
                     cached_item = item
                     break
 
-            # Jika belum ketemu, cari di seluruh chat cache
             if not cached_item:
                 for gid, entries in GROUP_MESSAGE_CACHE.items():
                     for item in reversed(entries):
@@ -6141,34 +6218,15 @@ def on_message(client: NewClient, message: MessageEv):
                         break
 
             if cached_item and cached_item.get("raw_message"):
-                target_unwrapped = deep_unwrap_message(cached_item["raw_message"])
-                try:
-                    media_bytes = client.download_any(target_unwrapped)
-                except Exception as ex1:
-                    logging.debug(f"Download target_unwrapped failed: {ex1}")
-                    try:
-                        media_bytes = client.download_any(cached_item["raw_message"])
-                    except Exception as ex2:
-                        logging.debug(f"Download raw_message failed: {ex2}")
+                cached_raw = cached_item["raw_message"]
+                cached_unwrapped = deep_unwrap_message(cached_raw)
+                target_unwrapped = cached_unwrapped
+                media_bytes = download_media_helper(cached_raw, cached_unwrapped)
                 if media_bytes and not caption:
                     caption = cached_item.get("caption", None)
 
-        # TIER 3: Coba download langsung dari quoted_msg
+        # METODE 4: Ekstrak JPEGThumbnail langsung dari quoted_msg jika full media tidak dapat diunduh
         if not media_bytes:
-            unwrapped_quote = deep_unwrap_message(quoted_msg)
-            if not target_unwrapped:
-                target_unwrapped = unwrapped_quote
-            try:
-                media_bytes = client.download_any(unwrapped_quote)
-            except Exception:
-                try:
-                    media_bytes = client.download_any(quoted_msg)
-                except Exception:
-                    pass
-
-        # TIER 4: Ekstrak JPEGThumbnail langsung dari quoted_msg jika full media tidak sempat tersimpan di bot
-        if not media_bytes:
-            unwrapped_quote = deep_unwrap_message(quoted_msg)
             for cand in [unwrapped_quote, quoted_msg]:
                 if not cand:
                     continue
@@ -6189,12 +6247,12 @@ def on_message(client: NewClient, message: MessageEv):
                         is_thumbnail_preview = True
                         break
 
-        # Jika masih gagal mendapatkan data media
+        # Jika semua metode gagal
         if not media_bytes:
             client.reply_message(
                 "Gagal: Tidak dapat mengunduh media 1x lihat tersebut.\n"
-                "Penyebab: Pesan 1x lihat tidak ditemukan di cache bot dan tidak memiliki preview thumbnail.\n\n"
-                "Tips: Pastikan bot sedang aktif saat pesan 1x lihat dikirim ke grup agar bot dapat menyimpannya secara otomatis.", 
+                "Penyebab: Tautan media dari WhatsApp telah kedaluwarsa atau media sudah terhapus dari server WhatsApp.\n\n"
+                "Tips: Pastikan segera me-reply dengan `,view` sesaat setelah pesan 1x lihat dikirim ke grup.", 
                 message
             )
             return
