@@ -2244,191 +2244,127 @@ def categorize_item_type(type_label: str) -> str:
         return "*Lain-lain*"
 
 def fetch_coryn_item_variants(query_or_id) -> dict | None:
-    """Mengambil data varian lengkap (Drop Boss & Craft Blacksmith) dari Coryn Club HTML"""
-    query_str = str(query_or_id).strip()
-    if query_str.startswith("#") or query_str.isdigit():
-        item_id = query_str.replace("#", "").strip()
-        url = f"https://coryn.club/item.php?id={item_id}"
-    else:
-        url = f"https://coryn.club/item.php?name={urllib.parse.quote(query_str)}"
-
-    try:
-        html = fetch_web_page(url)
-        soup = BeautifulSoup(html, 'html.parser')
-
-        cards = soup.find_all('div', class_='card-container')
-        if not cards:
-            return None
-
-        first_card = cards[0]
-        title_el = first_card.find('div', class_='card-title')
-        name = title_el.find('a').text.strip() if title_el and title_el.find('a') else "Unknown Item"
-        type_label = title_el.find('span').text.strip() if title_el and title_el.find('span') else "[Equipment]"
-
-        # Jika query berupa ID dan hanya dapat 1 kartu, coba cari berdasarkan nama untuk mendapatkan semua varian
-        if (query_str.startswith("#") or query_str.isdigit()) and name and len(cards) == 1:
-            name_url = f"https://coryn.club/item.php?name={urllib.parse.quote(name)}"
-            try:
-                name_html = fetch_web_page(name_url, timeout=5)
-                name_soup = BeautifulSoup(name_html, 'html.parser')
-                name_cards = name_soup.find_all('div', class_='card-container')
-                if name_cards:
-                    cards = name_cards
-            except Exception:
-                pass
-
-        sell_info = "0 Spina"
-        process_info = "0"
-        prop_div = cards[0].find('div', class_='item-prop')
-        if prop_div:
-            prop_txt = prop_div.get_text(separator=' ', strip=True)
-            m_sell = re.search(r'Sell\s*([\d,]+\s*Spina)', prop_txt, re.IGNORECASE)
-            if m_sell:
-                sell_info = m_sell.group(1)
-            m_proc = re.search(r'Process\s*(.*?)(?=$|Sell)', prop_txt, re.IGNORECASE)
-            if m_proc:
-                process_info = m_proc.group(1).strip()
-
-        drop_sections = []
-        craft_sections = []
-
-        for card in cards:
-            card_title_el = card.find('div', class_='card-title')
-            card_name = card_title_el.find('a').text.strip() if card_title_el and card_title_el.find('a') else ""
-            
-            if name and card_name and name.lower() not in card_name.lower() and card_name.lower() not in name.lower():
-                continue
-
-            accordions = card.find_all('ul', class_='accordion')
-            for acc in accordions:
-                lis = acc.find_all('li')
-                stats_list = []
-                obtained_list = []
-                recipe_info = ""
-
-                for li in lis:
-                    hdr = li.find('div')
-                    hdr_txt = hdr.text.strip().lower() if hdr else ""
-
-                    if "stat" in hdr_txt:
-                        grid = li.find('div', class_='table-grid')
-                        if grid:
-                            for row in grid.find_all('div', recursive=False):
-                                cols = [c.text.strip().replace('\n', ' ') for c in row.find_all('div', recursive=False) if c.text.strip()]
-                                if len(cols) >= 2 and cols[0] != "Stat/Effect":
-                                    stats_list.append(f"- {cols[0]}: {cols[1]}")
-                    elif "obtained" in hdr_txt:
-                        pag_items = li.find_all('div', class_='pagination-js-item')
-                        if pag_items:
-                            for item_el in pag_items:
-                                cols = [c.get_text(separator=' ', strip=True) for c in item_el.find_all('div', recursive=False) if c.get_text(strip=True)]
-                                cols = [c for c in cols if c != "-"]
-                                if cols:
-                                    obtained_list.append(" | ".join(cols))
-                        else:
-                            grid = li.find('div', class_='table-grid')
-                            if grid:
-                                for row in grid.find_all('div', recursive=False):
-                                    cols = [c.get_text(separator=' ', strip=True) for c in row.find_all('div', recursive=False) if c.get_text(strip=True)]
-                                    if cols and cols[0] not in ["Monster", "Dye", "Map", "Monster | Dye | Map"]:
-                                        clean_cols = [c for c in cols if c not in ["Monster", "Dye", "Map", "-"]]
-                                        if clean_cols:
-                                            obtained_list.append(" | ".join(clean_cols))
-                        if not obtained_list:
-                            txt = li.get_text(separator=' ', strip=True).replace("Obtained From", "").strip()
-                            if txt and not txt.startswith("Monster"):
-                                obtained_list.append(txt)
-                    elif "recipe" in hdr_txt:
-                        recipe_info = li.get_text(separator='\n', strip=True).replace("Recipe\n", "").strip()
-
-                is_craft = recipe_info or any("smith" in o.lower() for o in obtained_list)
-                if is_craft:
-                    craft_sections.append({
-                        "stats": stats_list,
-                        "recipe": recipe_info,
-                        "obtained": obtained_list
-                    })
-                elif stats_list or obtained_list:
-                    drop_sections.append({
-                        "stats": stats_list,
-                        "obtained": obtained_list
-                    })
-
-        return {
-            "name": name,
-            "type_label": type_label,
-            "sell": sell_info,
-            "process": process_info,
-            "drop_sections": drop_sections,
-            "craft_sections": craft_sections
-        }
-    except Exception as e:
-        logging.error(f"Gagal mengambil varian item {query_or_id}: {e}")
-        return None
+    """Stubb: Tidak lagi menggunakan Coryn Club demi mencegah lag/freeze. Mengembalikan None agar menggunakan data lokal."""
+    return None
 
 def format_item_detail(item: dict) -> str:
-    """Memformat data item equipment/armor/weapon menjadi 2 jenis output (Drop Boss vs Craft Blacksmith)"""
+    """Memformat data item equipment/armor/weapon/crysta dari database lokal (0 latency, murni lokal tanpa coryn.club)"""
     item_id = item.get("id")
-    item_name = item.get("name", "")
+    item_name = item.get("name", "Unknown")
+    type_label = item.get("type_label", "[Item]")
+    sell = item.get("sell", 0)
+    process = item.get("process", 0)
+    process_amt = item.get("process_amount", 1)
 
-    # Coba ambil data varian lengkap dari web
-    coryn_data = None
-    if item_id:
-        if item.get("is_custom_local"):
-            coryn_data = {
-                "name": item_name,
-                "type_label": item.get("type_label", "[Normal Crysta]"),
-                "sell": f"{item.get('sell', 67)} Spina",
-                "process": f"{item.get('process_amount', 100)} Mana",
-                "drop_sections": [
-                    {
-                        "stats": item.get("custom_stats_list") or [
-                            "- Short Range Damage: +10%",
-                            "- Stability: +5%",
-                            "- Evasion Recharge: +5%",
-                            "- Long Range Damage: -15%",
-                            "- Upgrade dari Crysta: Kuffania"
-                        ],
-                        "obtained": item.get("custom_obtained_list") or [
-                            "Blanc | Normal Crysta (Upgrade dari Crysta Kuffania)"
-                        ]
-                    }
-                ],
-                "craft_sections": []
-            }
+    display_name = get_item_bilingual_name(item_name)
+    
+    reply = []
+    reply.append(f"*DETAIL ITEM: {display_name.upper()}*")
+    reply.append(f"- *Nama:* {display_name}")
+    reply.append(f"- *Tipe:* {type_label}")
+    reply.append(f"- *Harga Jual:* {sell} Spina | *Proses:* {process} (x{process_amt})")
+    reply.append("")
+
+    # Cek apakah item adalah Crysta / Xtall
+    is_crysta = "crysta" in type_label.lower() or "xtall" in type_label.lower() or item.get("type_id") in [200, 201, 202, 203, 204, 210]
+
+    if is_crysta:
+        reply.append("──────────────────")
+        reply.append("*[INFORMASI UPGRADE & TIPE]*")
+        reply.append("──────────────────")
+
+        # Cek data upgrade dari crysta_upgrades.json
+        crystas_db = get_crysta_upgrades() or {}
+        cid_str = str(item_id) if item_id else ""
+        c_info = crystas_db.get(cid_str) or {}
+        upgrades_id = item.get("upgrades_id") or c_info.get("upgrades_id")
+
+        if upgrades_id:
+            parent_info = crystas_db.get(str(upgrades_id)) or {}
+            parent_name = parent_info.get("name", f"Crysta #{upgrades_id}")
+            disp_parent = get_item_bilingual_name(parent_name)
+            reply.append(f"- *Upgrade Dari Crysta:* {disp_parent}")
+            reply.append(f"- *Catatan:* Perlu memasang {disp_parent} terlebih dahulu sebelum upgrade ke {display_name}.")
         else:
-            coryn_data = fetch_coryn_item_variants(item_id)
-            if coryn_data and item_name:
-                c_low = coryn_data.get("name", "").strip().lower()
-                i_low = item_name.strip().lower()
-                if c_low != i_low and i_low not in c_low:
-                    coryn_data = None
-    if not coryn_data and item_name:
-        if not item.get("is_custom_local"):
-            cand_coryn = fetch_coryn_item_variants(item_name)
-            if cand_coryn and cand_coryn.get("name", "").strip().lower() == item_name.strip().lower():
-                coryn_data = cand_coryn
+            reply.append("- *Tipe Upgrade:* Base Crysta (Dapat dipasang langsung ke slot kosong tanpa memerlukan crysta sebelumnya).")
 
-    if coryn_data:
-        name = coryn_data.get("name", item_name)
-        type_label = coryn_data.get("type_label", item.get("type_label", "[Equipment]"))
-        sell = coryn_data.get("sell", f"{item.get('sell', 0)} Spina")
-        process = coryn_data.get("process", f"{item.get('process', 0)}")
+        badge = item.get("meta", {}).get("badge", "") if isinstance(item.get("meta"), dict) else ""
+        note = item.get("meta", {}).get("note", "") if isinstance(item.get("meta"), dict) else ""
+        if badge:
+            reply.append(f"- *Status / Update:* {badge}")
+        if note:
+            reply.append(f"- *Info Tambahan:* {note}")
 
-        reply = []
-        display_name = get_item_bilingual_name(name)
-        reply.append(f"*DETAIL ITEM: {display_name.upper()}*")
-        reply.append(f"- *Nama:* {display_name}")
-        reply.append(f"- *Tipe:* {type_label}")
-        reply.append(f"- *Harga Jual:* {sell} | *Proses:* {process}")
+        reply.append(f"- *Rute Lengkap:* Ketik `,rute {item_name}` atau `,rute #{item_id}` untuk melihat pohon upgrade lengkap.")
         reply.append("")
 
-        # 1. DROP FROM BOSS / MONSTER
+        # Stats
+        reply.append("──────────────────")
+        reply.append("*[STATUS & STATS / EFEK]*")
+        reply.append("──────────────────")
+        stats_list = []
+        if item.get("custom_stats_list"):
+            stats_list = item["custom_stats_list"]
+        elif item.get("stats"):
+            if isinstance(item["stats"], list):
+                for s in item["stats"]:
+                    if isinstance(s, dict):
+                        val = s.get("amount", 0)
+                        sign = "+" if val > 0 else ""
+                        stats_list.append(f"- {s.get('effect_name', 'Unknown')}: {sign}{val}")
+                    else:
+                        stats_list.append(f"- {s}")
+            else:
+                for line in str(item["stats"]).split("\n"):
+                    if line.strip():
+                        stats_list.append(line.strip() if line.strip().startswith("-") else f"- {line.strip()}")
+
+        if stats_list:
+            for s in stats_list:
+                m_upg = re.match(r"^-\s*Upgrade for:\s*(.+)$", s, re.IGNORECASE)
+                if m_upg:
+                    target_c = m_upg.group(1).strip()
+                    reply.append(f"- Upgrade dari Crysta: {get_item_bilingual_name(target_c)}")
+                else:
+                    reply.append(s)
+        else:
+            reply.append("- Efek stats belum tersimpan di database lokal. Silakan cek langsung di in-game atau ketik `,rute` untuk rute upgrade.")
+        reply.append("")
+
+        # Lokasi / Cara Mendapatkan
+        reply.append("──────────────────")
+        reply.append("*[CARA MENDAPATKAN]*")
+        reply.append("──────────────────")
+        obtains_list = []
+        if item.get("custom_obtained_list"):
+            obtains_list = item["custom_obtained_list"]
+        elif item.get("obtains") and isinstance(item["obtains"], list):
+            for ob in item["obtains"]:
+                m_name = ob.get("name", "")
+                m_type = ob.get("type_label", "")
+                m_map = ob.get("map_name", "")
+                loc = f" ({m_map})" if m_map else ""
+                obtains_list.append(f"{m_name} [{m_type}]{loc}")
+        elif item.get("obtaining"):
+            obtains_list = [str(item["obtaining"])]
+
+        if obtains_list:
+            for ob in obtains_list:
+                reply.append(f"- {ob}")
+        else:
+            if upgrades_id:
+                reply.append("- Diperoleh dari Upgrade Crysta / Drop Boss Toram World.")
+            else:
+                reply.append("- Drop Boss / Monster Toram World.")
+        reply.append("")
+
+    else:
+        # Non-Crysta (Weapon, Armor, Additional, Special, Usable, Material)
         reply.append("──────────────────")
         reply.append("1. *[DROP FROM BOSS / MONSTER]*")
         reply.append("──────────────────")
 
-        drops = coryn_data.get("drop_sections", [])
+        drops = item.get("drop_sections", [])
         if drops:
             for idx, d in enumerate(drops[:2]):
                 if len(drops) > 1:
@@ -2436,12 +2372,7 @@ def format_item_detail(item: dict) -> str:
                 if d.get("stats"):
                     reply.append("*Status & Stats (Drop):*")
                     for s in d["stats"]:
-                        m_upg = re.match(r"^-\s*Upgrade for:\s*(.+)$", s, re.IGNORECASE)
-                        if m_upg:
-                            target_c = m_upg.group(1).strip()
-                            reply.append(f"- Upgrade dari Crysta: {get_item_bilingual_name(target_c)}")
-                        else:
-                            reply.append(s)
+                        reply.append(s if s.startswith("-") else f"- {s}")
                 else:
                     reply.append("*Status & Stats (Drop):* Tidak ada data statistik khusus")
 
@@ -2453,96 +2384,79 @@ def format_item_detail(item: dict) -> str:
                     reply.append("\n*Lokasi Drop:* Boss / Monster Toram World")
                 reply.append("")
         else:
-            reply.append("_Item ini tidak memiliki drop dari monster/boss (Murni Crafting)._\n")
+            stats_text = ""
+            if "stats" in item and item["stats"]:
+                if isinstance(item["stats"], list):
+                    stats_lines = []
+                    for stat in item["stats"]:
+                        if isinstance(stat, dict):
+                            val = stat.get("amount", 0)
+                            sign = "+" if val > 0 else ""
+                            stats_lines.append(f"- {stat.get('effect_name', 'Unknown')}: {sign}{val}")
+                        else:
+                            stats_lines.append(f"- {stat}")
+                    stats_text = "\n".join(stats_lines)
+                else:
+                    stats_text = str(item["stats"])
 
-        # 2. CRAFT FROM BLACKSMITH / PLAYER
+            if stats_text:
+                reply.append("*Status & Stats:*")
+                reply.append(stats_text)
+            else:
+                reply.append("*Status & Stats:* Tidak ada data/efek khusus")
+
+            obtains_text = ""
+            if "obtains" in item and item["obtains"]:
+                ob_lines = []
+                for ob in item["obtains"]:
+                    m_name = ob.get("name", "")
+                    m_type = ob.get("type_label", "")
+                    m_map = ob.get("map_name", "")
+                    loc = f" ({m_map})" if m_map else ""
+                    ob_lines.append(f"- {m_name} [{m_type}]{loc}")
+                obtains_text = "\n".join(ob_lines)
+            elif "obtaining" in item and item["obtaining"]:
+                obtains_text = f"- {item['obtaining']}"
+
+            if obtains_text:
+                reply.append("\n*Lokasi Drop / Perolehan:*")
+                reply.append(obtains_text)
+            else:
+                reply.append("\n*Lokasi Drop:* Boss / Monster Toram World")
+            reply.append("")
+
         reply.append("──────────────────")
         reply.append("2. *[CRAFT FROM BLACKSMITH]*")
         reply.append("──────────────────")
-
-        crafts = coryn_data.get("craft_sections", [])
+        crafts = item.get("craft_sections", [])
         if crafts:
             for idx, c in enumerate(crafts[:2]):
                 if len(crafts) > 1:
                     reply.append(f"*Varian Craft {idx+1}:*")
                 if c.get("stats"):
                     reply.append("*Status & Stats Crafting (BS):*")
-                    reply.extend(c["stats"])
+                    for s in c["stats"]:
+                        reply.append(s if s.startswith("-") else f"- {s}")
                 else:
                     reply.append("*Status & Stats Crafting (BS):* Memiliki Potential Point untuk Statting BS")
 
                 if c.get("recipe"):
                     reply.append("\n*Resep & Bahan Crafting Blacksmith:*")
-                    lines = c["recipe"].split("\n")
+                    lines = str(c["recipe"]).split("\n")
                     for line in lines:
                         line_s = line.strip()
                         if line_s:
-                            if line_s in ["Fee", "Set", "Level", "Difficulty", "Materials"]:
-                                reply.append(f"- *{line_s}:*")
-                            elif line_s.startswith("-"):
-                                reply.append(f"  {line_s}")
-                            else:
-                                reply.append(f"  {line_s}")
+                            reply.append(f"  {line_s}")
                 else:
                     reply.append("\n*Resep Crafting:* Dapat dibuat di NPC Blacksmith / Player Smith Skill.")
                 reply.append("")
         else:
             reply.append("_Item ini tidak dapat dibuat di NPC Blacksmith / Smith Skill (Murni Drop)._\n")
 
-        return "\n".join(reply).strip()
+    if item_id:
+        reply.append(f"_Ref: https://raffy.club/item.php?id={item_id}_")
 
-    # Fallback jika scraper web tidak mendapatkan data
-    if item.get("id") and ("stats" not in item or not item.get("stats")):
-        api_detail = get_item_detail_from_api(item["id"])
-        if api_detail:
-            item = api_detail
-
-    stats_text = ""
-    if "stats" in item and item["stats"]:
-        if isinstance(item["stats"], list):
-            stats_text = "\n*Stats/Effects:*\n"
-            for stat in item["stats"]:
-                val = stat.get("amount", 0)
-                sign = "+" if val > 0 else ""
-                stats_text += f"- {stat.get('effect_name', 'Unknown')}: {sign}{val}\n"
-        else:
-            stats_text = f"\n*Stats/Effects:*\n{item['stats']}\n"
-    else:
-        stats_text = "\n*Stats/Effects:* Tidak ada data/efek\n"
-
-    obtains_text = ""
-    if "obtains" in item and item["obtains"]:
-        obtains_text = "\n*Cara Mendapatkan (Drop/Craft):*\n"
-        for ob in item["obtains"]:
-            m_name = ob.get("name", "")
-            m_type = ob.get("type_label", "")
-            m_map = ob.get("map_name", "")
-            loc = f" ({m_map})" if m_map else ""
-            obtains_text += f"- {m_name} [{m_type}]{loc}\n"
-    elif "obtaining" in item and item["obtaining"]:
-        obtains_text = f"\n*Cara Mendapatkan:*\n{item['obtaining']}\n"
-
-    badge = item.get("meta", {}).get("badge", "")
-    note = item.get("meta", {}).get("note", "")
-    meta_info = ""
-    if badge:
-        meta_info += f"*Badge:* {badge}\n"
-    if note:
-        meta_info += f"*Note:* {note}\n"
-
-    raw_n = item.get('name', 'Unknown')
-    disp_n = get_item_bilingual_name(raw_n)
-    text = (
-        f"*DETAIL ITEM: {disp_n.upper()}*\n\n"
-        f"- *Nama:* {disp_n}\n"
-        f"- *Tipe:* {item.get('type_label', 'Unknown')}\n"
-        f"- *Harga Jual:* {item.get('sell', 0)} Spina\n"
-        f"- *Proses Poin:* {item.get('process', 0)} (x{item.get('process_amount', 1)})\n"
-        f"{meta_info}"
-        f"{stats_text}"
-        f"{obtains_text}"
-    )
-    return text.strip()
+    return "\n".join(reply).strip()
 
 
 

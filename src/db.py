@@ -308,49 +308,15 @@ def get_item_category_key(type_label: str) -> str:
     return "item"
 
 def fetch_online_items_by_name(query: str) -> list:
-    """Fetch items from Coryn/Raffy API online when query is not found locally"""
-    url = f"https://coryn.club/api/v1/items.php?name={urllib.parse.quote(query)}&limit=20"
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-        'Accept': 'application/json, text/plain, */*',
-        'Accept-Language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
-    }
-    ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
-    req = urllib.request.Request(url, headers=headers)
-    try:
-        with urllib.request.urlopen(req, context=ctx, timeout=8) as resp:
-            res = json.loads(resp.read().decode('utf-8', errors='ignore'))
-            if res.get("success") and res.get("data"):
-                return res["data"]
-    except Exception as e:
-        print(f"Error fetching online items: {e}")
+    """Offline mode: return empty list to prevent slow blocking calls to external websites"""
     return []
 
 def get_item_detail_from_api(item_id: int | str) -> dict | None:
-    """Fetch complete detail (stats, obtains) for a single item by ID"""
-    url = f"https://coryn.club/api/v1/items.php?id={item_id}"
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-        'Accept': 'application/json, text/plain, */*',
-        'Accept-Language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
-    }
-    ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
-    req = urllib.request.Request(url, headers=headers)
-    try:
-        with urllib.request.urlopen(req, context=ctx, timeout=8) as resp:
-            res = json.loads(resp.read().decode('utf-8', errors='ignore'))
-            if res.get("success") and res.get("data"):
-                return res["data"]
-    except Exception as e:
-        print(f"Error fetching item detail #{item_id}: {e}")
+    """Offline mode: return None to prevent slow blocking calls to external websites"""
     return None
 
 def search_local_items(query: str, category_key: str = "item"):
-    """Cari item secara instan dari database lokal raffy_items.json & crysta_upgrades.json (dengan fallback online)"""
+    """Cari item secara instan dari database lokal raffy_items.json & crysta_upgrades.json (0 latency, murni lokal)"""
     items = get_items_db() or []
     crystas_db = get_crysta_upgrades() or {}
 
@@ -375,11 +341,7 @@ def search_local_items(query: str, category_key: str = "item"):
                 "obtaining": "Drop Boss / Upgrade",
                 "upgrades_id": c_info.get("upgrades_id")
             }]
-        # Fallback query ID online jika tidak ada di lokal
-        if item_id.isdigit():
-            online_item = get_item_detail_from_api(int(item_id))
-            if online_item:
-                return [online_item]
+        return []
 
     # 2. Pencarian Nama di raffy_items.json
     for item in items:
@@ -413,15 +375,6 @@ def search_local_items(query: str, category_key: str = "item"):
                     "upgrades_id": c_info.get("upgrades_id")
                 })
                 seen_ids.add(cid)
-
-    # 4. Fallback online jika tidak ada hasil lokal sama sekali
-    if not results and not q.startswith("#"):
-        online_items = fetch_online_items_by_name(q)
-        for item in online_items:
-            t_label = item.get("type_label", "")
-            if category_key != "item" and get_item_category_key(t_label) != category_key:
-                continue
-            results.append(item)
 
     return results
 
