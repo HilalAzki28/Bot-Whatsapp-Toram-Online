@@ -656,8 +656,15 @@ GROUP_MESSAGES_CACHE_FILE = os.path.join(DATA_DIR, "group_messages_cache.json")
 VIEWONCE_CACHE_DIR = os.path.join(DATA_DIR, "viewonce_cache")
 os.makedirs(VIEWONCE_CACHE_DIR, exist_ok=True)
 
-def is_view_once_message(msg: pb.Message) -> bool:
+def is_view_once_message(msg: pb.Message = None, ev: MessageEv = None) -> bool:
     """Mendeteksi apakah pesan memiliki pembungkus atau flag viewOnce (1x lihat)"""
+    if ev:
+        if getattr(ev, 'IsViewOnce', False) or getattr(ev, 'IsViewOnceV2', False) or getattr(ev, 'IsViewOnceV2Extension', False):
+            return True
+        if hasattr(ev, 'Raw') and ev.Raw and is_view_once_message(ev.Raw):
+            return True
+        if hasattr(ev, 'Message') and ev.Message and is_view_once_message(ev.Message):
+            return True
     if not msg:
         return False
     curr = msg
@@ -1881,8 +1888,9 @@ def download_media_helper(client: NewClient, msg_wrapped: pb.Message, msg_unwrap
                 return res, []
         except Exception as e:
             err_str = str(e).strip()
-            if err_str and err_str not in errors:
-                errors.append(f"download_any: {err_str}")
+            item_err = f"download_any: {err_str}"
+            if item_err not in errors:
+                errors.append(item_err)
 
     # 2. Coba manual dengan download_media_with_path menggunakan directPath & mediaKey
     for cand in [msg_unwrapped, msg_wrapped]:
@@ -1930,12 +1938,14 @@ def download_media_helper(client: NewClient, msg_wrapped: pb.Message, msg_unwrap
                             return res, []
                     except Exception as e:
                         err_str = str(e).strip()
-                        if err_str and err_str not in errors:
-                            errors.append(f"download_media_with_path: {err_str}")
+                        item_err = f"download_media_with_path: {err_str}"
+                        if item_err not in errors:
+                            errors.append(item_err)
         except Exception as e:
             err_str = str(e).strip()
-            if err_str and err_str not in errors:
-                errors.append(f"inspect_cand: {err_str}")
+            item_err = f"inspect_cand: {err_str}"
+            if item_err not in errors:
+                errors.append(item_err)
 
     return None, errors
 
@@ -2143,6 +2153,8 @@ def cache_group_message(message: MessageEv):
 
         text_content = extract_text_from_message_pb(unwrapped or message.Message)
 
+        is_vo = is_view_once_message(message.Message, message)
+
         entry = {
             "id": msg_id,
             "parent_id": parent_id,
@@ -2154,6 +2166,7 @@ def cache_group_message(message: MessageEv):
             "timestamp": ts,
             "is_image": is_img,
             "is_album": is_album,
+            "is_view_once": is_vo,
             "expected_count": expected_count,
             "caption": img_caption,
             "text": text_content,
@@ -2179,7 +2192,6 @@ def cache_group_message(message: MessageEv):
                 q.pop(0)
 
         # Simpan cache ke file jika berupa media, view-once, atau album
-        is_vo = is_view_once_message(message.Message)
         is_media = (
             is_img or is_album or is_vo 
             or (unwrapped and (
@@ -5398,7 +5410,7 @@ def on_message(client: NewClient, message: MessageEv):
     cache_group_message(message)
 
     # Jika ini adalah pesan 1x lihat (View Once), unduh dan simpan salinan aslinya secara otomatis di background
-    if message.Message and is_view_once_message(message.Message):
+    if is_view_once_message(message.Message, message):
         def _pre_cache_vo_worker(m_ev):
             try:
                 m_id = m_ev.Info.ID if m_ev.Info else ""
@@ -5409,22 +5421,29 @@ def on_message(client: NewClient, message: MessageEv):
                 if os.path.exists(dat_path) and os.path.getsize(dat_path) > 0:
                     return
                 
+                chat_jid = m_ev.Info.MessageSource.Chat if (m_ev.Info and m_ev.Info.MessageSource) else None
+                chat_jid_str = f"{chat_jid.User}@{chat_jid.Server}" if chat_jid else ""
+
                 unwrapped_m = deep_unwrap_message(m_ev.Message)
                 media_bytes, errs = download_media_helper(client, m_ev.Message, unwrapped_m)
+                if not media_bytes and hasattr(m_ev, 'Raw') and m_ev.Raw:
+                    media_bytes, errs = download_media_helper(client, m_ev.Raw, deep_unwrap_message(m_ev.Raw))
                 
                 caption = ""
                 m_type = ""
-                if unwrapped_m.HasField('imageMessage'):
-                    caption = unwrapped_m.imageMessage.caption or ""
-                    m_type = "image"
-                elif unwrapped_m.HasField('videoMessage'):
-                    caption = unwrapped_m.videoMessage.caption or ""
-                    m_type = "video"
-                elif unwrapped_m.HasField('audioMessage'):
-                    m_type = "audio"
-                elif unwrapped_m.HasField('documentMessage'):
-                    caption = unwrapped_m.documentMessage.caption or ""
-                    m_type = "document"
+                target_check = unwrapped_m or m_ev.Message
+                if target_check:
+                    if target_check.HasField('imageMessage'):
+                        caption = target_check.imageMessage.caption or ""
+                        m_type = "image"
+                    elif target_check.HasField('videoMessage'):
+                        caption = target_check.videoMessage.caption or ""
+                        m_type = "video"
+                    elif target_check.HasField('audioMessage'):
+                        m_type = "audio"
+                    elif target_check.HasField('documentMessage'):
+                        caption = target_check.documentMessage.caption or ""
+                        m_type = "document"
                     
                 if media_bytes:
                     with open(dat_path, "wb") as f:
@@ -5434,6 +5453,7 @@ def on_message(client: NewClient, message: MessageEv):
                             "id": m_id,
                             "type": m_type,
                             "caption": caption,
+                            "chat_jid": chat_jid_str,
                             "timestamp": time.time()
                         }, f)
                     print(f" [VIEW ONCE CACHE] Berhasil pre-cache media 1x lihat ID={m_id} [{m_type}] ({len(media_bytes)} bytes)")
@@ -6234,11 +6254,51 @@ def on_message(client: NewClient, message: MessageEv):
                 if media_bytes and not caption:
                     caption = cached_item.get("caption", None)
 
+        # METODE 2B: Fallback cari pesan 1x lihat atau media terbaru dari chat ini jika stanza_id tidak cocok
+        if not media_bytes:
+            # 1. Cek dari file VIEWONCE_CACHE_DIR untuk chat_jid_str dalam 30 menit terakhir
+            try:
+                for fn in sorted(os.listdir(VIEWONCE_CACHE_DIR), reverse=True):
+                    if fn.endswith(".json"):
+                        mp = os.path.join(VIEWONCE_CACHE_DIR, fn)
+                        dp = mp.replace(".json", ".dat")
+                        if os.path.exists(dp) and os.path.getsize(dp) > 0:
+                            with open(mp, "r", encoding="utf-8") as f:
+                                meta = json.load(f)
+                            if meta.get("chat_jid") == chat_jid_str and (time.time() - meta.get("timestamp", 0) <= 1800):
+                                with open(dp, "rb") as f:
+                                    media_bytes = f.read()
+                                media_type = meta.get("type", "")
+                                caption = caption or meta.get("caption", None)
+                                break
+            except Exception as e:
+                all_diagnostics.append(f"fallback_disk: {e}")
+
+        if not media_bytes:
+            # 2. Cek dari GROUP_MESSAGE_CACHE untuk pesan is_view_once atau is_image terbaru dalam 30 menit terakhir
+            for item in reversed(GROUP_MESSAGE_CACHE.get(chat_jid_str, [])):
+                if (item.get("is_view_once") or item.get("is_image")) and (time.time() - item.get("timestamp", 0) <= 1800):
+                    cached_raw = item.get("raw_message")
+                    if cached_raw:
+                        cached_unwrapped = deep_unwrap_message(cached_raw)
+                        res, errs = download_media_helper(client, cached_raw, cached_unwrapped)
+                        if res:
+                            media_bytes = res
+                            caption = caption or item.get("caption", None)
+                            target_unwrapped = cached_unwrapped
+                            break
+                        elif errs:
+                            for er in errs:
+                                if er not in all_diagnostics:
+                                    all_diagnostics.append(er)
+
         # METODE 3: Coba download langsung dari quoted_msg
         if not media_bytes:
             media_bytes, errs = download_media_helper(client, quoted_msg, unwrapped_quote)
             if not media_bytes and errs:
-                all_diagnostics.extend(errs)
+                for er in errs:
+                    if er not in all_diagnostics:
+                        all_diagnostics.append(er)
 
         # METODE 4: Ekstrak JPEGThumbnail langsung dari quoted_msg / cached jika full media tidak dapat diunduh
         if not media_bytes:
@@ -6264,7 +6324,7 @@ def on_message(client: NewClient, message: MessageEv):
 
         # Jika semua metode gagal
         if not media_bytes:
-            diag_str = f"\nDetail kendala: {'; '.join(all_diagnostics[:2])}" if all_diagnostics else ""
+            diag_str = f"\nDetail kendala: {'; '.join(all_diagnostics[:3])}" if all_diagnostics else ""
             client.reply_message(
                 "Gagal: Tidak dapat mengunduh media 1x lihat tersebut.\n"
                 "Penyebab: Media tidak ditemukan di memori server atau tautan unduhan WhatsApp telah kedaluwarsa.\n\n"
